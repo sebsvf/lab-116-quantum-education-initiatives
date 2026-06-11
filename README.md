@@ -1,4 +1,5 @@
-**"**This repository serves as the central data operations and analytics LAB for my strategic leadership as Director of Public Relations and Quantum Education Research at QuantumHub Peru. All initiatives, datasets, and analyses within are deeply rooted in QuantumHub's mission to democratize quantum education, research, and innovation across Latin America with a specialized focus on building a sustainable ecosystem in Peru, my country.
+**LAB 116**
+This repository serves as the central data operations and analytics for my strategic leadership as Director of Public Relations and Quantum Education Research at QuantumHub Peru. All initiatives, datasets, and analyses within are deeply rooted in QuantumHub's mission to democratize quantum education, research, and innovation across Latin America with a specialized focus on building a sustainable ecosystem in Peru, my country.
 
 The code '116' honors the founding anniversary of QuantumHub Peru (June 11th). This laboratory operates under the organization's core philosophy for human capital development, which dictates that talent "should later move into university research/coursework and only after that comes public policy and industry development". By quantifying and analyzing our educational pipelines, this repository seeks to mathematically validate and optimize that exact trajectory."
 
