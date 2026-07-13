@@ -1,0 +1,476 @@
+2026-07-05 00:00:06 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-05 00:00:06 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-05 00:00:06 | INFO     | main                 | Country : all
+2026-07-05 00:00:06 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-05 00:00:06 | INFO     | pipeline             | ============================================================
+2026-07-05 00:00:06 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-05 00:00:06 | INFO     | pipeline             | ============================================================
+2026-07-05 00:00:06 | INFO     | input_loader         | Loaded 1 universities from data/universities_sample.csv
+2026-07-05 00:00:06 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 00:00:06 | INFO     | pipeline             | Universities to process: 1
+2026-07-05 00:00:06 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-05 00:00:06 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-05 00:00:06 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-05 00:00:06 | INFO     | crawler              | Crawl: UTEC | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-05 00:00:06 | DEBUG    | crawler              | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-05 00:00:07 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 00:00:08 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 00:00:08 | DEBUG    | extractor            | Block extraction: 31 from https://utec.edu.pe/carreras/fisica
+2026-07-05 00:00:10 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 00:00:10 | DEBUG    | extractor            | Block extraction: 3 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 00:00:10 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-05 00:00:12 | DEBUG    | crawler              |   HTML (444,451b) depth=1: https://posgrado.utec.edu.pe/
+2026-07-05 00:00:13 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 00:00:13 | DEBUG    | extractor            | Block extraction: 94 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 00:00:13 | INFO     | pipeline             |   100 fragments | 3 candidate rows
+2026-07-05 00:00:14 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 00:00:14 | DEBUG    | extractor            | Block extraction: 97 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 00:00:14 | INFO     | pipeline             |   200 fragments | 3 candidate rows
+2026-07-05 00:00:16 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 00:00:16 | DEBUG    | extractor            | Block extraction: 99 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 00:00:16 | INFO     | pipeline             |   300 fragments | 3 candidate rows
+2026-07-05 00:00:17 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 00:00:17 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 00:00:17 | INFO     | pipeline             |   400 fragments | 3 candidate rows
+2026-07-05 00:00:19 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 00:00:19 | DEBUG    | extractor            | Block extraction: 43 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 00:00:20 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 00:00:20 | DEBUG    | extractor            | Block extraction: 123 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 00:00:20 | INFO     | pipeline             |   500 fragments | 3 candidate rows
+2026-07-05 00:00:20 | INFO     | crawler              |   Done: UTEC | 10 pages fetched
+2026-07-05 00:00:20 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-05 00:00:20 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-05 00:00:20 | INFO     | pipeline             | Phase 1/2 complete — 3 new candidate rows (3 total)
+2026-07-05 00:00:20 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-05 00:00:20 | INFO     | pipeline             | Wrote 3 rows → data/qise_candidates.csv
+2026-07-05 00:00:20 | INFO     | pipeline             | ============================================================
+2026-07-05 00:00:20 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-05 00:00:20 | INFO     | pipeline             |   Fragments processed : 583
+2026-07-05 00:00:20 | INFO     | pipeline             |   Candidate rows      : 3
+2026-07-05 00:00:20 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-05 00:00:20 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-05 00:00:20 | INFO     | pipeline             |   Elapsed             : 14.4s
+2026-07-05 00:00:20 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 00:00:20 | INFO     | pipeline             |   By classification:
+2026-07-05 00:00:20 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 3
+2026-07-05 00:00:20 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 00:00:20 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-05 00:00:20 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-05 00:00:20 | INFO     | pipeline             | ============================================================
+2026-07-05 00:11:52 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-05 00:11:52 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-05 00:11:52 | INFO     | main                 | Country : all
+2026-07-05 00:11:52 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-05 00:11:52 | INFO     | pipeline             | ============================================================
+2026-07-05 00:11:52 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-05 00:11:52 | INFO     | pipeline             | ============================================================
+2026-07-05 00:11:52 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-05 00:11:52 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 00:11:52 | INFO     | pipeline             | Universities to process: 2
+2026-07-05 00:11:52 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-05 00:11:52 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-05 00:11:52 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-05 00:11:52 | INFO     | crawler              | Crawl: UTEC | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-05 00:11:53 | DEBUG    | crawler              | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-05 00:11:53 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 00:11:53 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 00:11:53 | DEBUG    | extractor            | Block extraction: 31 from https://utec.edu.pe/carreras/fisica
+2026-07-05 00:11:53 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 00:11:53 | DEBUG    | extractor            | Block extraction: 3 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 00:11:53 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-05 00:11:53 | DEBUG    | crawler              |   HTML (444,451b) depth=1: https://posgrado.utec.edu.pe/
+2026-07-05 00:11:54 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 00:11:54 | DEBUG    | extractor            | Block extraction: 94 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 00:11:54 | INFO     | pipeline             |   100 fragments | 3 candidate rows
+2026-07-05 00:11:54 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 00:11:54 | DEBUG    | extractor            | Block extraction: 97 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 00:11:54 | INFO     | pipeline             |   200 fragments | 3 candidate rows
+2026-07-05 00:11:54 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 00:11:54 | DEBUG    | extractor            | Block extraction: 99 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 00:11:54 | INFO     | pipeline             |   300 fragments | 3 candidate rows
+2026-07-05 00:11:54 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 00:11:54 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 00:11:54 | INFO     | pipeline             |   400 fragments | 3 candidate rows
+2026-07-05 00:11:54 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 00:11:54 | DEBUG    | extractor            | Block extraction: 43 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 00:11:54 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 00:11:54 | DEBUG    | extractor            | Block extraction: 123 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 00:11:54 | INFO     | pipeline             |   500 fragments | 3 candidate rows
+2026-07-05 00:11:54 | INFO     | crawler              |   Done: UTEC | 10 pages fetched
+2026-07-05 00:11:54 | INFO     | crawler              | Crawl: Universidad de Ingeniería y Tecnología | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-05 00:11:55 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 00:11:56 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 00:11:56 | DEBUG    | extractor            | Block extraction: 31 from https://utec.edu.pe/carreras/fisica
+2026-07-05 00:11:56 | INFO     | pipeline             |   600 fragments | 3 candidate rows
+2026-07-05 00:11:58 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 00:11:58 | DEBUG    | extractor            | Block extraction: 3 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 00:11:59 | DEBUG    | crawler              |   HTML (444,451b) depth=1: https://posgrado.utec.edu.pe/
+2026-07-05 00:12:01 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 00:12:01 | DEBUG    | extractor            | Block extraction: 94 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 00:12:01 | INFO     | pipeline             |   700 fragments | 3 candidate rows
+2026-07-05 00:12:02 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 00:12:02 | DEBUG    | extractor            | Block extraction: 97 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 00:12:02 | INFO     | pipeline             |   800 fragments | 3 candidate rows
+2026-07-05 00:12:04 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 00:12:04 | DEBUG    | extractor            | Block extraction: 99 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 00:12:04 | INFO     | pipeline             |   900 fragments | 3 candidate rows
+2026-07-05 00:12:05 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 00:12:05 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 00:12:05 | INFO     | pipeline             |   1000 fragments | 3 candidate rows
+2026-07-05 00:12:07 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 00:12:07 | DEBUG    | extractor            | Block extraction: 43 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 00:12:08 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 00:12:08 | DEBUG    | extractor            | Block extraction: 123 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 00:12:08 | INFO     | pipeline             |   1100 fragments | 3 candidate rows
+2026-07-05 00:12:08 | INFO     | crawler              |   Done: Universidad de Ingeniería y Tecnología | 10 pages fetched
+2026-07-05 00:12:08 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-05 00:12:08 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-05 00:12:08 | INFO     | pipeline             | Phase 1/2 complete — 3 new candidate rows (3 total)
+2026-07-05 00:12:08 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-05 00:12:08 | INFO     | pipeline             | Wrote 3 rows → data/qise_candidates.csv
+2026-07-05 00:12:08 | INFO     | pipeline             | ============================================================
+2026-07-05 00:12:08 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-05 00:12:08 | INFO     | pipeline             |   Fragments processed : 1166
+2026-07-05 00:12:08 | INFO     | pipeline             |   Candidate rows      : 3
+2026-07-05 00:12:08 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-05 00:12:08 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-05 00:12:08 | INFO     | pipeline             |   Elapsed             : 16.0s
+2026-07-05 00:12:08 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 00:12:08 | INFO     | pipeline             |   By classification:
+2026-07-05 00:12:08 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 3
+2026-07-05 00:12:08 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 00:12:08 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-05 00:12:08 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-05 00:12:08 | INFO     | pipeline             | ============================================================
+2026-07-05 00:24:16 | DEBUG    | extractor            | Block extraction: 31 from https://utec.edu.pe/carreras/fisica
+2026-07-05 00:24:16 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 00:30:17 | DEBUG    | extractor            | Block extraction: 31 from https://utec.edu.pe/carreras/fisica
+2026-07-05 01:34:40 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-05 01:34:40 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 01:46:02 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-05 01:46:02 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 01:46:13 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 01:46:13 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-05 01:46:13 | INFO     | input_loader         | Loaded 2 universities from /Users/rafaelchamayo/qc-universities-paper/web_scrapper/tests/../data/universities_sample.csv
+2026-07-05 01:46:14 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-05 01:46:14 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-05 01:46:14 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-05 01:46:14 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-05 01:46:14 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-05 01:46:14 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-05 01:46:14 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-05 01:46:29 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-05 01:47:14 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 01:47:14 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-05 01:47:14 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmp7hp1silx.csv
+2026-07-05 01:47:15 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-05 01:47:15 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-05 01:47:15 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-05 01:47:15 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-05 01:47:15 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-05 01:47:15 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-05 01:47:15 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-05 01:48:36 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-05 01:48:36 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-05 01:48:36 | INFO     | main                 | Country : all
+2026-07-05 01:48:36 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-05 01:48:36 | INFO     | pipeline             | ============================================================
+2026-07-05 01:48:36 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-05 01:48:36 | INFO     | pipeline             | ============================================================
+2026-07-05 01:48:36 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-05 01:48:36 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 01:48:36 | INFO     | pipeline             | Universities to process: 2
+2026-07-05 01:48:36 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-05 01:48:36 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-05 01:48:36 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-05 01:48:36 | INFO     | crawler              | Crawl: UTEC | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-05 01:48:37 | DEBUG    | crawler              | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-05 01:48:37 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 01:48:37 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 01:48:37 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-05 01:48:37 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 01:48:37 | DEBUG    | extractor            | Block extraction: 16 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 01:48:37 | INFO     | pipeline             |   100 fragments | 12 candidate rows
+2026-07-05 01:48:38 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-05 01:48:38 | DEBUG    | crawler              |   HTML (444,451b) depth=1: https://posgrado.utec.edu.pe/
+2026-07-05 01:48:38 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 01:48:38 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 01:48:38 | INFO     | pipeline             |   200 fragments | 12 candidate rows
+2026-07-05 01:48:38 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 01:48:38 | DEBUG    | extractor            | Block extraction: 169 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 01:48:38 | INFO     | pipeline             |   300 fragments | 12 candidate rows
+2026-07-05 01:48:38 | INFO     | pipeline             |   400 fragments | 12 candidate rows
+2026-07-05 01:48:38 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 01:48:38 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 01:48:39 | INFO     | pipeline             |   500 fragments | 12 candidate rows
+2026-07-05 01:48:39 | INFO     | pipeline             |   600 fragments | 12 candidate rows
+2026-07-05 01:48:39 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 01:48:39 | DEBUG    | extractor            | Block extraction: 158 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 01:48:39 | INFO     | pipeline             |   700 fragments | 12 candidate rows
+2026-07-05 01:48:39 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 01:48:39 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 01:48:39 | INFO     | pipeline             |   800 fragments | 12 candidate rows
+2026-07-05 01:48:39 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 01:48:39 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 01:48:39 | INFO     | pipeline             |   900 fragments | 12 candidate rows
+2026-07-05 01:48:39 | INFO     | pipeline             |   1000 fragments | 12 candidate rows
+2026-07-05 01:48:39 | INFO     | crawler              |   Done: UTEC | 10 pages fetched
+2026-07-05 01:48:39 | INFO     | crawler              | Crawl: Universidad de Ingeniería y Tecnología | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-05 01:48:39 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 01:48:39 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 01:48:39 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-05 01:48:39 | INFO     | pipeline             |   1100 fragments | 12 candidate rows
+2026-07-05 01:48:40 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 01:48:40 | DEBUG    | extractor            | Block extraction: 16 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 01:48:40 | DEBUG    | crawler              |   HTML (444,451b) depth=1: https://posgrado.utec.edu.pe/
+2026-07-05 01:48:40 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 01:48:40 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 01:48:40 | INFO     | pipeline             |   1200 fragments | 12 candidate rows
+2026-07-05 01:48:40 | INFO     | pipeline             |   1300 fragments | 12 candidate rows
+2026-07-05 01:48:40 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 01:48:41 | DEBUG    | extractor            | Block extraction: 169 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 01:48:41 | INFO     | pipeline             |   1400 fragments | 12 candidate rows
+2026-07-05 01:48:41 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 01:48:41 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 01:48:41 | INFO     | pipeline             |   1500 fragments | 12 candidate rows
+2026-07-05 01:48:41 | INFO     | pipeline             |   1600 fragments | 12 candidate rows
+2026-07-05 01:48:41 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 01:48:41 | DEBUG    | extractor            | Block extraction: 158 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 01:48:41 | INFO     | pipeline             |   1700 fragments | 12 candidate rows
+2026-07-05 01:48:41 | INFO     | pipeline             |   1800 fragments | 12 candidate rows
+2026-07-05 01:48:41 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 01:48:41 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 01:48:41 | INFO     | pipeline             |   1900 fragments | 12 candidate rows
+2026-07-05 01:48:41 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 01:48:42 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 01:48:42 | INFO     | pipeline             |   2000 fragments | 12 candidate rows
+2026-07-05 01:48:42 | INFO     | crawler              |   Done: Universidad de Ingeniería y Tecnología | 10 pages fetched
+2026-07-05 01:48:42 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-05 01:48:42 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-05 01:48:42 | INFO     | pipeline             | Phase 1/2 complete — 12 new candidate rows (12 total)
+2026-07-05 01:48:42 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-05 01:48:42 | INFO     | pipeline             | Wrote 12 rows → data/qise_candidates.csv
+2026-07-05 01:48:42 | INFO     | pipeline             | ============================================================
+2026-07-05 01:48:42 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-05 01:48:42 | INFO     | pipeline             |   Fragments processed : 2084
+2026-07-05 01:48:42 | INFO     | pipeline             |   Candidate rows      : 12
+2026-07-05 01:48:42 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-05 01:48:42 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-05 01:48:42 | INFO     | pipeline             |   Elapsed             : 5.4s
+2026-07-05 01:48:42 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 01:48:42 | INFO     | pipeline             |   By classification:
+2026-07-05 01:48:42 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-05 01:48:42 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 7
+2026-07-05 01:48:42 | INFO     | pipeline             |     unclear                           : 4
+2026-07-05 01:48:42 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 01:48:42 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-05 01:48:42 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-05 01:48:42 | INFO     | pipeline             |       • UTEC
+2026-07-05 01:48:42 | INFO     | pipeline             | ============================================================
+2026-07-05 01:50:15 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-05 01:50:15 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-05 01:50:15 | INFO     | main                 | Country : all
+2026-07-05 01:50:15 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-05 01:50:15 | INFO     | pipeline             | ============================================================
+2026-07-05 01:50:15 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-05 01:50:15 | INFO     | pipeline             | ============================================================
+2026-07-05 01:50:15 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-05 01:50:15 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 01:50:15 | INFO     | pipeline             | Universities to process: 2
+2026-07-05 01:50:15 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-05 01:50:15 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-05 01:50:15 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-05 01:50:15 | INFO     | crawler              | Crawl: UTEC | seeds=2 max_pages=10 max_depth=5
+2026-07-05 01:50:16 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 01:50:17 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 01:50:17 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-05 01:50:18 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 01:50:18 | DEBUG    | extractor            | Block extraction: 16 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 01:50:19 | INFO     | pipeline             |   100 fragments | 12 candidate rows
+2026-07-05 01:50:20 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 01:50:20 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 01:50:20 | INFO     | pipeline             |   200 fragments | 12 candidate rows
+2026-07-05 01:50:21 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 01:50:21 | DEBUG    | extractor            | Block extraction: 169 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 01:50:21 | INFO     | pipeline             |   300 fragments | 12 candidate rows
+2026-07-05 01:50:21 | INFO     | pipeline             |   400 fragments | 12 candidate rows
+2026-07-05 01:50:23 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 01:50:23 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 01:50:23 | INFO     | pipeline             |   500 fragments | 12 candidate rows
+2026-07-05 01:50:23 | INFO     | pipeline             |   600 fragments | 12 candidate rows
+2026-07-05 01:50:24 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 01:50:24 | DEBUG    | extractor            | Block extraction: 158 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 01:50:24 | INFO     | pipeline             |   700 fragments | 12 candidate rows
+2026-07-05 01:50:26 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 01:50:26 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 01:50:26 | INFO     | pipeline             |   800 fragments | 12 candidate rows
+2026-07-05 01:50:27 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 01:50:27 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 01:50:27 | INFO     | pipeline             |   900 fragments | 12 candidate rows
+2026-07-05 01:50:27 | INFO     | pipeline             |   1000 fragments | 12 candidate rows
+2026-07-05 01:50:29 | DEBUG    | crawler              |   HTML (394,428b) depth=1: https://utec.edu.pe/carreras/bioingenieria
+2026-07-05 01:50:29 | DEBUG    | extractor            | Block extraction: 185 from https://utec.edu.pe/carreras/bioingenieria
+2026-07-05 01:50:29 | INFO     | pipeline             |   1100 fragments | 12 candidate rows
+2026-07-05 01:50:29 | INFO     | pipeline             |   1200 fragments | 12 candidate rows
+2026-07-05 01:50:29 | INFO     | crawler              |   Done: UTEC | 10 páginas
+2026-07-05 01:50:29 | INFO     | crawler              | Crawl: Universidad de Ingeniería y Tecnología | seeds=2 max_pages=10 max_depth=5
+2026-07-05 01:50:30 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 01:50:32 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 01:50:32 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-05 01:50:32 | INFO     | pipeline             |   1300 fragments | 13 candidate rows
+2026-07-05 01:50:33 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 01:50:34 | DEBUG    | extractor            | Block extraction: 16 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 01:50:35 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 01:50:35 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 01:50:35 | INFO     | pipeline             |   1400 fragments | 13 candidate rows
+2026-07-05 01:50:35 | INFO     | pipeline             |   1500 fragments | 13 candidate rows
+2026-07-05 01:50:36 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 01:50:36 | DEBUG    | extractor            | Block extraction: 169 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 01:50:36 | INFO     | pipeline             |   1600 fragments | 13 candidate rows
+2026-07-05 01:50:38 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 01:50:38 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 01:50:38 | INFO     | pipeline             |   1700 fragments | 13 candidate rows
+2026-07-05 01:50:38 | INFO     | pipeline             |   1800 fragments | 13 candidate rows
+2026-07-05 01:50:39 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 01:50:39 | DEBUG    | extractor            | Block extraction: 158 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 01:50:39 | INFO     | pipeline             |   1900 fragments | 13 candidate rows
+2026-07-05 01:50:41 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 01:50:41 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 01:50:41 | INFO     | pipeline             |   2000 fragments | 13 candidate rows
+2026-07-05 01:50:42 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 01:50:42 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 01:50:42 | INFO     | pipeline             |   2100 fragments | 13 candidate rows
+2026-07-05 01:50:42 | INFO     | pipeline             |   2200 fragments | 13 candidate rows
+2026-07-05 01:50:44 | DEBUG    | crawler              |   HTML (394,428b) depth=1: https://utec.edu.pe/carreras/bioingenieria
+2026-07-05 01:50:44 | DEBUG    | extractor            | Block extraction: 185 from https://utec.edu.pe/carreras/bioingenieria
+2026-07-05 01:50:44 | INFO     | pipeline             |   2300 fragments | 13 candidate rows
+2026-07-05 01:50:44 | INFO     | pipeline             |   2400 fragments | 13 candidate rows
+2026-07-05 01:50:44 | INFO     | crawler              |   Done: Universidad de Ingeniería y Tecnología | 10 páginas
+2026-07-05 01:50:44 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-05 01:50:44 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-05 01:50:44 | INFO     | pipeline             | Phase 1/2 complete — 13 new candidate rows (13 total)
+2026-07-05 01:50:44 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-05 01:50:44 | INFO     | pipeline             | Wrote 13 rows → data/qise_candidates.csv
+2026-07-05 01:50:44 | INFO     | pipeline             | ============================================================
+2026-07-05 01:50:44 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-05 01:50:44 | INFO     | pipeline             |   Fragments processed : 2454
+2026-07-05 01:50:44 | INFO     | pipeline             |   Candidate rows      : 13
+2026-07-05 01:50:44 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-05 01:50:44 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-05 01:50:44 | INFO     | pipeline             |   Elapsed             : 29.4s
+2026-07-05 01:50:44 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 01:50:44 | INFO     | pipeline             |   By classification:
+2026-07-05 01:50:44 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-05 01:50:44 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 8
+2026-07-05 01:50:44 | INFO     | pipeline             |     unclear                           : 4
+2026-07-05 01:50:44 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 01:50:44 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-05 01:50:44 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-05 01:50:44 | INFO     | pipeline             |       • UTEC
+2026-07-05 01:50:44 | INFO     | pipeline             | ============================================================
+2026-07-05 20:05:55 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-05 20:05:55 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-05 20:05:55 | INFO     | main                 | Country : all
+2026-07-05 20:05:55 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-05 20:05:55 | INFO     | pipeline             | ============================================================
+2026-07-05 20:05:55 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-05 20:05:55 | INFO     | pipeline             | ============================================================
+2026-07-05 20:05:55 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-05 20:05:55 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-05 20:05:55 | INFO     | pipeline             | Universities to process: 2
+2026-07-05 20:05:55 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-05 20:05:55 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-05 20:05:55 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-05 20:05:55 | INFO     | crawler              | Crawl: UTEC | seeds=2 max_pages=10 max_depth=5
+2026-07-05 20:05:55 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 20:05:56 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 20:05:57 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-05 20:05:58 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 20:05:58 | DEBUG    | extractor            | Block extraction: 16 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 20:05:58 | INFO     | pipeline             |   100 fragments | 12 candidate rows
+2026-07-05 20:05:59 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 20:06:00 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 20:06:00 | INFO     | pipeline             |   200 fragments | 12 candidate rows
+2026-07-05 20:06:01 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 20:06:01 | DEBUG    | extractor            | Block extraction: 169 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 20:06:01 | INFO     | pipeline             |   300 fragments | 12 candidate rows
+2026-07-05 20:06:01 | INFO     | pipeline             |   400 fragments | 12 candidate rows
+2026-07-05 20:06:02 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 20:06:03 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 20:06:03 | INFO     | pipeline             |   500 fragments | 12 candidate rows
+2026-07-05 20:06:03 | INFO     | pipeline             |   600 fragments | 12 candidate rows
+2026-07-05 20:06:04 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 20:06:04 | DEBUG    | extractor            | Block extraction: 158 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 20:06:04 | INFO     | pipeline             |   700 fragments | 12 candidate rows
+2026-07-05 20:06:05 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 20:06:06 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 20:06:06 | INFO     | pipeline             |   800 fragments | 12 candidate rows
+2026-07-05 20:06:07 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 20:06:07 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 20:06:07 | INFO     | pipeline             |   900 fragments | 12 candidate rows
+2026-07-05 20:06:07 | INFO     | pipeline             |   1000 fragments | 12 candidate rows
+2026-07-05 20:06:09 | DEBUG    | crawler              |   HTML (394,428b) depth=1: https://utec.edu.pe/carreras/bioingenieria
+2026-07-05 20:06:09 | DEBUG    | extractor            | Block extraction: 185 from https://utec.edu.pe/carreras/bioingenieria
+2026-07-05 20:06:09 | INFO     | pipeline             |   1100 fragments | 12 candidate rows
+2026-07-05 20:06:09 | INFO     | pipeline             |   1200 fragments | 12 candidate rows
+2026-07-05 20:06:09 | INFO     | crawler              |   Done: UTEC | 10 páginas
+2026-07-05 20:06:09 | INFO     | crawler              | Crawl: Universidad de Ingeniería y Tecnología | seeds=2 max_pages=10 max_depth=5
+2026-07-05 20:06:10 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-05 20:06:12 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-05 20:06:12 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-05 20:06:12 | INFO     | pipeline             |   1300 fragments | 13 candidate rows
+2026-07-05 20:06:13 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-05 20:06:13 | DEBUG    | extractor            | Block extraction: 16 from https://utec.edu.pe/programas-de-bienestar
+2026-07-05 20:06:15 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 20:06:15 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-05 20:06:15 | INFO     | pipeline             |   1400 fragments | 13 candidate rows
+2026-07-05 20:06:15 | INFO     | pipeline             |   1500 fragments | 13 candidate rows
+2026-07-05 20:06:16 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 20:06:16 | DEBUG    | extractor            | Block extraction: 169 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-05 20:06:16 | INFO     | pipeline             |   1600 fragments | 13 candidate rows
+2026-07-05 20:06:18 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 20:06:18 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-05 20:06:18 | INFO     | pipeline             |   1700 fragments | 13 candidate rows
+2026-07-05 20:06:18 | INFO     | pipeline             |   1800 fragments | 13 candidate rows
+2026-07-05 20:06:19 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 20:06:19 | DEBUG    | extractor            | Block extraction: 158 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-05 20:06:19 | INFO     | pipeline             |   1900 fragments | 13 candidate rows
+2026-07-05 20:06:21 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-05 20:06:21 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/business-analytics
+2026-07-05 20:06:21 | INFO     | pipeline             |   2000 fragments | 13 candidate rows
+2026-07-05 20:06:22 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 20:06:22 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-05 20:06:22 | INFO     | pipeline             |   2100 fragments | 13 candidate rows
+2026-07-05 20:06:22 | INFO     | pipeline             |   2200 fragments | 13 candidate rows
+2026-07-05 20:06:24 | DEBUG    | crawler              |   HTML (394,428b) depth=1: https://utec.edu.pe/carreras/bioingenieria
+2026-07-05 20:06:24 | DEBUG    | extractor            | Block extraction: 185 from https://utec.edu.pe/carreras/bioingenieria
+2026-07-05 20:06:24 | INFO     | pipeline             |   2300 fragments | 13 candidate rows
+2026-07-05 20:06:24 | INFO     | pipeline             |   2400 fragments | 13 candidate rows
+2026-07-05 20:06:24 | INFO     | crawler              |   Done: Universidad de Ingeniería y Tecnología | 10 páginas
+2026-07-05 20:06:24 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-05 20:06:24 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-05 20:06:24 | INFO     | pipeline             | Phase 1/2 complete — 13 new candidate rows (13 total)
+2026-07-05 20:06:24 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-05 20:06:24 | INFO     | pipeline             | Wrote 13 rows → data/qise_candidates.csv
+2026-07-05 20:06:24 | INFO     | pipeline             | ============================================================
+2026-07-05 20:06:24 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-05 20:06:24 | INFO     | pipeline             |   Fragments processed : 2454
+2026-07-05 20:06:24 | INFO     | pipeline             |   Candidate rows      : 13
+2026-07-05 20:06:24 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-05 20:06:24 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-05 20:06:24 | INFO     | pipeline             |   Elapsed             : 29.2s
+2026-07-05 20:06:24 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 20:06:24 | INFO     | pipeline             |   By classification:
+2026-07-05 20:06:24 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-05 20:06:24 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 8
+2026-07-05 20:06:24 | INFO     | pipeline             |     unclear                           : 4
+2026-07-05 20:06:24 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-05 20:06:24 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-05 20:06:24 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-05 20:06:24 | INFO     | pipeline             |       • UTEC
+2026-07-05 20:06:24 | INFO     | pipeline             | ============================================================

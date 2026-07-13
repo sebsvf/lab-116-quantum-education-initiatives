@@ -1,0 +1,1050 @@
+2026-07-11 01:16:34 | INFO     | main                 | Input   : data/universities_noseed_sample.csv
+2026-07-11 01:16:34 | INFO     | main                 | Output  : data/noseed_test.csv
+2026-07-11 01:16:34 | INFO     | main                 | Country : all
+2026-07-11 01:16:34 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-11 01:16:34 | INFO     | pipeline             | ============================================================
+2026-07-11 01:16:34 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-11 01:16:34 | INFO     | pipeline             | ============================================================
+2026-07-11 01:16:34 | INFO     | input_loader         | Loaded 3 universities from data/universities_noseed_sample.csv
+2026-07-11 01:16:34 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-11 01:16:34 | INFO     | pipeline             | Universities to process: 3
+2026-07-11 01:16:34 | DEBUG    | seed_discovery       | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:39 | INFO     | seed_discovery       | Seed discovery: PUCP | homepage_links=108 sitemap_urls=1000 candidates=568 scored>=3: 166 → kept 20
+2026-07-11 01:16:39 | INFO     | seed_discovery       |     [ 14] https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones  (url:departamento + stem:electronica,informatica,ingenieria + sitemap)
+2026-07-11 01:16:39 | INFO     | seed_discovery       |     [ 13] https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres  (url:cursos,oferta academica + anchor:cursos + curriculum-pattern)
+2026-07-11 01:16:39 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones  (url:carrera + stem:ingenieria,telecomunicaciones + sitemap)
+2026-07-11 01:16:39 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-11 01:16:39 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-informatica  (url:carrera + stem:informatica,ingenieria + sitemap)
+2026-07-11 01:16:40 | DEBUG    | seed_discovery       | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:45 | INFO     | seed_discovery       | Seed discovery: UTEC | homepage_links=50 sitemap_urls=1961 candidates=1973 scored>=3: 609 → kept 20
+2026-07-11 01:16:45 | INFO     | seed_discovery       |     [ 13] https://utec.edu.pe/blog-de-carreras/utec/ingenieria-de-la-energia-en-utec-conoce-el-plan-de-estudios-de-esta-carrera  (url:carrera,plan de estudios + stem:ingenieria + curriculum-pattern + sitemap + low-priority:blog)
+2026-07-11 01:16:45 | INFO     | seed_discovery       |     [ 12] https://utec.edu.pe/carreras/fisica  (url:carrera + anchor:carrera + stem:fisica + sitemap)
+2026-07-11 01:16:45 | INFO     | seed_discovery       |     [ 12] https://utec.edu.pe/carreras/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-11 01:16:45 | INFO     | seed_discovery       |     [ 11] https://utec.edu.pe/blog-de-carreras/ingenieria-industrial/egresada-de-ingenieria-industrial-de-utec-fue-becada-en-el-programa-doctoral-de-ingenieria-industrial-en-university-south-florida-usf  (url:carrera,doctoral,programa + stem:ingenieria + sitemap + low-priority:blog)
+2026-07-11 01:16:45 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/blog-de-carreras/ingenieria-electronica/grad-school-lo-que-me-avisaron-y-no-hice-caso-experiencias-y-consejos-de-un-alumno-en-el-41  (url:carrera,school + stem:electronica,ingenieria + sitemap + low-priority:blog)
+2026-07-11 01:16:45 | DEBUG    | seed_discovery       | robots.txt unreadable for https://portal.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:48 | DEBUG    | seed_discovery       |   404: https://portal.uni.edu.pe/sitemap.xml
+2026-07-11 01:16:48 | INFO     | seed_discovery       | Seed discovery: UNI | homepage_links=145 sitemap_urls=0 candidates=145 scored>=3: 29 → kept 20
+2026-07-11 01:16:48 | INFO     | seed_discovery       |     [ 15] https://portal.uni.edu.pe/index.php/posgrado-uni/catalogo-de-posgrado  (url:catalogo,posgrado + anchor:catalogo,posgrado + curriculum-pattern)
+2026-07-11 01:16:48 | INFO     | seed_discovery       |     [ 12] https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica  (anchor:facultad + stem:electrica,electronica,ingenieria)
+2026-07-11 01:16:48 | INFO     | seed_discovery       |     [ 10] https://portal.uni.edu.pe/index.php/facultades/ingenieria-economica-estadistica-y-de-ciencias-sociales  (anchor:facultad + stem:ciencias,ingenieria)
+2026-07-11 01:16:48 | INFO     | seed_discovery       |     [  8] https://portal.uni.edu.pe/index.php/facultades/ciencias  (anchor:facultad + stem:ciencias)
+2026-07-11 01:16:48 | INFO     | seed_discovery       |     [  8] https://portal.uni.edu.pe/index.php/facultades/ingenieria-ambiental  (anchor:facultad + stem:ingenieria)
+2026-07-11 01:16:48 | INFO     | pipeline             | Discovered seeds written → data/processed/discovered_seeds.csv (60 rows)
+2026-07-11 01:16:48 | INFO     | pipeline             | Seed resolution: {'auto_discovered': 3} | 60 seeds auto-discovered
+2026-07-11 01:16:48 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-11 01:16:48 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-11 01:16:48 | INFO     | dispatcher           | Dispatching 3 universities
+2026-07-11 01:16:48 | INFO     | crawler              | Crawl: PUCP | seeds=21 max_pages=150 max_depth=2 max_pdfs=50 pdfs=on seed_origin=auto_discovered
+2026-07-11 01:16:48 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:48 | DEBUG    | crawler              |   HTML (96,785b) depth=0: https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones
+2026-07-11 01:16:48 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:48 | DEBUG    | crawler              |   HTML (224,857b) depth=0: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-11 01:16:48 | DEBUG    | crawler              |   HTML (111,145b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (110,035b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-electronica
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (109,145b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-informatica
+2026-07-11 01:16:49 | DEBUG    | crawler              | robots.txt unreadable for https://puntoedu.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (331,986b) depth=0: https://puntoedu.pucp.edu.pe/vida-universitaria/institucional/el-departamento-academico-de-ciencias-pucp-60-aniversario
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (109,166b) depth=0: https://www.pucp.edu.pe/carrera/ciencias-de-la-informacion
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (111,146b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-ambiental-y-sostenible
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (110,055b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-biomedica
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (108,933b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-civil
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (109,273b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-de-minas
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (109,120b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-geologica
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (108,898b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-industrial
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (109,233b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-mecanica
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (109,431b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-mecatronica
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (109,587b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-quimica
+2026-07-11 01:16:49 | DEBUG    | crawler              |   HTML (109,436b) depth=0: https://www.pucp.edu.pe/carrera/matematicas
+2026-07-11 01:16:50 | DEBUG    | crawler              |   HTML (95,232b) depth=0: https://www.pucp.edu.pe/unidad/departamento-academico-de-ciencias
+2026-07-11 01:16:50 | DEBUG    | crawler              |   HTML (27,225b) depth=0: http://blog.pucp.edu.pe/
+2026-07-11 01:16:50 | DEBUG    | crawler              | robots.txt unreadable for https://admision.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:50 | DEBUG    | crawler              |   HTML (56,244b) depth=0: https://admision.pucp.edu.pe/
+2026-07-11 01:16:51 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:51 | DEBUG    | crawler              |   HTML (48,910b) depth=0: https://posgrado.pucp.edu.pe/admision
+2026-07-11 01:16:51 | DEBUG    | crawler              |   PDF: https://posgrado.pucp.edu.pe/wp-content/uploads/2026/05/PREGUNTAS-FRECUENTES-2026-2.pdf (found on: https://posgrado.pucp.edu.pe/admision)
+2026-07-11 01:16:51 | DEBUG    | extractor            | PDF extracted: 9 page fragment(s) via pymupdf: https://posgrado.pucp.edu.pe/wp-content/uploads/2026/05/PREGUNTAS-FRECUENTES-2026-2.pdf
+2026-07-11 01:16:51 | DEBUG    | crawler              | robots.txt unreadable for https://gobierno.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:16:51 | DEBUG    | crawler              |   HTML (86,332b) depth=0: https://gobierno.pucp.edu.pe/
+2026-07-11 01:16:52 | DEBUG    | crawler              |   HTML (105,183b) depth=0: http://www.fondoeditorial.pucp.edu.pe/
+2026-07-11 01:17:03 | INFO     | crawler              |   SSLError on http, retrying https: https://www.revistas.pucp.edu.pe/
+2026-07-11 01:17:13 | WARNING  | crawler              |   SSLError: https://www.revistas.pucp.edu.pe/
+2026-07-11 01:17:13 | DEBUG    | crawler              | robots.txt unreadable for https://departamento-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:17:13 | DEBUG    | crawler              |   HTML (110,467b) depth=0: https://departamento-ingenieria.pucp.edu.pe/
+2026-07-11 01:17:13 | DEBUG    | crawler              | robots.txt unreadable for https://comienza.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:17:13 | DEBUG    | crawler              |   HTML (56,244b) depth=0: https://comienza.pucp.edu.pe/
+2026-07-11 01:17:14 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:17:14 | DEBUG    | crawler              |   HTML (93,552b) depth=0: https://facultad.pucp.edu.pe/ingenieria
+2026-07-11 01:17:14 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:17:14 | DEBUG    | crawler              |   HTML (88,533b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-de-las-telecomunicaciones/plan-de-estudios
+2026-07-11 01:17:14 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_TELECOMUNICACIONES-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-de-las-telecomunicaciones/plan-de-estudios)
+2026-07-11 01:17:14 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_TELECOMUNICACIONES-2026-1.pdf
+2026-07-11 01:17:14 | DEBUG    | crawler              |   HTML (87,902b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-electronica/plan-de-estudios
+2026-07-11 01:17:14 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_ELECTRONICA-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-electronica/plan-de-estudios)
+2026-07-11 01:17:14 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_ELECTRONICA-2026-1.pdf
+2026-07-11 01:17:14 | DEBUG    | crawler              |   HTML (88,098b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-informatica/plan-de-estudios
+2026-07-11 01:17:14 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_INFORMATICA-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-informatica/plan-de-estudios)
+2026-07-11 01:17:14 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_INFORMATICA-2026-1.pdf
+2026-07-11 01:17:14 | DEBUG    | crawler              | robots.txt unreadable for https://dci.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:17:14 | DEBUG    | crawler              |   HTML (14,897b) depth=0: https://dci.pucp.edu.pe/servicios-de-comunicacion/difusion-de-logros-academicos-entrevistas-o-columnas-de-opinion-en-medios-institucionales
+2026-07-11 01:17:14 | DEBUG    | crawler              | robots.txt unreadable for https://drive.google.com: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:17:16 | WARNING  | crawler              |   HTTP 404: https://drive.google.com/uc?export=download&id=1I0Bahmu1shIzQXy6ddjNGzP2KGRQPU4T
+2026-07-11 01:17:16 | DEBUG    | crawler              | robots.txt unreadable for https://departamento-ciencias.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:17:16 | DEBUG    | crawler              |   HTML (49,535b) depth=0: https://departamento-ciencias.pucp.edu.pe/
+2026-07-11 01:18:31 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:19:04 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/ciencias-de-la-informacion/plan-de-estudios
+2026-07-11 01:19:04 | DEBUG    | crawler              |   HTML (92,501b) depth=0: http://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/ciencias-de-la-informacion/plan-de-estudios
+2026-07-11 01:19:04 | DEBUG    | extractor            | Table extraction: 47 rows from https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios
+2026-07-11 01:19:05 | DEBUG    | crawler              |   PDF: http://files.pucp.edu.pe/facultad/llcchh/wp-content/uploads/2015/12/Sumillas_Plan_Estudios_CCII_2016.pdf (found on: http://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/ciencias-de-la-informacion/plan-de-estudios)
+2026-07-11 01:19:05 | DEBUG    | extractor            | PDF extracted: 11 page fragment(s) via pymupdf: http://files.pucp.edu.pe/facultad/llcchh/wp-content/uploads/2015/12/Sumillas_Plan_Estudios_CCII_2016.pdf
+2026-07-11 01:19:05 | INFO     | pipeline             |   100 fragments | 0 candidate rows
+2026-07-11 01:19:38 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-11 01:19:38 | DEBUG    | crawler              |   HTML (87,481b) depth=0: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-11 01:19:38 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-11 01:19:38 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-11 01:19:38 | DEBUG    | crawler              |   HTML (88,341b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-ambiental-y-sostenible/plan-de-estudios
+2026-07-11 01:19:38 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_AMBIENTAL-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-ambiental-y-sostenible/plan-de-estudios)
+2026-07-11 01:19:38 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_AMBIENTAL-2026-1.pdf
+2026-07-11 01:19:38 | DEBUG    | crawler              |   HTML (90,908b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-biomedica/plan-de-estudios
+2026-07-11 01:19:38 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2025/05/Plan-de-Estudios-IB-PUCP_EEGGCC-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-biomedica/plan-de-estudios)
+2026-07-11 01:19:38 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2025/05/Plan-de-Estudios-IB-PUCP_EEGGCC-1.pdf
+2026-07-11 01:19:38 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2025/05/Plan-de-Estudios-IB-PUCP_FCI.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-biomedica/plan-de-estudios)
+2026-07-11 01:19:38 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2025/05/Plan-de-Estudios-IB-PUCP_FCI.pdf
+2026-07-11 01:19:38 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_BIOMEDICA-2026-1_PUCP-UPCH.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-biomedica/plan-de-estudios)
+2026-07-11 01:19:38 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_BIOMEDICA-2026-1_PUCP-UPCH.pdf
+2026-07-11 01:19:38 | DEBUG    | crawler              |   HTML (88,316b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-civil/plan-de-estudios
+2026-07-11 01:19:38 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_CIVIL-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-civil/plan-de-estudios)
+2026-07-11 01:19:38 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_CIVIL-2026-1.pdf
+2026-07-11 01:19:38 | DEBUG    | crawler              |   HTML (88,076b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-de-minas/plan-de-estudios
+2026-07-11 01:19:38 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_MINAS-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-de-minas/plan-de-estudios)
+2026-07-11 01:19:39 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_MINAS-2026-1.pdf
+2026-07-11 01:19:39 | DEBUG    | crawler              |   HTML (88,119b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-geologica/plan-de-estudios
+2026-07-11 01:19:39 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_GEOLOGICA-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-geologica/plan-de-estudios)
+2026-07-11 01:19:39 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_GEOLOGICA-2026-1.pdf
+2026-07-11 01:19:39 | DEBUG    | crawler              |   HTML (88,144b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-industrial/plan-de-estudios
+2026-07-11 01:19:39 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_INDUSTRIAL-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-industrial/plan-de-estudios)
+2026-07-11 01:19:39 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_INDUSTRIAL-2026-1.pdf
+2026-07-11 01:19:39 | DEBUG    | crawler              |   HTML (88,103b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-mecanica/plan-de-estudios
+2026-07-11 01:19:39 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_MECANICA-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-mecanica/plan-de-estudios)
+2026-07-11 01:19:39 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_MECANICA-2026-1.pdf
+2026-07-11 01:19:39 | DEBUG    | crawler              |   HTML (88,118b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-mecatronica/plan-de-estudios
+2026-07-11 01:19:39 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_MECATRONICA-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-mecatronica/plan-de-estudios)
+2026-07-11 01:19:39 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_MECATRONICA-2026-1.pdf
+2026-07-11 01:19:39 | DEBUG    | crawler              |   HTML (87,850b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-quimica/plan-de-estudios
+2026-07-11 01:19:39 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_INGENIERIA-QUIMICA-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/ingenieria-quimica/plan-de-estudios)
+2026-07-11 01:19:39 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_INGENIERIA-QUIMICA-2026-1.pdf
+2026-07-11 01:19:39 | DEBUG    | crawler              |   HTML (87,455b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/matematicas/plan-de-estudios
+2026-07-11 01:19:39 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_MATEMATICAS-2026-1.pdf (found on: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/matematicas/plan-de-estudios)
+2026-07-11 01:19:39 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_MATEMATICAS-2026-1.pdf
+2026-07-11 01:19:39 | DEBUG    | crawler              | robots.txt unreadable for https://departamento.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:19:39 | DEBUG    | crawler              |   HTML (49,535b) depth=0: https://departamento.pucp.edu.pe/ciencias
+2026-07-11 01:19:39 | DEBUG    | crawler              | robots.txt unreadable for https://azol.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:19:40 | WARNING  | crawler              |   HTTP 404: https://azol.pucp.edu.pe/profesor/jorge-moreno-ruiz
+2026-07-11 01:19:40 | DEBUG    | crawler              | robots.txt unreadable for https://ingenieria-diplus.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:19:40 | DEBUG    | crawler              |   HTML (152,889b) depth=0: https://ingenieria-diplus.pucp.edu.pe/
+2026-07-11 01:19:41 | DEBUG    | crawler              | robots.txt unreadable for https://cide.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:19:41 | DEBUG    | crawler              |   HTML (378,287b) depth=0: https://cide.pucp.edu.pe/
+2026-07-11 01:19:41 | DEBUG    | crawler              | robots.txt unreadable for https://aeg.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:19:41 | DEBUG    | crawler              |   HTML (66,309b) depth=0: https://aeg.pucp.edu.pe/
+2026-07-11 01:19:41 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones
+2026-07-11 01:19:42 | DEBUG    | crawler              | robots.txt unreadable for https://estudios-generales-ciencias.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Fisica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Fisica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Ambiental_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Ambiental_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Biomedica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Biomedica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Civil_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Civil_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Telecomunicaciones_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Telecomunicaciones_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Minas_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Minas_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Electronica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Electronica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Geologica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Geologica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Industrial_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Industrial_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Informatica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Informatica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Mecanica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Mecanica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Mecatronica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Mecatronica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Ing.-Quimica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Ing.-Quimica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Matematicas_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Matematicas_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Quimica_Plan-de-Estudios_Actualizado-2026.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-telecomunicaciones)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2026/07/Quimica_Plan-de-Estudios_Actualizado-2026.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-electronica
+2026-07-11 01:19:42 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-informatica
+2026-07-11 01:19:42 | DEBUG    | crawler              |   HTML (92,501b) depth=1: https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios
+2026-07-11 01:19:42 | DEBUG    | extractor            | Table extraction: 47 rows from https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios
+2026-07-11 01:19:42 | INFO     | pipeline             |   200 fragments | 15 candidate rows
+2026-07-11 01:19:42 | DEBUG    | crawler              |   HTML (92,501b) depth=1: https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-de-estudios-2016
+2026-07-11 01:19:42 | DEBUG    | extractor            | Table extraction: 47 rows from https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-de-estudios-2016
+2026-07-11 01:19:42 | DEBUG    | crawler              |   HTML (90,002b) depth=1: https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-de-estudios-2004
+2026-07-11 01:19:42 | DEBUG    | extractor            | Table extraction: 40 rows from https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-de-estudios-2004
+2026-07-11 01:19:42 | INFO     | pipeline             |   300 fragments | 15 candidate rows
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: http://files.pucp.edu.pe/facultad/llcchh/wp-content/uploads/files/2012/05/Plan-de-estudios-Ciencias-de-la-Informaci%C3%B3n.pdf (found on: https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-de-estudios-2004)
+2026-07-11 01:19:42 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: http://files.pucp.edu.pe/facultad/llcchh/wp-content/uploads/files/2012/05/Plan-de-estudios-Ciencias-de-la-Informaci%C3%B3n.pdf
+2026-07-11 01:19:42 | DEBUG    | crawler              |   PDF: http://files.pucp.edu.pe/facultad/llcchh/wp-content/uploads/2015/12/Sumillas_Plan_Estudios_CCII_2004.pdf (found on: https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-de-estudios-2004)
+2026-07-11 01:19:43 | DEBUG    | extractor            | PDF extracted: 8 page fragment(s) via pymupdf: http://files.pucp.edu.pe/facultad/llcchh/wp-content/uploads/2015/12/Sumillas_Plan_Estudios_CCII_2004.pdf
+2026-07-11 01:19:43 | DEBUG    | crawler              |   HTML (81,712b) depth=1: https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-especial-de-licenciatura
+2026-07-11 01:19:43 | DEBUG    | extractor            | Table extraction: 4 rows from https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-especial-de-licenciatura
+2026-07-11 01:19:43 | DEBUG    | crawler              |   PDF: http://files.pucp.edu.pe/facultad/llcchh/wp-content/uploads/2015/12/17011558/Plan-de-estudios-PELCI.pdf (found on: https://facultad.pucp.edu.pe/letras-ciencias-humanas/especialidades/ciencias-de-la-informacion/plan-de-estudios?tab=plan-especial-de-licenciatura)
+2026-07-11 01:19:43 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: http://files.pucp.edu.pe/facultad/llcchh/wp-content/uploads/2015/12/17011558/Plan-de-estudios-PELCI.pdf
+2026-07-11 01:20:58 | DEBUG    | crawler              | robots.txt unreadable for http://unex.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:21:31 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://unex.pucp.edu.pe/
+2026-07-11 01:21:31 | DEBUG    | crawler              |   HTML (74,163b) depth=0: http://unex.pucp.edu.pe/
+2026-07-11 01:22:46 | DEBUG    | crawler              | robots.txt unreadable for http://cef.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:23:20 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://cef.pucp.edu.pe/
+2026-07-11 01:23:20 | DEBUG    | crawler              |   HTML (75,307b) depth=0: http://cef.pucp.edu.pe/
+2026-07-11 01:23:21 | DEBUG    | crawler              | robots.txt unreadable for https://cef.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://cef.pucp.edu.pe/wp-content/uploads/2020/07/NUEVO-REGLAMENTO-CEF-noviembre-2017.pdf (found on: http://cef.pucp.edu.pe/)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 8 page fragment(s) via pymupdf: https://cef.pucp.edu.pe/wp-content/uploads/2020/07/NUEVO-REGLAMENTO-CEF-noviembre-2017.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   HTML (87,481b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-11 01:23:22 | DEBUG    | crawler              |   HTML (88,239b) depth=1: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2025/05/Plan-biomedica-PUCP-2025-2.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2025/05/Plan-biomedica-PUCP-2025-2.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-Civil-vigente-desde-2021-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-Civil-vigente-desde-2021-1.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-de-las-Telecomunicacionesvigente-desde-2019-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-de-las-Telecomunicacionesvigente-desde-2019-1.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-de-Minas-vigente-desde-2020-2.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-de-Minas-vigente-desde-2020-2.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-electronica-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-electronica-1.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-geologica.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-geologica.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-Industrial-vigente-desde-2022-1-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-Industrial-vigente-desde-2022-1-1.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-informatica.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-informatica.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/pe-mec-2020-2-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/pe-mec-2020-2-1.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-mecatronica-version-pdf.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-mecatronica-version-pdf.pdf
+2026-07-11 01:23:22 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Ing.-Quimica_Plan-de-Estudios_2025.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-11 01:23:22 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Ing.-Quimica_Plan-de-Estudios_2025.pdf
+2026-07-11 01:23:22 | WARNING  | crawler              |   max_pdfs_per_domain (50) reached — further documents skipped
+2026-07-11 01:23:22 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-ambiental-sostenible
+2026-07-11 01:23:22 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-civil
+2026-07-11 01:23:22 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-de-minas
+2026-07-11 01:23:22 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-geologica
+2026-07-11 01:23:25 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-industrial
+2026-07-11 01:23:26 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-mecatronica
+2026-07-11 01:23:26 | INFO     | pipeline             |   400 fragments | 22 candidate rows
+2026-07-11 01:23:28 | DEBUG    | crawler              |   HTML (88,378b) depth=0: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=ingenieria-quimica
+2026-07-11 01:23:28 | DEBUG    | crawler              | robots.txt unreadable for https://open.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:23:30 | DEBUG    | crawler              |   HTML (48,492b) depth=0: https://open.pucp.edu.pe/
+2026-07-11 01:23:31 | DEBUG    | crawler              |   HTML (84,478b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/
+2026-07-11 01:23:33 | DEBUG    | crawler              |   HTML (74,942b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/fisica
+2026-07-11 01:23:34 | DEBUG    | crawler              |   HTML (76,784b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-ambiental-y-sostenible
+2026-07-11 01:23:36 | DEBUG    | crawler              |   HTML (77,362b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-biomedica
+2026-07-11 01:23:39 | DEBUG    | crawler              |   HTML (75,495b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-civil
+2026-07-11 01:23:40 | DEBUG    | crawler              |   HTML (75,386b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-de-las-telecomunicaciones
+2026-07-11 01:23:42 | DEBUG    | crawler              |   HTML (75,176b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-de-minas
+2026-07-11 01:23:43 | DEBUG    | crawler              |   HTML (75,094b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-electronica
+2026-07-11 01:23:44 | DEBUG    | crawler              |   HTML (75,216b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-geologica
+2026-07-11 01:23:46 | DEBUG    | crawler              |   HTML (75,155b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-industrial
+2026-07-11 01:23:48 | DEBUG    | crawler              |   HTML (74,822b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-informatica
+2026-07-11 01:23:49 | DEBUG    | crawler              |   HTML (75,031b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-mecanica
+2026-07-11 01:23:50 | DEBUG    | crawler              |   HTML (74,686b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-mecatronica
+2026-07-11 01:23:52 | DEBUG    | crawler              |   HTML (75,881b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/ingenieria-quimica
+2026-07-11 01:23:54 | DEBUG    | crawler              |   HTML (74,678b) depth=0: https://estudios-generales-ciencias.pucp.edu.pe/plan_estudio/matematicas
+2026-07-11 01:23:54 | DEBUG    | crawler              | robots.txt unreadable for https://daes.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:23:55 | DEBUG    | crawler              |   HTML (66,319b) depth=0: https://daes.pucp.edu.pe/
+2026-07-11 01:23:55 | DEBUG    | crawler              |   HTML (166,889b) depth=0: https://www.pucp.edu.pe/pregrado/carreras/por-facultad
+2026-07-11 01:23:55 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-artes-escenicas.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:23:55 | DEBUG    | crawler              |   HTML (318,669b) depth=0: https://facultad-artes-escenicas.pucp.edu.pe/teatro/plan-de-estudio
+2026-07-11 01:23:55 | DEBUG    | extractor            | Block extraction: 22 from https://facultad-artes-escenicas.pucp.edu.pe/especialidades/musica/plan-de-estudio/plan-de-estudio-ejecucion-musical
+2026-07-11 01:24:29 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ciencias-contables/informacion-academica/plan-de-estudios
+2026-07-11 01:24:29 | DEBUG    | crawler              |   HTML (70,108b) depth=0: http://facultad.pucp.edu.pe/ciencias-contables/informacion-academica/plan-de-estudios
+2026-07-11 01:25:02 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/ciencias-estadisticas/plan-de-estudios
+2026-07-11 01:25:02 | DEBUG    | crawler              |   HTML (87,481b) depth=0: http://facultad.pucp.edu.pe/ingenieria/carreras/ciencias-estadisticas/plan-de-estudios
+2026-07-11 01:25:02 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-sociales.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:25:02 | DEBUG    | crawler              |   HTML (75,107b) depth=0: https://facultad-ciencias-sociales.pucp.edu.pe/carreras/antropologia/planes-de-estudio
+2026-07-11 01:25:02 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-derecho.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:25:02 | DEBUG    | crawler              |   HTML (101,355b) depth=0: https://facultad-derecho.pucp.edu.pe/estudiantes/plan-de-estudios
+2026-07-11 01:25:03 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-educacion.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:25:05 | DEBUG    | crawler              |   HTML (91,009b) depth=0: https://facultad-educacion.pucp.edu.pe/carreras/educacion-primaria
+2026-07-11 01:25:39 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/arqueologia/plan-de-estudios
+2026-07-11 01:25:41 | DEBUG    | crawler              |   HTML (76,086b) depth=0: http://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/arqueologia/plan-de-estudios
+2026-07-11 01:26:14 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/filosofia/plan-de-estudios
+2026-07-11 01:26:17 | DEBUG    | crawler              |   HTML (77,281b) depth=0: http://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/filosofia/plan-de-estudios
+2026-07-11 01:26:50 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/geografia-y-medio-ambiente/plan-de-estudios
+2026-07-11 01:26:53 | DEBUG    | crawler              |   HTML (84,968b) depth=0: http://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/geografia-y-medio-ambiente/plan-de-estudios
+2026-07-11 01:27:26 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/historia/plan-de-estudios
+2026-07-11 01:27:29 | DEBUG    | crawler              |   HTML (76,054b) depth=0: http://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/historia/plan-de-estudios
+2026-07-11 01:28:02 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/humanidades/plan-de-estudios
+2026-07-11 01:28:08 | DEBUG    | crawler              |   HTML (79,295b) depth=0: http://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/humanidades/plan-de-estudios
+2026-07-11 01:28:41 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/linguistica-y-literatura/plan-de-estudios
+2026-07-11 01:28:44 | DEBUG    | crawler              |   HTML (75,895b) depth=0: http://facultad.pucp.edu.pe/letras-ciencias-humanas/carreras/linguistica-y-literatura/plan-de-estudios
+2026-07-11 01:28:44 | DEBUG    | crawler              | robots.txt unreadable for https://ide.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:28:45 | DEBUG    | crawler              |   HTML (67,303b) depth=0: https://ide.pucp.edu.pe/
+2026-07-11 01:28:45 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-contables.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:28:47 | DEBUG    | crawler              |   HTML (77,370b) depth=0: https://facultad-ciencias-contables.pucp.edu.pe/
+2026-07-11 01:28:47 | INFO     | crawler              |   Done: PUCP | 150 pages fetched (98 HTML, 52 PDFs)
+2026-07-11 01:28:47 | INFO     | crawler              | Crawl: UTEC | seeds=21 max_pages=150 max_depth=2 max_pdfs=50 pdfs=on seed_origin=auto_discovered
+2026-07-11 01:28:47 | DEBUG    | crawler              | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:28:47 | DEBUG    | crawler              |   HTML (89,755b) depth=0: https://utec.edu.pe/blog-de-carreras/utec/ingenieria-de-la-energia-en-utec-conoce-el-plan-de-estudios-de-esta-carrera
+2026-07-11 01:28:47 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-11 01:28:47 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-11 01:28:47 | INFO     | pipeline             |   500 fragments | 28 candidate rows
+2026-07-11 01:28:47 | DEBUG    | crawler              |   HTML (402,651b) depth=0: https://utec.edu.pe/carreras/ingenieria-electronica
+2026-07-11 01:28:47 | DEBUG    | extractor            | Block extraction: 200 from https://utec.edu.pe/carreras/ingenieria-electronica
+2026-07-11 01:28:47 | INFO     | pipeline             |   600 fragments | 38 candidate rows
+2026-07-11 01:28:47 | INFO     | pipeline             |   700 fragments | 38 candidate rows
+2026-07-11 01:28:47 | DEBUG    | crawler              |   HTML (376,015b) depth=0: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-11 01:28:47 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-11 01:28:47 | INFO     | pipeline             |   800 fragments | 38 candidate rows
+2026-07-11 01:28:47 | INFO     | pipeline             |   900 fragments | 38 candidate rows
+2026-07-11 01:28:48 | DEBUG    | crawler              |   HTML (361,422b) depth=0: https://utec.edu.pe/carreras/ingenieria-ambiental
+2026-07-11 01:28:48 | DEBUG    | extractor            | Block extraction: 171 from https://utec.edu.pe/carreras/ingenieria-ambiental
+2026-07-11 01:28:48 | INFO     | pipeline             |   1000 fragments | 38 candidate rows
+2026-07-11 01:28:48 | DEBUG    | crawler              |   HTML (358,177b) depth=0: https://utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:28:48 | DEBUG    | extractor            | Block extraction: 176 from https://utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:28:48 | INFO     | pipeline             |   1100 fragments | 38 candidate rows
+2026-07-11 01:28:48 | INFO     | pipeline             |   1200 fragments | 38 candidate rows
+2026-07-11 01:28:48 | DEBUG    | crawler              |   HTML (375,630b) depth=0: https://utec.edu.pe/carreras/ingenieria-de-la-energia
+2026-07-11 01:28:48 | DEBUG    | extractor            | Block extraction: 172 from https://utec.edu.pe/carreras/ingenieria-de-la-energia
+2026-07-11 01:28:48 | INFO     | pipeline             |   1300 fragments | 38 candidate rows
+2026-07-11 01:28:48 | INFO     | pipeline             |   1400 fragments | 38 candidate rows
+2026-07-11 01:28:48 | DEBUG    | crawler              |   HTML (388,598b) depth=0: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-11 01:28:48 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-11 01:28:48 | INFO     | pipeline             |   1500 fragments | 38 candidate rows
+2026-07-11 01:28:48 | INFO     | pipeline             |   1600 fragments | 38 candidate rows
+2026-07-11 01:28:48 | DEBUG    | crawler              |   HTML (392,300b) depth=0: https://utec.edu.pe/carreras/ingenieria-mecanica
+2026-07-11 01:28:48 | DEBUG    | extractor            | Block extraction: 183 from https://utec.edu.pe/carreras/ingenieria-mecanica
+2026-07-11 01:28:49 | INFO     | pipeline             |   1700 fragments | 38 candidate rows
+2026-07-11 01:28:49 | DEBUG    | crawler              |   HTML (400,670b) depth=0: https://utec.edu.pe/carreras/ingenieria-mecatronica
+2026-07-11 01:28:49 | DEBUG    | extractor            | Block extraction: 202 from https://utec.edu.pe/carreras/ingenieria-mecatronica
+2026-07-11 01:28:49 | INFO     | pipeline             |   1800 fragments | 38 candidate rows
+2026-07-11 01:28:49 | INFO     | pipeline             |   1900 fragments | 38 candidate rows
+2026-07-11 01:28:49 | DEBUG    | crawler              |   HTML (375,381b) depth=0: https://utec.edu.pe/carreras/ingenieria-quimica
+2026-07-11 01:28:49 | DEBUG    | extractor            | Block extraction: 178 from https://utec.edu.pe/carreras/ingenieria-quimica
+2026-07-11 01:28:49 | INFO     | pipeline             |   2000 fragments | 38 candidate rows
+2026-07-11 01:28:49 | INFO     | pipeline             |   2100 fragments | 38 candidate rows
+2026-07-11 01:28:49 | DEBUG    | crawler              |   HTML (105,765b) depth=0: https://utec.edu.pe/facultad/facultad-de-ciencias-basicas
+2026-07-11 01:28:49 | DEBUG    | extractor            | Block extraction: 1 from https://utec.edu.pe/facultad/facultad-de-ciencias-basicas
+2026-07-11 01:28:49 | DEBUG    | crawler              |   HTML (113,713b) depth=0: https://utec.edu.pe/facultad/facultad-de-computacion
+2026-07-11 01:28:49 | DEBUG    | extractor            | Block extraction: 4 from https://utec.edu.pe/facultad/facultad-de-computacion
+2026-07-11 01:28:49 | DEBUG    | crawler              |   HTML (153,729b) depth=0: https://utec.edu.pe/facultad/facultad-de-ingenieria
+2026-07-11 01:28:49 | DEBUG    | extractor            | Block extraction: 10 from https://utec.edu.pe/facultad/facultad-de-ingenieria
+2026-07-11 01:28:49 | DEBUG    | crawler              |   HTML (90,501b) depth=0: https://utec.edu.pe/utec-podcast-innovacion-en-la-ingenieria-maestrias-universidad-de-ingenieria-y-tecnologia
+2026-07-11 01:28:50 | DEBUG    | crawler              | robots.txt unreadable for https://pregrado.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:28:50 | DEBUG    | crawler              |   HTML (140,909b) depth=0: https://pregrado.utec.edu.pe/landings/carreras/fisica
+2026-07-11 01:28:50 | DEBUG    | extractor            | Block extraction: 50 from https://pregrado.utec.edu.pe/landings/carreras/fisica
+2026-07-11 01:28:50 | INFO     | pipeline             |   2200 fragments | 38 candidate rows
+2026-07-11 01:28:50 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:28:50 | DEBUG    | crawler              |   HTML (444,451b) depth=0: https://posgrado.utec.edu.pe/
+2026-07-11 01:28:51 | WARNING  | crawler              |   HTTP 404: https://utec.edu.pe/carreras-de-ingenieria/ingenieria-de-la-energia/malla-curricular
+2026-07-11 01:28:51 | DEBUG    | crawler              | robots.txt unreadable for https://www.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:28:53 | DEBUG    | crawler              |   HTML (89,632b) depth=0: https://www.utec.edu.pe/noticias/utec-campus-sostenible
+2026-07-11 01:30:08 | DEBUG    | crawler              | robots.txt unreadable for https://app.utec.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:30:41 | WARNING  | crawler              |   ConnectTimeout: https://app.utec.edu.pe/visita-el-campus-utec?custentity_ut001_medio_de_origen=Organico&custentity_ut001_medio_origen_detalle=nota-blog
+2026-07-11 01:30:41 | DEBUG    | crawler              | robots.txt unreadable for https://intranet.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:30:42 | DEBUG    | crawler              |   HTML (9,076b) depth=0: https://intranet.utec.edu.pe/
+2026-07-11 01:30:42 | DEBUG    | crawler              |   HTML (375,630b) depth=1: https://utec.edu.pe/carreras-de-ingenieria/ingenieria-de-la-energia
+2026-07-11 01:30:42 | DEBUG    | extractor            | Block extraction: 172 from https://utec.edu.pe/carreras/ingenieria-de-la-energia
+2026-07-11 01:30:42 | INFO     | pipeline             |   2300 fragments | 49 candidate rows
+2026-07-11 01:30:42 | INFO     | pipeline             |   2400 fragments | 49 candidate rows
+2026-07-11 01:30:44 | WARNING  | crawler              |   HTTP 404: https://utec.edu.pe/carreras-de-ingenieria/ingenieria-de-la-energia/perfil-de-egresado
+2026-07-11 01:30:45 | DEBUG    | crawler              | robots.txt unreadable for https://store.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:30:46 | DEBUG    | crawler              |   HTML (116,738b) depth=0: https://store.utec.edu.pe/
+2026-07-11 01:30:46 | DEBUG    | crawler              | robots.txt unreadable for https://z9r4docs.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:30:47 | DEBUG    | crawler              |   HTML (4,028b) depth=0: https://z9r4docs.utec.edu.pe/protocolo-ante-hostigamiento-sexual
+2026-07-11 01:30:48 | DEBUG    | crawler              | robots.txt unreadable for https://admision.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:30:48 | DEBUG    | crawler              |   HTML (193,100b) depth=0: https://admision.utec.edu.pe/whatsapp-pregrado
+2026-07-11 01:30:48 | DEBUG    | crawler              |   HTML (90,021b) depth=1: https://utec.edu.pe/carreras/ingenieria-electronica/informacion
+2026-07-11 01:30:48 | DEBUG    | crawler              |   HTML (89,836b) depth=1: https://utec.edu.pe/carreras/ingenieria-de-la-energia/informacion
+2026-07-11 01:30:48 | DEBUG    | crawler              |   HTML (89,967b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial/informacion
+2026-07-11 01:30:48 | DEBUG    | crawler              |   HTML (89,762b) depth=1: https://utec.edu.pe/carreras/ingenieria-mecanica/informacion
+2026-07-11 01:30:48 | DEBUG    | crawler              |   HTML (90,083b) depth=1: https://utec.edu.pe/carreras/ingenieria-quimica/informacion
+2026-07-11 01:30:48 | DEBUG    | crawler              |   HTML (176,599b) depth=0: https://www.utec.edu.pe/
+2026-07-11 01:30:48 | DEBUG    | crawler              |   HTML (376,015b) depth=0: https://www.utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-11 01:30:48 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-11 01:30:48 | INFO     | pipeline             |   2500 fragments | 49 candidate rows
+2026-07-11 01:30:48 | DEBUG    | crawler              | robots.txt unreadable for https://www1.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:30:51 | DEBUG    | crawler              |   HTML (131,694b) depth=0: https://www1.utec.edu.pe/politica-de-privacidad
+2026-07-11 01:30:54 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=154ApF9p_yba4SXlZ2S0GOdPn78nTFpso (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:30:54 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=154ApF9p_yba4SXlZ2S0GOdPn78nTFpso&export=download
+2026-07-11 01:30:54 | INFO     | pipeline             |   2600 fragments | 49 candidate rows
+2026-07-11 01:30:57 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=12yrfD78P8_HHVDyxGw6e5bJNztgvs00l (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:30:57 | DEBUG    | extractor            | PDF extracted: 12 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=12yrfD78P8_HHVDyxGw6e5bJNztgvs00l&export=download
+2026-07-11 01:30:59 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1nqWI9fQu2nKj5X9xbagR0o9J-_gZtcvM (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:30:59 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1nqWI9fQu2nKj5X9xbagR0o9J-_gZtcvM&export=download
+2026-07-11 01:31:01 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1SWPK7MoF1GQ49fIBvp2RzshKnq7WgLIg (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:01 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1SWPK7MoF1GQ49fIBvp2RzshKnq7WgLIg&export=download
+2026-07-11 01:31:03 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=16M6z2mgjIGFuHUW-XcG2lAO2n89tn0Sp (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:03 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=16M6z2mgjIGFuHUW-XcG2lAO2n89tn0Sp&export=download
+2026-07-11 01:31:07 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1OlFF83Xm_4H4FACEleFc_cIQGtIwanFO (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:07 | DEBUG    | extractor            | PDF extracted: 7 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1OlFF83Xm_4H4FACEleFc_cIQGtIwanFO&export=download
+2026-07-11 01:31:09 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1-gxCGjVpldDEiV4o19CUAHawqu1lMpIX (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:09 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1-gxCGjVpldDEiV4o19CUAHawqu1lMpIX&export=download
+2026-07-11 01:31:11 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1Y9pgvsczJlZOd5l-8nlEC0vJYWFlM5oQ (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:11 | DEBUG    | extractor            | PDF extracted: 5 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1Y9pgvsczJlZOd5l-8nlEC0vJYWFlM5oQ&export=download
+2026-07-11 01:31:15 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1vUZnTCzCOoWP6wG3s1mbGriVXjmSzzgF (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:15 | DEBUG    | extractor            | PDF extracted: 36 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1vUZnTCzCOoWP6wG3s1mbGriVXjmSzzgF&export=download
+2026-07-11 01:31:17 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=12SbgQc2bJ1zCDdVrSIJibx6bWHEaq8g8 (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:17 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=12SbgQc2bJ1zCDdVrSIJibx6bWHEaq8g8&export=download
+2026-07-11 01:31:19 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1edNim-sd-y-02a_WzRlx2J4S2GPE7Bp3 (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:19 | DEBUG    | extractor            | PDF extracted: 7 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1edNim-sd-y-02a_WzRlx2J4S2GPE7Bp3&export=download
+2026-07-11 01:31:21 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=199I0uwFqVQ4xemVwtOdXdhlSfUD5bQd6 (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:21 | DEBUG    | extractor            | PDF extracted: 6 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=199I0uwFqVQ4xemVwtOdXdhlSfUD5bQd6&export=download
+2026-07-11 01:31:23 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1IZkKprysseT7TaKgnnyjTjzVyXy2EvR1 (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:23 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1IZkKprysseT7TaKgnnyjTjzVyXy2EvR1&export=download
+2026-07-11 01:31:25 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1QgyfIPLpPYImHGgz9A3gjXrl3-qymmuc (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:25 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1QgyfIPLpPYImHGgz9A3gjXrl3-qymmuc&export=download
+2026-07-11 01:31:28 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1WuJlOSXo-lvMBP_Q11QZN40mVy1BCX_K (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:28 | DEBUG    | extractor            | PDF extracted: 6 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1WuJlOSXo-lvMBP_Q11QZN40mVy1BCX_K&export=download
+2026-07-11 01:31:29 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1XTNXED117pXdfnIo7HbGLrWWxmej8EUy (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:30 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1XTNXED117pXdfnIo7HbGLrWWxmej8EUy&export=download
+2026-07-11 01:31:30 | INFO     | pipeline             |   2700 fragments | 49 candidate rows
+2026-07-11 01:31:31 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1aEbaqXjpuAWuAtTKZSoXmAVwOdP8_CAr (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:31 | DEBUG    | extractor            | PDF extracted: 7 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1aEbaqXjpuAWuAtTKZSoXmAVwOdP8_CAr&export=download
+2026-07-11 01:31:33 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1sFRvMwQhwRETgQJ2nEZA5eoFnaYAQYkR (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:33 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1sFRvMwQhwRETgQJ2nEZA5eoFnaYAQYkR&export=download
+2026-07-11 01:31:35 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1V3shzKzOReqmdn8l9_d7spUuHKppu3ID (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:35 | DEBUG    | extractor            | PDF extracted: 5 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1V3shzKzOReqmdn8l9_d7spUuHKppu3ID&export=download
+2026-07-11 01:31:36 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1Z8v-g2F0GceIRJOtlTM-e18N0L1CbxH0 (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:36 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1Z8v-g2F0GceIRJOtlTM-e18N0L1CbxH0&export=download
+2026-07-11 01:31:38 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1_fvsIBuX9-W0gbiit1eL-EnhGLLcSCaJ (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:38 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1_fvsIBuX9-W0gbiit1eL-EnhGLLcSCaJ&export=download
+2026-07-11 01:31:39 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1Zw-rF5hAVncVx0y8InoufgFmqIOeQ7gv (found on: https://www1.utec.edu.pe/politica-de-privacidad)
+2026-07-11 01:31:39 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1Zw-rF5hAVncVx0y8InoufgFmqIOeQ7gv&export=download
+2026-07-11 01:32:13 | WARNING  | crawler              |   ConnectTimeout: https://app.utec.edu.pe/sites/default/files/pdf/protocolo_de_hostigamiento_sexual_2022.pdf
+2026-07-11 01:32:13 | DEBUG    | crawler              | robots.txt unreadable for http://ci.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:32:14 | DEBUG    | crawler              |   HTML (26,308b) depth=0: http://ci.utec.edu.pe/
+2026-07-11 01:32:15 | DEBUG    | crawler              |   HTML (1,813b) depth=1: https://drive.google.com/uc?export=download&id=1zgP9crLCX4I2naIxrgLGVa1X8CWPzVnu
+2026-07-11 01:32:18 | DEBUG    | crawler              |   Skipping non-HTML/PDF (video/mp4): https://drive.google.com/uc?export=download&id=1JVJNm5D4Zofy7zN_jWHCf5EdkTrKOkdN
+2026-07-11 01:32:20 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=11S-mFC0CWm1osTFXXnfFUdS4SrCjwY7E (found on: http://ci.utec.edu.pe/)
+2026-07-11 01:32:20 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=11S-mFC0CWm1osTFXXnfFUdS4SrCjwY7E&export=download
+2026-07-11 01:32:22 | DEBUG    | crawler              |   Skipping non-HTML/PDF (video/mp4): https://drive.google.com/uc?export=download&id=1ypKU4hF5-kSg5sct10y2xPo7PiKt55nI
+2026-07-11 01:32:26 | DEBUG    | crawler              |   Skipping non-HTML/PDF (video/mp4): https://drive.google.com/uc?export=download&id=1ed7PEcA-nCcvJmLkJ8Q9YOUo8U3ky1zB
+2026-07-11 01:32:33 | DEBUG    | crawler              |   Skipping non-HTML/PDF (video/mp4): https://drive.google.com/uc?export=download&id=1E8Ce1v3s2E7xMy4KsRbo2bKSx_s49jlw
+2026-07-11 01:32:33 | DEBUG    | crawler              | robots.txt unreadable for https://cdi.utec.edu.pe: <urlopen error [Errno 61] Connection refused> (allowing)
+2026-07-11 01:32:42 | WARNING  | crawler              |   ConnectionError: https://cdi.utec.edu.pe/
+2026-07-11 01:32:43 | DEBUG    | crawler              | robots.txt unreadable for https://www.bienestarestudiantil.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:32:44 | DEBUG    | crawler              |   HTML (786,909b) depth=0: https://www.bienestarestudiantil.utec.edu.pe/
+2026-07-11 01:33:59 | DEBUG    | crawler              | robots.txt unreadable for https://cita.utec.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:34:32 | WARNING  | crawler              |   ConnectTimeout: https://cita.utec.edu.pe/
+2026-07-11 01:34:32 | DEBUG    | crawler              | robots.txt unreadable for https://compsust.utec.edu.pe: <urlopen error [Errno 8] nodename nor servname provided, or not known> (allowing)
+2026-07-11 01:34:41 | WARNING  | crawler              |   ConnectionError: https://compsust.utec.edu.pe/
+2026-07-11 01:34:42 | DEBUG    | crawler              | robots.txt unreadable for https://cris.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:34:42 | DEBUG    | crawler              |   HTML (36,502b) depth=0: https://cris.utec.edu.pe/
+2026-07-11 01:34:42 | DEBUG    | crawler              |   HTML (163,964b) depth=1: https://posgrado.utec.edu.pe/catalogo-blogs
+2026-07-11 01:34:42 | DEBUG    | crawler              |   HTML (228,472b) depth=1: https://posgrado.utec.edu.pe/maestrias/engineering-management
+2026-07-11 01:34:43 | DEBUG    | extractor            | Block extraction: 2 from https://posgrado.utec.edu.pe/maestrias/engineering-management
+2026-07-11 01:34:43 | DEBUG    | crawler              |   HTML (238,337b) depth=1: https://posgrado.utec.edu.pe/maestrias/ciencias-de-la-ingenieria
+2026-07-11 01:34:43 | DEBUG    | extractor            | Block extraction: 2 from https://posgrado.utec.edu.pe/maestrias/ciencias-de-la-ingenieria
+2026-07-11 01:34:43 | DEBUG    | crawler              |   HTML (253,783b) depth=1: https://posgrado.utec.edu.pe/doctorado/ingenieria-y-ciencias-aplicadas
+2026-07-11 01:34:43 | DEBUG    | extractor            | Block extraction: 2 from https://posgrado.utec.edu.pe/doctorado/ingenieria-y-ciencias-aplicadas
+2026-07-11 01:34:44 | DEBUG    | crawler              |   HTML (193,533b) depth=1: https://posgrado.utec.edu.pe/cursos/microdegree_fundamentos-de-matematica-para-inteligencia-artificial
+2026-07-11 01:34:44 | DEBUG    | extractor            | Block extraction: 9 from https://posgrado.utec.edu.pe/cursos/microdegree_fundamentos-de-matematica-para-inteligencia-artificial
+2026-07-11 01:34:45 | DEBUG    | crawler              |   HTML (200,269b) depth=1: https://posgrado.utec.edu.pe/programas/ingenieria-del-diseno-y-gestion-de-proyectos-de-automatizacion
+2026-07-11 01:34:45 | DEBUG    | extractor            | Block extraction: 1 from https://posgrado.utec.edu.pe/programas/ingenieria-del-diseno-y-gestion-de-proyectos-de-automatizacion
+2026-07-11 01:34:46 | DEBUG    | crawler              |   HTML (195,728b) depth=1: https://posgrado.utec.edu.pe/programas/gestion-integrado-sistemas-control-proteccion-inundaciones
+2026-07-11 01:34:48 | DEBUG    | crawler              |   HTML (209,126b) depth=1: https://posgrado.utec.edu.pe/cursos/calidad-de-energia-electrica
+2026-07-11 01:34:48 | DEBUG    | extractor            | Block extraction: 7 from https://posgrado.utec.edu.pe/cursos/calidad-de-energia-electrica
+2026-07-11 01:34:48 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://www.utec.edu.pe/carreras/ingenieria-industrial
+2026-07-11 01:34:48 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-11 01:34:48 | INFO     | pipeline             |   2800 fragments | 49 candidate rows
+2026-07-11 01:34:48 | INFO     | pipeline             |   2900 fragments | 49 candidate rows
+2026-07-11 01:34:51 | DEBUG    | crawler              |   HTML (375,630b) depth=1: https://www.utec.edu.pe/carreras/ingenieria-de-la-energia
+2026-07-11 01:34:51 | DEBUG    | extractor            | Block extraction: 172 from https://utec.edu.pe/carreras/ingenieria-de-la-energia
+2026-07-11 01:34:51 | INFO     | pipeline             |   3000 fragments | 49 candidate rows
+2026-07-11 01:34:51 | INFO     | pipeline             |   3100 fragments | 49 candidate rows
+2026-07-11 01:34:51 | DEBUG    | crawler              |   HTML (392,300b) depth=1: https://www.utec.edu.pe/carreras/ingenieria-mecanica
+2026-07-11 01:34:51 | DEBUG    | extractor            | Block extraction: 183 from https://utec.edu.pe/carreras/ingenieria-mecanica
+2026-07-11 01:34:51 | INFO     | pipeline             |   3200 fragments | 49 candidate rows
+2026-07-11 01:34:53 | DEBUG    | crawler              |   HTML (375,381b) depth=1: https://www.utec.edu.pe/carreras/ingenieria-quimica
+2026-07-11 01:34:53 | DEBUG    | extractor            | Block extraction: 178 from https://utec.edu.pe/carreras/ingenieria-quimica
+2026-07-11 01:34:53 | INFO     | pipeline             |   3300 fragments | 49 candidate rows
+2026-07-11 01:34:53 | INFO     | pipeline             |   3400 fragments | 49 candidate rows
+2026-07-11 01:34:54 | DEBUG    | crawler              |   HTML (361,422b) depth=1: https://www.utec.edu.pe/carreras/ingenieria-ambiental
+2026-07-11 01:34:54 | DEBUG    | extractor            | Block extraction: 171 from https://utec.edu.pe/carreras/ingenieria-ambiental
+2026-07-11 01:34:54 | INFO     | pipeline             |   3500 fragments | 49 candidate rows
+2026-07-11 01:34:54 | INFO     | pipeline             |   3600 fragments | 49 candidate rows
+2026-07-11 01:34:56 | DEBUG    | crawler              |   HTML (358,177b) depth=1: https://www.utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:34:56 | DEBUG    | extractor            | Block extraction: 176 from https://utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:34:56 | INFO     | pipeline             |   3700 fragments | 49 candidate rows
+2026-07-11 01:34:56 | INFO     | pipeline             |   3800 fragments | 49 candidate rows
+2026-07-11 01:34:57 | DEBUG    | crawler              |   HTML (402,651b) depth=1: https://www.utec.edu.pe/carreras/ingenieria-electronica
+2026-07-11 01:34:58 | DEBUG    | extractor            | Block extraction: 200 from https://utec.edu.pe/carreras/ingenieria-electronica
+2026-07-11 01:34:58 | INFO     | pipeline             |   3900 fragments | 49 candidate rows
+2026-07-11 01:34:58 | INFO     | pipeline             |   4000 fragments | 49 candidate rows
+2026-07-11 01:34:59 | DEBUG    | crawler              |   HTML (400,670b) depth=1: https://www.utec.edu.pe/carreras/ingenieria-mecatronica
+2026-07-11 01:34:59 | DEBUG    | extractor            | Block extraction: 202 from https://utec.edu.pe/carreras/ingenieria-mecatronica
+2026-07-11 01:34:59 | INFO     | pipeline             |   4100 fragments | 49 candidate rows
+2026-07-11 01:34:59 | INFO     | pipeline             |   4200 fragments | 49 candidate rows
+2026-07-11 01:35:00 | DEBUG    | crawler              |   HTML (254,618b) depth=1: https://www.utec.edu.pe/carreras/fisica
+2026-07-11 01:35:00 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-11 01:35:00 | INFO     | pipeline             |   4300 fragments | 49 candidate rows
+2026-07-11 01:35:02 | DEBUG    | crawler              |   HTML (153,701b) depth=1: https://www.utec.edu.pe/carreras-de-ingenieria
+2026-07-11 01:35:02 | DEBUG    | extractor            | Block extraction: 10 from https://utec.edu.pe/facultad/facultad-de-ingenieria
+2026-07-11 01:35:04 | DEBUG    | crawler              |   HTML (3,974b) depth=0: https://z9r4docs.utec.edu.pe/catalogo-utec-store
+2026-07-11 01:35:04 | DEBUG    | crawler              | robots.txt unreadable for https://ce2a.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:35:05 | WARNING  | crawler              |   HTTP 404: https://ce2a.utec.edu.pe/
+2026-07-11 01:35:05 | DEBUG    | crawler              | robots.txt unreadable for https://global.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:35:07 | DEBUG    | crawler              |   HTML (28,589b) depth=0: https://global.utec.edu.pe/
+2026-07-11 01:36:22 | DEBUG    | crawler              | robots.txt unreadable for https://recorridovirtual.utec.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:36:55 | WARNING  | crawler              |   ConnectTimeout: https://recorridovirtual.utec.edu.pe/
+2026-07-11 01:36:57 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://www1.utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-11 01:36:57 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-11 01:36:57 | INFO     | pipeline             |   4400 fragments | 49 candidate rows
+2026-07-11 01:36:59 | DEBUG    | crawler              |   HTML (118,604b) depth=1: https://www1.utec.edu.pe/carreras/ingenieria-ambiental
+2026-07-11 01:36:59 | DEBUG    | extractor            | Block extraction: 1 from https://www1.utec.edu.pe/carreras/ingenieria-ambiental
+2026-07-11 01:36:59 | DEBUG    | crawler              |   HTML (60,757b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-ambiental/malla-curricular
+2026-07-11 01:37:02 | DEBUG    | crawler              |   HTML (122,713b) depth=1: https://www1.utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:37:02 | DEBUG    | extractor            | Block extraction: 1 from https://www1.utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:37:03 | DEBUG    | crawler              |   HTML (376,015b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-civil/malla-curricular
+2026-07-11 01:37:03 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-11 01:37:03 | INFO     | pipeline             |   4500 fragments | 49 candidate rows
+2026-07-11 01:37:03 | INFO     | pipeline             |   4600 fragments | 49 candidate rows
+2026-07-11 01:37:04 | DEBUG    | crawler              |   HTML (375,630b) depth=1: https://www1.utec.edu.pe/carreras/ingenieria-de-la-energia
+2026-07-11 01:37:04 | DEBUG    | extractor            | Block extraction: 172 from https://utec.edu.pe/carreras/ingenieria-de-la-energia
+2026-07-11 01:37:05 | INFO     | pipeline             |   4700 fragments | 49 candidate rows
+2026-07-11 01:37:05 | INFO     | pipeline             |   4800 fragments | 49 candidate rows
+2026-07-11 01:37:06 | DEBUG    | crawler              |   HTML (402,651b) depth=1: https://www1.utec.edu.pe/carreras/ingenieria-electronica
+2026-07-11 01:37:06 | DEBUG    | extractor            | Block extraction: 200 from https://utec.edu.pe/carreras/ingenieria-electronica
+2026-07-11 01:37:06 | INFO     | pipeline             |   4900 fragments | 49 candidate rows
+2026-07-11 01:37:06 | INFO     | pipeline             |   5000 fragments | 49 candidate rows
+2026-07-11 01:37:08 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://www1.utec.edu.pe/carreras/ingenieria-industrial
+2026-07-11 01:37:08 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-11 01:37:08 | INFO     | pipeline             |   5100 fragments | 49 candidate rows
+2026-07-11 01:37:08 | INFO     | pipeline             |   5200 fragments | 49 candidate rows
+2026-07-11 01:37:09 | DEBUG    | crawler              |   HTML (392,300b) depth=1: https://www1.utec.edu.pe/carreras/ingenieria-mecanica
+2026-07-11 01:37:09 | DEBUG    | extractor            | Block extraction: 183 from https://utec.edu.pe/carreras/ingenieria-mecanica
+2026-07-11 01:37:09 | INFO     | pipeline             |   5300 fragments | 49 candidate rows
+2026-07-11 01:37:10 | DEBUG    | crawler              |   HTML (400,670b) depth=1: https://www1.utec.edu.pe/carreras/ingenieria-mecatronica
+2026-07-11 01:37:11 | DEBUG    | extractor            | Block extraction: 202 from https://utec.edu.pe/carreras/ingenieria-mecatronica
+2026-07-11 01:37:11 | INFO     | pipeline             |   5400 fragments | 49 candidate rows
+2026-07-11 01:37:11 | INFO     | pipeline             |   5500 fragments | 49 candidate rows
+2026-07-11 01:37:12 | DEBUG    | crawler              |   HTML (375,381b) depth=1: https://www1.utec.edu.pe/carreras/ingenieria-quimica
+2026-07-11 01:37:12 | DEBUG    | extractor            | Block extraction: 178 from https://utec.edu.pe/carreras/ingenieria-quimica
+2026-07-11 01:37:12 | INFO     | pipeline             |   5600 fragments | 49 candidate rows
+2026-07-11 01:37:12 | INFO     | pipeline             |   5700 fragments | 49 candidate rows
+2026-07-11 01:38:28 | DEBUG    | crawler              | robots.txt unreadable for https://proyectos.utec.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:39:01 | WARNING  | crawler              |   ConnectTimeout: https://proyectos.utec.edu.pe/
+2026-07-11 01:39:01 | DEBUG    | crawler              | robots.txt unreadable for https://research.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:39:04 | DEBUG    | crawler              |   HTML (938,235b) depth=0: https://research.utec.edu.pe/
+2026-07-11 01:40:19 | DEBUG    | crawler              | robots.txt unreadable for https://centrobio.utec.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:40:52 | WARNING  | crawler              |   ConnectTimeout: https://centrobio.utec.edu.pe/
+2026-07-11 01:40:53 | DEBUG    | crawler              | robots.txt unreadable for https://patrimonio.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:40:53 | WARNING  | crawler              |   HTTP 404: https://patrimonio.utec.edu.pe/en/home
+2026-07-11 01:40:54 | DEBUG    | crawler              | robots.txt unreadable for https://educacion-ejecutiva.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:40:55 | DEBUG    | crawler              |   HTML (468,018b) depth=0: https://educacion-ejecutiva.utec.edu.pe/
+2026-07-11 01:40:56 | DEBUG    | crawler              | robots.txt unreadable for http://repositorio.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-11 01:40:58 | DEBUG    | crawler              |   HTML (36,368b) depth=0: http://repositorio.utec.edu.pe/
+2026-07-11 01:40:59 | WARNING  | crawler              |   HTTP 404: https://drive.google.com/uc?export=download&id=1J_JQrAtmQXeogZHNEq9UNYwsK8YBEF3x
+2026-07-11 01:41:02 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1-Sv47-fHcF6Aw5HR5Sx8wUaUVzGtJIPx (found on: http://repositorio.utec.edu.pe/)
+2026-07-11 01:41:02 | DEBUG    | extractor            | PDF extracted: 27 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1-Sv47-fHcF6Aw5HR5Sx8wUaUVzGtJIPx&export=download
+2026-07-11 01:41:02 | INFO     | pipeline             |   5800 fragments | 49 candidate rows
+2026-07-11 01:41:03 | DEBUG    | crawler              |   HTML (939,396b) depth=1: https://drive.google.com/uc?export=download&id=1tNIn7PW94xZCSfW1vvBshSo_AeafLOHh
+2026-07-11 01:41:05 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1Vz5K0KO-l_rxM2T-vbG7oTbw2c6piuYo (found on: http://repositorio.utec.edu.pe/)
+2026-07-11 01:41:06 | DEBUG    | extractor            | PDF extracted: 10 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1Vz5K0KO-l_rxM2T-vbG7oTbw2c6piuYo&export=download
+2026-07-11 01:41:06 | DEBUG    | crawler              | robots.txt unreadable for https://bienestarestudiantil.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:41:06 | DEBUG    | crawler              |   HTML (784,386b) depth=0: https://bienestarestudiantil.utec.edu.pe/
+2026-07-11 01:41:07 | WARNING  | crawler              |   HTTP 403: https://cris.utec.edu.pe/es
+2026-07-11 01:41:07 | DEBUG    | crawler              | robots.txt unreadable for https://cirso.utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:41:09 | DEBUG    | crawler              |   HTML (938,999b) depth=0: https://cirso.utec.edu.pe/
+2026-07-11 01:41:11 | DEBUG    | crawler              |   HTML (100,350b) depth=1: https://cris.utec.edu.pe/es/organisations/universidad-de-ingenier%C3%ADa-y-tecnolog%C3%ADa-utec
+2026-07-11 01:41:11 | DEBUG    | crawler              |   HTML (134,714b) depth=0: https://utec.edu.pe/politica-de-privacidad
+2026-07-11 01:41:11 | DEBUG    | extractor            | Block extraction: 14 from https://utec.edu.pe/politica-de-privacidad
+2026-07-11 01:41:13 | DEBUG    | crawler              |   HTML (164,071b) depth=2: https://posgrado.utec.edu.pe/node/1665
+2026-07-11 01:41:15 | DEBUG    | crawler              |   HTML (160,568b) depth=2: https://posgrado.utec.edu.pe/ciencia-de-datos-ambiental-aplicaciones-herramientas-y-oportunidades
+2026-07-11 01:41:15 | DEBUG    | crawler              |   HTML (165,507b) depth=2: https://posgrado.utec.edu.pe/UTEC-Posgrado-presenta-su-primer-doctorado-en-Ingenieria-y-Ciencias-Aplicadas-una-apuesta-para-impulsar-la-investigacion-que-transforma-el-mundo
+2026-07-11 01:41:17 | DEBUG    | crawler              |   HTML (160,230b) depth=2: https://posgrado.utec.edu.pe/por-que-python-es-el-mejor-lenguaje-para-empezar-a-programar
+2026-07-11 01:41:19 | DEBUG    | crawler              |   HTML (89,967b) depth=2: https://www.utec.edu.pe/carreras/ingenieria-industrial/informacion
+2026-07-11 01:41:20 | DEBUG    | crawler              |   HTML (89,836b) depth=2: https://www.utec.edu.pe/carreras/ingenieria-de-la-energia/informacion
+2026-07-11 01:41:22 | DEBUG    | crawler              |   HTML (89,762b) depth=2: https://www.utec.edu.pe/carreras/ingenieria-mecanica/informacion
+2026-07-11 01:41:23 | DEBUG    | crawler              |   HTML (90,083b) depth=2: https://www.utec.edu.pe/carreras/ingenieria-quimica/informacion
+2026-07-11 01:41:25 | DEBUG    | crawler              |   HTML (90,021b) depth=2: https://www.utec.edu.pe/carreras/ingenieria-electronica/informacion
+2026-07-11 01:41:27 | DEBUG    | crawler              |   HTML (100,713b) depth=2: https://www1.utec.edu.pe/carreras/fisica
+2026-07-11 01:41:29 | DEBUG    | crawler              |   HTML (92,482b) depth=2: https://www1.utec.edu.pe/en/undergraduate-programs/environmental-engineering
+2026-07-11 01:41:29 | DEBUG    | extractor            | Block extraction: 1 from https://www1.utec.edu.pe/en/undergraduate-programs/environmental-engineering
+2026-07-11 01:42:44 | DEBUG    | crawler              | robots.txt unreadable for http://app.utec.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:43:18 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://app.utec.edu.pe/admision/pdf/application_form_study_abroad.pdf
+2026-07-11 01:43:51 | WARNING  | crawler              |   ConnectTimeout: https://app.utec.edu.pe/admision/pdf/application_form_study_abroad.pdf
+2026-07-11 01:43:52 | DEBUG    | crawler              |   HTML (97,608b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-ambiental/que-es
+2026-07-11 01:43:54 | DEBUG    | crawler              |   HTML (99,834b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-ambiental/especializaciones
+2026-07-11 01:43:56 | DEBUG    | crawler              |   HTML (101,744b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-ambiental/perfil-de-egresado
+2026-07-11 01:43:57 | WARNING  | crawler              |   HTTP 404: https://www.utec.edu.pe/carreras/ingenieria-ambiental/acreditacion
+2026-07-11 01:43:59 | DEBUG    | crawler              |   HTML (228,990b) depth=2: https://www1.utec.edu.pe/carreras-de-ingenieria
+2026-07-11 01:43:59 | DEBUG    | crawler              |   HTML (358,177b) depth=2: https://www1.utec.edu.pe/en/undergraduate-programs/civil-engineering
+2026-07-11 01:44:00 | DEBUG    | extractor            | Block extraction: 176 from https://utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:44:00 | INFO     | pipeline             |   5900 fragments | 50 candidate rows
+2026-07-11 01:44:00 | INFO     | pipeline             |   6000 fragments | 50 candidate rows
+2026-07-11 01:44:02 | DEBUG    | crawler              |   HTML (358,177b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-civil/que-es
+2026-07-11 01:44:02 | DEBUG    | extractor            | Block extraction: 176 from https://utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:44:02 | INFO     | pipeline             |   6100 fragments | 50 candidate rows
+2026-07-11 01:44:02 | DEBUG    | crawler              |   HTML (358,177b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-civil/especializaciones
+2026-07-11 01:44:03 | DEBUG    | extractor            | Block extraction: 176 from https://utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:44:03 | INFO     | pipeline             |   6200 fragments | 50 candidate rows
+2026-07-11 01:44:03 | INFO     | pipeline             |   6300 fragments | 50 candidate rows
+2026-07-11 01:44:05 | DEBUG    | crawler              |   HTML (101,816b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-civil/perfil-de-egresado
+2026-07-11 01:44:06 | DEBUG    | crawler              |   HTML (358,177b) depth=0: https://www.utec.edu.pe/carreras/ingenieria-civil/acreditacion
+2026-07-11 01:44:06 | DEBUG    | extractor            | Block extraction: 176 from https://utec.edu.pe/carreras/ingenieria-civil
+2026-07-11 01:44:06 | INFO     | pipeline             |   6400 fragments | 50 candidate rows
+2026-07-11 01:44:06 | INFO     | pipeline             |   6500 fragments | 50 candidate rows
+2026-07-11 01:44:08 | DEBUG    | crawler              |   HTML (116,270b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-de-la-energia/informacion
+2026-07-11 01:44:08 | DEBUG    | extractor            | Block extraction: 1 from https://www1.utec.edu.pe/carreras/ingenieria-de-la-energia/informacion
+2026-07-11 01:44:10 | DEBUG    | crawler              |   HTML (115,636b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-electronica/informacion
+2026-07-11 01:44:10 | DEBUG    | extractor            | Block extraction: 1 from https://www1.utec.edu.pe/carreras/ingenieria-electronica/informacion
+2026-07-11 01:44:12 | DEBUG    | crawler              |   HTML (118,343b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-industrial/informacion
+2026-07-11 01:44:12 | DEBUG    | extractor            | Block extraction: 1 from https://www1.utec.edu.pe/carreras/ingenieria-industrial/informacion
+2026-07-11 01:44:14 | DEBUG    | crawler              |   HTML (115,963b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-mecanica/informacion
+2026-07-11 01:44:14 | DEBUG    | extractor            | Block extraction: 1 from https://www1.utec.edu.pe/carreras/ingenieria-mecanica/informacion
+2026-07-11 01:44:16 | DEBUG    | crawler              |   HTML (117,977b) depth=2: https://www1.utec.edu.pe/carreras/ingenieria-quimica/informacion
+2026-07-11 01:44:16 | DEBUG    | extractor            | Block extraction: 1 from https://www1.utec.edu.pe/carreras/ingenieria-quimica/informacion
+2026-07-11 01:44:18 | DEBUG    | crawler              |   HTML (163,964b) depth=1: https://educacion-ejecutiva.utec.edu.pe/catalogo-blogs
+2026-07-11 01:44:18 | DEBUG    | crawler              |   HTML (228,472b) depth=1: https://educacion-ejecutiva.utec.edu.pe/maestrias/engineering-management
+2026-07-11 01:44:18 | DEBUG    | extractor            | Block extraction: 2 from https://posgrado.utec.edu.pe/maestrias/engineering-management
+2026-07-11 01:44:20 | DEBUG    | crawler              |   HTML (238,337b) depth=1: https://educacion-ejecutiva.utec.edu.pe/maestrias/ciencias-de-la-ingenieria
+2026-07-11 01:44:20 | DEBUG    | extractor            | Block extraction: 2 from https://posgrado.utec.edu.pe/maestrias/ciencias-de-la-ingenieria
+2026-07-11 01:44:21 | DEBUG    | crawler              |   HTML (253,783b) depth=1: https://educacion-ejecutiva.utec.edu.pe/doctorado/ingenieria-y-ciencias-aplicadas
+2026-07-11 01:44:21 | DEBUG    | extractor            | Block extraction: 2 from https://posgrado.utec.edu.pe/doctorado/ingenieria-y-ciencias-aplicadas
+2026-07-11 01:44:23 | DEBUG    | crawler              |   HTML (193,533b) depth=1: https://educacion-ejecutiva.utec.edu.pe/cursos/microdegree_fundamentos-de-matematica-para-inteligencia-artificial
+2026-07-11 01:44:23 | DEBUG    | extractor            | Block extraction: 9 from https://posgrado.utec.edu.pe/cursos/microdegree_fundamentos-de-matematica-para-inteligencia-artificial
+2026-07-11 01:44:24 | DEBUG    | crawler              |   HTML (200,269b) depth=1: https://educacion-ejecutiva.utec.edu.pe/programas/ingenieria-del-diseno-y-gestion-de-proyectos-de-automatizacion
+2026-07-11 01:44:24 | DEBUG    | extractor            | Block extraction: 1 from https://posgrado.utec.edu.pe/programas/ingenieria-del-diseno-y-gestion-de-proyectos-de-automatizacion
+2026-07-11 01:44:26 | DEBUG    | crawler              |   HTML (195,728b) depth=1: https://educacion-ejecutiva.utec.edu.pe/programas/gestion-integrado-sistemas-control-proteccion-inundaciones
+2026-07-11 01:44:27 | WARNING  | crawler              |   HTTP 404: https://www.utec.edu.pe/carreras-de-ingenieria/ingenieria-civil
+2026-07-11 01:44:27 | DEBUG    | crawler              |   HTML (402,651b) depth=0: https://www.utec.edu.pe/carreras-de-ingenieria/ingenieria-electronica
+2026-07-11 01:44:27 | DEBUG    | extractor            | Block extraction: 200 from https://utec.edu.pe/carreras/ingenieria-electronica
+2026-07-11 01:44:27 | INFO     | pipeline             |   6600 fragments | 50 candidate rows
+2026-07-11 01:44:27 | INFO     | pipeline             |   6700 fragments | 50 candidate rows
+2026-07-11 01:44:29 | WARNING  | crawler              |   HTTP 404: https://www.utec.edu.pe/carreras-de-ingenieria/ingenieria-industrial
+2026-07-11 01:44:31 | DEBUG    | crawler              |   HTML (375,630b) depth=0: https://www.utec.edu.pe/carreras-de-ingenieria/ingenieria-de-la-energia
+2026-07-11 01:44:31 | DEBUG    | extractor            | Block extraction: 172 from https://utec.edu.pe/carreras/ingenieria-de-la-energia
+2026-07-11 01:44:31 | INFO     | pipeline             |   6800 fragments | 50 candidate rows
+2026-07-11 01:44:31 | INFO     | pipeline             |   6900 fragments | 50 candidate rows
+2026-07-11 01:44:32 | DEBUG    | crawler              |   HTML (375,381b) depth=0: https://www.utec.edu.pe/carreras-de-ingenieria/ingenieria-quimica
+2026-07-11 01:44:32 | DEBUG    | extractor            | Block extraction: 178 from https://utec.edu.pe/carreras/ingenieria-quimica
+2026-07-11 01:44:32 | INFO     | pipeline             |   7000 fragments | 50 candidate rows
+2026-07-11 01:44:32 | INFO     | pipeline             |   7100 fragments | 50 candidate rows
+2026-07-11 01:44:33 | WARNING  | crawler              |   HTTP 404: https://www.utec.edu.pe/carreras-de-ingenieria/ingenieria-mecanica
+2026-07-11 01:44:35 | DEBUG    | crawler              |   HTML (361,422b) depth=0: https://www.utec.edu.pe/carreras-de-ingenieria/ingenieria-ambiental
+2026-07-11 01:44:35 | DEBUG    | extractor            | Block extraction: 171 from https://utec.edu.pe/carreras/ingenieria-ambiental
+2026-07-11 01:44:35 | INFO     | pipeline             |   7200 fragments | 50 candidate rows
+2026-07-11 01:44:36 | DEBUG    | crawler              |   HTML (394,428b) depth=0: https://www.utec.edu.pe/carreras-de-ingenieria/bioingenieria
+2026-07-11 01:44:36 | DEBUG    | extractor            | Block extraction: 185 from https://utec.edu.pe/carreras/bioingenieria
+2026-07-11 01:44:37 | INFO     | pipeline             |   7300 fragments | 50 candidate rows
+2026-07-11 01:44:37 | INFO     | pipeline             |   7400 fragments | 50 candidate rows
+2026-07-11 01:44:38 | DEBUG    | crawler              |   HTML (400,670b) depth=0: https://www.utec.edu.pe/carreras-de-ingenieria/ingenieria-mecatronica
+2026-07-11 01:44:38 | DEBUG    | extractor            | Block extraction: 202 from https://utec.edu.pe/carreras/ingenieria-mecatronica
+2026-07-11 01:44:38 | INFO     | pipeline             |   7500 fragments | 50 candidate rows
+2026-07-11 01:44:38 | INFO     | pipeline             |   7600 fragments | 50 candidate rows
+2026-07-11 01:44:39 | DEBUG    | crawler              |   HTML (376,015b) depth=0: https://www.utec.edu.pe/carreras-de-ingenieria/ciencia-de-la-computacion
+2026-07-11 01:44:39 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-11 01:44:39 | INFO     | pipeline             |   7700 fragments | 50 candidate rows
+2026-07-11 01:44:39 | INFO     | pipeline             |   7800 fragments | 50 candidate rows
+2026-07-11 01:44:42 | DEBUG    | crawler              |   HTML (97,164b) depth=2: https://cris.utec.edu.pe/es/organisations/departamento-de-ciencia-de-computaci%C3%B3n-y-de-datos
+2026-07-11 01:44:43 | DEBUG    | crawler              |   HTML (69,075b) depth=2: https://cris.utec.edu.pe/es/organisations/grupo-de-investigaci%C3%B3n-en-anal%C3%ADtica-de-datos-y-ciencias-de-decisi
+2026-07-11 01:44:45 | DEBUG    | crawler              |   HTML (92,619b) depth=2: https://cris.utec.edu.pe/es/organisations/departamento-de-humanidades-artes-y-ciencias-sociales
+2026-07-11 01:44:45 | DEBUG    | crawler              |   HTML (164,071b) depth=2: https://educacion-ejecutiva.utec.edu.pe/node/1665
+2026-07-11 01:44:47 | DEBUG    | crawler              |   HTML (160,568b) depth=2: https://educacion-ejecutiva.utec.edu.pe/ciencia-de-datos-ambiental-aplicaciones-herramientas-y-oportunidades
+2026-07-11 01:44:48 | DEBUG    | crawler              |   HTML (165,507b) depth=2: https://educacion-ejecutiva.utec.edu.pe/UTEC-Posgrado-presenta-su-primer-doctorado-en-Ingenieria-y-Ciencias-Aplicadas-una-apuesta-para-impulsar-la-investigacion-que-transforma-el-mundo
+2026-07-11 01:44:50 | DEBUG    | crawler              |   HTML (160,230b) depth=2: https://educacion-ejecutiva.utec.edu.pe/por-que-python-es-el-mejor-lenguaje-para-empezar-a-programar
+2026-07-11 01:44:50 | DEBUG    | crawler              |   HTML (88,742b) depth=0: https://utec.edu.pe/blog-de-carreras/ingenieria-industrial/egresada-de-ingenieria-industrial-de-utec-fue-becada-en-el-programa-doctoral-de-ingenieria-industrial-en-university-south-florida-usf
+2026-07-11 01:44:50 | INFO     | crawler              |   Done: UTEC | 150 pages fetched (121 HTML, 25 PDFs)
+2026-07-11 01:44:50 | INFO     | crawler              | Crawl: UNI | seeds=21 max_pages=150 max_depth=2 max_pdfs=50 pdfs=on seed_origin=auto_discovered
+2026-07-11 01:44:50 | DEBUG    | crawler              | robots.txt unreadable for https://portal.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:44:50 | DEBUG    | crawler              |   HTML (78,708b) depth=0: https://portal.uni.edu.pe/index.php/posgrado-uni/catalogo-de-posgrado
+2026-07-11 01:44:52 | DEBUG    | crawler              | robots.txt unreadable for https://uniedupe93141-my.sharepoint.com: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:44:52 | DEBUG    | crawler              |   PDF: https://uniedupe93141-my.sharepoint.com/:b:/g/personal/mejoracontinua_diga_uni_edu_pe/IQDNDNFDdWw-S4jNPbq4kE0yAVWKPKa6SIFpkuBu_ZLQedA?e=6ImdR3&download=1 (found on: https://portal.uni.edu.pe/index.php/posgrado-uni/catalogo-de-posgrado)
+2026-07-11 01:44:52 | DEBUG    | extractor            | PDF extracted: 78 page fragment(s) via pymupdf: https://uniedupe93141-my.sharepoint.com/personal/mejoracontinua_diga_uni_edu_pe/Documents/VARIOS/MEJORA%20GENERAL/BOLET%c3%8dN%20ESTAD%c3%8dSTICO/BEAD%202025%20VF.pdf?ga=1
+2026-07-11 01:44:53 | INFO     | pipeline             |   7900 fragments | 51 candidate rows
+2026-07-11 01:44:53 | DEBUG    | crawler              |   PDF: https://portal.uni.edu.pe/images/noticias/202009/pdfs/catlogo-20202_compressed.pdf (found on: https://portal.uni.edu.pe/index.php/posgrado-uni/catalogo-de-posgrado)
+2026-07-11 01:44:54 | DEBUG    | extractor            | PDF extracted: 424 page fragment(s) via pymupdf: https://portal.uni.edu.pe/images/noticias/202009/pdfs/catlogo-20202_compressed.pdf
+2026-07-11 01:44:54 | INFO     | pipeline             |   8000 fragments | 51 candidate rows
+2026-07-11 01:44:55 | INFO     | pipeline             |   8100 fragments | 60 candidate rows
+2026-07-11 01:44:55 | INFO     | pipeline             |   8200 fragments | 66 candidate rows
+2026-07-11 01:44:56 | INFO     | pipeline             |   8300 fragments | 66 candidate rows
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (83,605b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (85,091b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-economica-estadistica-y-de-ciencias-sociales
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (85,439b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ciencias
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (84,110b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-ambiental
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (84,362b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-civil
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (83,572b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-de-petroleo-y-petroquimica
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (81,674b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-geologica-minera-y-metalurgica
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (83,309b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-industrial-y-de-sistemas
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (83,869b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (83,262b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-quimica-y-textil
+2026-07-11 01:44:56 | DEBUG    | crawler              |   HTML (117,235b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ciencias/ingenieria-fisica
+2026-07-11 01:44:56 | DEBUG    | extractor            | Table extraction: 20 rows from https://portal.uni.edu.pe/index.php/facultades/ciencias/ingenieria-fisica
+2026-07-11 01:44:57 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1izo5xP9ak-mm8pFB4fGSnSOS0bSUK3Da (found on: https://portal.uni.edu.pe/index.php/facultades/ciencias/ingenieria-fisica)
+2026-07-11 01:44:57 | DEBUG    | extractor            | PDF extracted: 5 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1izo5xP9ak-mm8pFB4fGSnSOS0bSUK3Da&export=download
+2026-07-11 01:44:57 | INFO     | pipeline             |   8400 fragments | 69 candidate rows
+2026-07-11 01:44:57 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1tv4MApjyGtawf_qSobIbqQUyeLWLTeGH (found on: https://portal.uni.edu.pe/index.php/facultades/ciencias/ingenieria-fisica)
+2026-07-11 01:44:58 | DEBUG    | extractor            | PDF extracted: 232 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1tv4MApjyGtawf_qSobIbqQUyeLWLTeGH&export=download
+2026-07-11 01:44:58 | INFO     | pipeline             |   8500 fragments | 82 candidate rows
+2026-07-11 01:44:59 | INFO     | pipeline             |   8600 fragments | 116 candidate rows
+2026-07-11 01:44:59 | DEBUG    | crawler              |   HTML (79,166b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-de-ciberseguridad
+2026-07-11 01:44:59 | DEBUG    | crawler              |   PDF: https://portal.uni.edu.pe/images/FAC-PLANES/ING_CIBERSEGURIDAD.pdf (found on: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-de-ciberseguridad)
+2026-07-11 01:44:59 | WARNING  | extractor            | PDF has 0 chars over 3 page(s) (engine=pypdf) — flagging for manual review: https://portal.uni.edu.pe/images/FAC-PLANES/ING_CIBERSEGURIDAD.pdf
+2026-07-11 01:44:59 | DEBUG    | crawler              |   HTML (107,499b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-de-telecomunicaciones
+2026-07-11 01:44:59 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-de-telecomunicaciones
+2026-07-11 01:44:59 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1e0X45TfawmDPcDCnfvJBMDSpJaIeoNuu (found on: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-de-telecomunicaciones)
+2026-07-11 01:44:59 | DEBUG    | extractor            | PDF extracted: 5 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1e0X45TfawmDPcDCnfvJBMDSpJaIeoNuu&export=download
+2026-07-11 01:44:59 | DEBUG    | crawler              |   PDF: https://portal.uni.edu.pe/images/FAC-PLANES/ING_TELECOMUNICACIONES.pdf (found on: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-de-telecomunicaciones)
+2026-07-11 01:44:59 | WARNING  | extractor            | PDF has 0 chars over 4 page(s) (engine=pypdf) — flagging for manual review: https://portal.uni.edu.pe/images/FAC-PLANES/ING_TELECOMUNICACIONES.pdf
+2026-07-11 01:44:59 | WARNING  | crawler              |   HTTP 404: https://portal.uni.edu.pe/sitio/academico/facultades/electrica/plan_de_estudios_ing_telecomunicaciones.pdf
+2026-07-11 01:44:59 | DEBUG    | crawler              |   HTML (103,162b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-electrica
+2026-07-11 01:44:59 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-electrica
+2026-07-11 01:45:00 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1ghfG6ksx-wS4m0ZbM_1FV6td7MpxKBZv (found on: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-electrica)
+2026-07-11 01:45:00 | DEBUG    | extractor            | PDF extracted: 5 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1ghfG6ksx-wS4m0ZbM_1FV6td7MpxKBZv&export=download
+2026-07-11 01:45:00 | DEBUG    | crawler              |   PDF: https://portal.uni.edu.pe/images/FAC-PLANES/ING_ELECTRICA.pdf (found on: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-electrica)
+2026-07-11 01:45:00 | WARNING  | extractor            | PDF has 0 chars over 4 page(s) (engine=pypdf) — flagging for manual review: https://portal.uni.edu.pe/images/FAC-PLANES/ING_ELECTRICA.pdf
+2026-07-11 01:45:00 | DEBUG    | crawler              |   HTML (103,848b) depth=0: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-electronica
+2026-07-11 01:45:00 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-electronica
+2026-07-11 01:45:00 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1aschUrZsF6flZcOi-17oy5C4YRcz0OaQ (found on: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-electronica)
+2026-07-11 01:45:00 | DEBUG    | extractor            | PDF extracted: 5 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1aschUrZsF6flZcOi-17oy5C4YRcz0OaQ&export=download
+2026-07-11 01:45:00 | DEBUG    | crawler              |   PDF: https://portal.uni.edu.pe/images/FAC-PLANES/ING_ELECTRONICA.pdf (found on: https://portal.uni.edu.pe/index.php/facultades/ingenieria-electrica-y-electronica/ingenieria-electronica)
+2026-07-11 01:45:00 | WARNING  | extractor            | PDF has 0 chars over 4 page(s) (engine=pypdf) — flagging for manual review: https://portal.uni.edu.pe/images/FAC-PLANES/ING_ELECTRONICA.pdf
+2026-07-11 01:45:00 | DEBUG    | crawler              | robots.txt unreadable for http://www.catalogo.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:45:00 | DEBUG    | crawler              |   HTML (26,947b) depth=0: http://www.catalogo.uni.edu.pe/
+2026-07-11 01:45:00 | DEBUG    | crawler              |   PDF: http://procesos.uni.edu.pe/Carousel/Ley/RR235-2026.pdf (found on: http://www.catalogo.uni.edu.pe/)
+2026-07-11 01:45:00 | DEBUG    | extractor            | PDF extracted: 25 page fragment(s) via pymupdf: http://procesos.uni.edu.pe/Carousel/Ley/RR235-2026.pdf
+2026-07-11 01:45:00 | DEBUG    | crawler              |   PDF: http://procesos.uni.edu.pe/Carousel/Ley/Guia2022.pdf (found on: http://www.catalogo.uni.edu.pe/)
+2026-07-11 01:45:00 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: http://procesos.uni.edu.pe/Carousel/Ley/Guia2022.pdf
+2026-07-11 01:45:00 | DEBUG    | crawler              |   PDF: http://procesos.uni.edu.pe/Carousel/Ley/LeyN°30034.pdf (found on: http://www.catalogo.uni.edu.pe/)
+2026-07-11 01:45:00 | WARNING  | extractor            | PDF has 0 chars over 3 page(s) (engine=pypdf) — flagging for manual review: http://procesos.uni.edu.pe/Carousel/Ley/LeyN%C2%B030034.pdf
+2026-07-11 01:45:00 | DEBUG    | crawler              | robots.txt unreadable for https://press.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:45:00 | DEBUG    | crawler              |   HTML (16,097b) depth=0: https://press.uni.edu.pe/index.php/historiauni/catalog/series/historiauni
+2026-07-11 01:45:00 | DEBUG    | crawler              |   HTML (552,895b) depth=0: http://www.ctic.uni.edu.pe/
+2026-07-11 01:45:00 | DEBUG    | extractor            | Block extraction: 11 from https://www.ctic.uni.edu.pe/
+2026-07-11 01:45:00 | INFO     | pipeline             |   8700 fragments | 121 candidate rows
+2026-07-11 01:45:00 | DEBUG    | crawler              | robots.txt unreadable for http://apps.uni.edu.pe: <urlopen error [Errno 8] nodename nor servname provided, or not known> (allowing)
+2026-07-11 01:45:10 | INFO     | crawler              |   ConnectionError on http, retrying https: https://apps.uni.edu.pe/
+2026-07-11 01:45:19 | WARNING  | crawler              |   ConnectionError: https://apps.uni.edu.pe/
+2026-07-11 01:45:19 | DEBUG    | crawler              | robots.txt unreadable for http://www.admision.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:45:19 | DEBUG    | crawler              |   HTML (148,713b) depth=0: http://www.admision.uni.edu.pe/
+2026-07-11 01:45:19 | DEBUG    | extractor            | Block extraction: 3 from https://admision.uni.edu.pe/
+2026-07-11 01:45:19 | DEBUG    | crawler              | robots.txt unreadable for https://admision.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:45:19 | DEBUG    | crawler              |   PDF: https://admision.uni.edu.pe/wp-content/uploads/2026/06/Guia-de-Inscripcion-2026-2.pdf (found on: http://www.admision.uni.edu.pe/)
+2026-07-11 01:45:19 | DEBUG    | extractor            | PDF extracted: 17 page fragment(s) via pymupdf: https://admision.uni.edu.pe/wp-content/uploads/2026/06/Guia-de-Inscripcion-2026-2.pdf
+2026-07-11 01:45:19 | DEBUG    | crawler              |   PDF: https://admision.uni.edu.pe/wp-content/uploads/2026/01/semibeca-concurso-admision-1.pdf (found on: http://www.admision.uni.edu.pe/)
+2026-07-11 01:45:19 | DEBUG    | extractor            | PDF extracted: 6 page fragment(s) via pymupdf: https://admision.uni.edu.pe/wp-content/uploads/2026/01/semibeca-concurso-admision-1.pdf
+2026-07-11 01:45:19 | DEBUG    | crawler              |   PDF: https://admision.uni.edu.pe/wp-content/uploads/2025/11/CONCURSO-DE-ADMISION-BECAS-Y-SEMIBECAS-IEN-2026-1.pdf (found on: http://www.admision.uni.edu.pe/)
+2026-07-11 01:45:19 | DEBUG    | extractor            | PDF extracted: 6 page fragment(s) via pymupdf: https://admision.uni.edu.pe/wp-content/uploads/2025/11/CONCURSO-DE-ADMISION-BECAS-Y-SEMIBECAS-IEN-2026-1.pdf
+2026-07-11 01:45:19 | DEBUG    | crawler              |   PDF: https://admision.uni.edu.pe/wp-content/uploads/2024/11/semibeca-resultados-1.pdf (found on: http://www.admision.uni.edu.pe/)
+2026-07-11 01:45:19 | DEBUG    | extractor            | PDF extracted: 7 page fragment(s) via pymupdf: https://admision.uni.edu.pe/wp-content/uploads/2024/11/semibeca-resultados-1.pdf
+2026-07-11 01:45:19 | DEBUG    | crawler              |   PDF: https://admision.uni.edu.pe/wp-content/uploads/2026/06/GUIA-DE-PAGOS-2026-2-SIMULACRO.pdf (found on: http://www.admision.uni.edu.pe/)
+2026-07-11 01:45:19 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://admision.uni.edu.pe/wp-content/uploads/2026/06/GUIA-DE-PAGOS-2026-2-SIMULACRO.pdf
+2026-07-11 01:45:20 | DEBUG    | crawler              | robots.txt unreadable for http://www.ceps.uni.edu.pe: Remote end closed connection without response (allowing)
+2026-07-11 01:45:20 | DEBUG    | crawler              |   HTML (168,476b) depth=0: http://www.ceps.uni.edu.pe/
+2026-07-11 01:45:20 | DEBUG    | extractor            | Block extraction: 16 from https://ceps.uni.edu.pe/
+2026-07-11 01:45:20 | INFO     | crawler              |   robots.txt disallows, skipping: http://www.orce.uni.edu.pe/
+2026-07-11 01:45:20 | DEBUG    | crawler              | robots.txt unreadable for http://vri.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:45:20 | DEBUG    | crawler              |   HTML (204,653b) depth=0: http://vri.uni.edu.pe/
+2026-07-11 01:45:20 | DEBUG    | crawler              | robots.txt unreadable for http://www.vra.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:45:20 | DEBUG    | crawler              |   HTML (91,561b) depth=0: http://www.vra.uni.edu.pe/
+2026-07-11 01:45:20 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1i_wzxx_5z1fp7JrVctxwjz_Mmh4pgFhe (found on: http://www.vra.uni.edu.pe/)
+2026-07-11 01:45:20 | WARNING  | extractor            | PDF has 0 chars over 11 page(s) (engine=pypdf) — flagging for manual review: https://drive.usercontent.google.com/download?id=1i_wzxx_5z1fp7JrVctxwjz_Mmh4pgFhe&export=download
+2026-07-11 01:45:20 | DEBUG    | crawler              | robots.txt unreadable for https://cdnuni.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:45:20 | DEBUG    | crawler              |   PDF: https://cdnuni.uni.edu.pe/dn/laravel/storage/app/archivos_dn/R.R.%20N%C2%B0%200371-%202016-DN.pdf (found on: http://www.vra.uni.edu.pe/)
+2026-07-11 01:45:20 | WARNING  | extractor            | PDF has 0 chars over 13 page(s) (engine=pypdf) — flagging for manual review: https://cdnuni.uni.edu.pe/dn/laravel/storage/app/archivos_dn/R.R.%20N%C2%B0%200371-%202016-DN.pdf
+2026-07-11 01:45:20 | DEBUG    | crawler              | robots.txt unreadable for http://posgrado.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:45:20 | DEBUG    | crawler              |   HTML (6,822b) depth=0: http://posgrado.uni.edu.pe/
+2026-07-11 01:46:35 | DEBUG    | crawler              | robots.txt unreadable for http://www.cismid.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:47:09 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.cismid.uni.edu.pe/
+2026-07-11 01:47:09 | DEBUG    | crawler              |   HTML (87,038b) depth=0: http://www.cismid.uni.edu.pe/
+2026-07-11 01:47:09 | DEBUG    | crawler              | robots.txt unreadable for https://lnh.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:47:09 | DEBUG    | crawler              |   HTML (47,019b) depth=0: https://lnh.uni.edu.pe/
+2026-07-11 01:47:09 | DEBUG    | crawler              | robots.txt unreadable for https://cer.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:47:09 | DEBUG    | crawler              |   HTML (95,660b) depth=0: https://cer.uni.edu.pe/
+2026-07-11 01:47:09 | DEBUG    | crawler              | robots.txt unreadable for https://ditt.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:47:09 | DEBUG    | crawler              |   HTML (171,680b) depth=0: https://ditt.uni.edu.pe/
+2026-07-11 01:47:09 | DEBUG    | crawler              | robots.txt unreadable for http://www.bibliotecacentral.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:47:09 | DEBUG    | crawler              |   HTML (45,130b) depth=0: http://www.bibliotecacentral.uni.edu.pe/
+2026-07-11 01:47:09 | DEBUG    | crawler              | robots.txt unreadable for http://www.diga.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:47:09 | DEBUG    | crawler              |   HTML (50,398b) depth=0: http://www.diga.uni.edu.pe/
+2026-07-11 01:47:09 | DEBUG    | crawler              |   HTML (8,006b) depth=0: http://www.ocef.uni.edu.pe/
+2026-07-11 01:47:10 | DEBUG    | crawler              | robots.txt unreadable for http://www.ocpla.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:47:10 | DEBUG    | crawler              |   HTML (42,725b) depth=0: http://www.ocpla.uni.edu.pe/
+2026-07-11 01:47:10 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1Aqe8_G_SPYdAt4EWTA5Ctcb9Yy1M-Rgh (found on: http://www.ocpla.uni.edu.pe/)
+2026-07-11 01:47:10 | DEBUG    | extractor            | PDF extracted: 52 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1Aqe8_G_SPYdAt4EWTA5Ctcb9Yy1M-Rgh&export=download
+2026-07-11 01:47:10 | INFO     | pipeline             |   8800 fragments | 123 candidate rows
+2026-07-11 01:47:10 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1tMWsjqj3xDFXC4Y-WAX3MH3XROjrgxGl (found on: http://www.ocpla.uni.edu.pe/)
+2026-07-11 01:47:11 | DEBUG    | extractor            | PDF extracted: 68 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1tMWsjqj3xDFXC4Y-WAX3MH3XROjrgxGl&export=download
+2026-07-11 01:47:11 | INFO     | pipeline             |   8900 fragments | 123 candidate rows
+2026-07-11 01:47:11 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=13chDFGGCRv2Lzut-Fv_R1xyn1-VpetS2 (found on: http://www.ocpla.uni.edu.pe/)
+2026-07-11 01:47:11 | DEBUG    | extractor            | PDF extracted: 74 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=13chDFGGCRv2Lzut-Fv_R1xyn1-VpetS2&export=download
+2026-07-11 01:47:12 | DEBUG    | crawler              | robots.txt unreadable for https://www.ceuni.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:47:12 | DEBUG    | crawler              |   HTML (214,149b) depth=0: https://www.ceuni.uni.edu.pe/
+2026-07-11 01:47:12 | DEBUG    | crawler              |   PDF: https://uniedupe93141-my.sharepoint.com/:b:/g/personal/ceuni_uni_edu_pe/IQBWCrJnIgyySb10MdZY3obhAd6uXrth_50_DTFD7zCWaC8?e=kDplRI&download=1 (found on: https://www.ceuni.uni.edu.pe/)
+2026-07-11 01:47:12 | DEBUG    | extractor            | PDF extracted: 33 page fragment(s) via pymupdf: https://uniedupe93141-my.sharepoint.com/personal/ceuni_uni_edu_pe/Documents/2026/REGLAMENTOS/RCU%200650-2026-%20Reglamento%20vigente%2025.05.2026.pdf?ga=1
+2026-07-11 01:47:12 | INFO     | pipeline             |   9000 fragments | 123 candidate rows
+2026-07-11 01:47:12 | DEBUG    | crawler              | robots.txt unreadable for https://www.defensoria.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:47:12 | DEBUG    | crawler              |   HTML (53,264b) depth=0: https://www.defensoria.uni.edu.pe/
+2026-07-11 01:48:27 | DEBUG    | crawler              | robots.txt unreadable for http://www.ocdo.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:49:00 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.ocdo.uni.edu.pe/
+2026-07-11 01:49:33 | WARNING  | crawler              |   ConnectTimeout: https://www.ocdo.uni.edu.pe/
+2026-07-11 01:49:33 | DEBUG    | crawler              | robots.txt unreadable for http://www.ocsg.uni.edu.pe: <urlopen error [Errno 8] nodename nor servname provided, or not known> (allowing)
+2026-07-11 01:49:42 | INFO     | crawler              |   ConnectionError on http, retrying https: https://www.ocsg.uni.edu.pe/
+2026-07-11 01:49:51 | WARNING  | crawler              |   ConnectionError: https://www.ocsg.uni.edu.pe/
+2026-07-11 01:49:51 | DEBUG    | crawler              | robots.txt unreadable for http://www.czduni.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:49:51 | DEBUG    | crawler              |   HTML (15,653b) depth=0: http://www.czduni.uni.edu.pe/
+2026-07-11 01:49:51 | DEBUG    | crawler              |   HTML (46,444b) depth=0: http://www.unisalud.uni.edu.pe/
+2026-07-11 01:49:53 | WARNING  | crawler              |   HTTP 404: https://drive.google.com/uc?export=download&id=1aduic6UYRzlqYkyvIqIxR9Mp5p7PpmQR
+2026-07-11 01:49:54 | WARNING  | crawler              |   HTTP 404: https://drive.google.com/uc?export=download&id=1i-zIeYY6F8FPEEcgdjYU8LI0meErxJXf
+2026-07-11 01:49:54 | DEBUG    | crawler              |   PDF: http://www.unisalud.uni.edu.pe/media/attachments/2020/12/02/rr-0588-2020.pdf (found on: http://www.unisalud.uni.edu.pe/)
+2026-07-11 01:49:54 | DEBUG    | extractor            | PDF extracted: 41 page fragment(s) via pymupdf: http://www.unisalud.uni.edu.pe/media/attachments/2020/12/02/rr-0588-2020.pdf
+2026-07-11 01:49:55 | DEBUG    | crawler              | robots.txt unreadable for http://fiee.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:49:55 | DEBUG    | crawler              |   HTML (230,550b) depth=0: http://fiee.uni.edu.pe/
+2026-07-11 01:49:57 | DEBUG    | crawler              | robots.txt unreadable for http://www.fieecs.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:49:57 | DEBUG    | crawler              |   HTML (25,345b) depth=0: http://www.fieecs.uni.edu.pe/
+2026-07-11 01:51:12 | DEBUG    | crawler              | robots.txt unreadable for http://www.seupros.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:51:45 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.seupros.uni.edu.pe/
+2026-07-11 01:52:18 | WARNING  | crawler              |   ConnectTimeout: https://www.seupros.uni.edu.pe/
+2026-07-11 01:52:18 | DEBUG    | crawler              | robots.txt unreadable for http://fc.uni.edu.pe: Remote end closed connection without response (allowing)
+2026-07-11 01:52:28 | INFO     | crawler              |   ConnectionError on http, retrying https: https://fc.uni.edu.pe/fc
+2026-07-11 01:52:38 | WARNING  | crawler              |   ConnectionError: https://fc.uni.edu.pe/fc
+2026-07-11 01:52:38 | DEBUG    | crawler              | robots.txt unreadable for https://fia.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:52:38 | DEBUG    | crawler              |   HTML (154,420b) depth=0: https://fia.uni.edu.pe/
+2026-07-11 01:52:38 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1yxNCDeQPeG4JJ6T9SsVh7RQy3fjZILtw (found on: https://fia.uni.edu.pe/)
+2026-07-11 01:52:38 | DEBUG    | extractor            | PDF extracted: 10 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1yxNCDeQPeG4JJ6T9SsVh7RQy3fjZILtw&export=download
+2026-07-11 01:52:38 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1QSTRn4X-m-w88lTm7IMiaGK1JqAh3IjW (found on: https://fia.uni.edu.pe/)
+2026-07-11 01:52:38 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1QSTRn4X-m-w88lTm7IMiaGK1JqAh3IjW&export=download
+2026-07-11 01:52:38 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1_gCiH8oGH4sTf4hjq1gBxf0-F87bAn1p (found on: https://fia.uni.edu.pe/)
+2026-07-11 01:52:38 | DEBUG    | extractor            | PDF extracted: 5 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1_gCiH8oGH4sTf4hjq1gBxf0-F87bAn1p&export=download
+2026-07-11 01:52:38 | DEBUG    | crawler              | robots.txt unreadable for https://fic.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:52:38 | DEBUG    | crawler              |   HTML (16,172b) depth=0: https://fic.uni.edu.pe/
+2026-07-11 01:52:38 | DEBUG    | crawler              | robots.txt unreadable for http://www.lms.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:52:38 | DEBUG    | crawler              |   HTML (65,773b) depth=0: http://www.lms.uni.edu.pe/
+2026-07-11 01:52:39 | DEBUG    | crawler              | robots.txt unreadable for http://www.fip.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:52:39 | DEBUG    | crawler              |   HTML (37,908b) depth=0: http://www.fip.uni.edu.pe/
+2026-07-11 01:52:39 | DEBUG    | crawler              | robots.txt unreadable for http://www.figmm.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:52:39 | DEBUG    | crawler              |   HTML (234,803b) depth=0: http://www.figmm.uni.edu.pe/
+2026-07-11 01:52:39 | DEBUG    | extractor            | Block extraction: 3 from https://www.figmm.uni.edu.pe/
+2026-07-11 01:52:39 | DEBUG    | crawler              | robots.txt unreadable for http://www.fiis.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:52:39 | DEBUG    | crawler              |   HTML (82,237b) depth=0: http://www.fiis.uni.edu.pe/
+2026-07-11 01:52:39 | DEBUG    | crawler              | robots.txt unreadable for http://www.fim.uni.edu.pe: <urlopen error [Errno 8] nodename nor servname provided, or not known> (allowing)
+2026-07-11 01:52:48 | INFO     | crawler              |   ConnectionError on http, retrying https: https://www.fim.uni.edu.pe/
+2026-07-11 01:52:57 | WARNING  | crawler              |   ConnectionError: https://www.fim.uni.edu.pe/
+2026-07-11 01:52:57 | DEBUG    | crawler              | robots.txt unreadable for http://fiqt.uni.edu.pe: <urlopen error [Errno 8] nodename nor servname provided, or not known> (allowing)
+2026-07-11 01:53:06 | INFO     | crawler              |   ConnectionError on http, retrying https: https://fiqt.uni.edu.pe/home
+2026-07-11 01:53:15 | WARNING  | crawler              |   ConnectionError: https://fiqt.uni.edu.pe/home
+2026-07-11 01:53:15 | DEBUG    | crawler              | robots.txt unreadable for http://www.bibliotecavirtual.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:53:15 | DEBUG    | crawler              |   HTML (45,130b) depth=0: http://www.bibliotecavirtual.uni.edu.pe/
+2026-07-11 01:53:15 | DEBUG    | crawler              |   HTML (14,741b) depth=1: https://press.uni.edu.pe/index.php/historiauni/catalog/category/ingenieria
+2026-07-11 01:53:15 | DEBUG    | crawler              |   HTML (20,784b) depth=1: https://press.uni.edu.pe/index.php/historiauni/catalog/series/hiacp
+2026-07-11 01:54:30 | DEBUG    | crawler              | robots.txt unreadable for http://www.ctic-virtual.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:55:03 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.ctic-virtual.uni.edu.pe/
+2026-07-11 01:55:36 | WARNING  | crawler              |   ConnectTimeout: https://www.ctic-virtual.uni.edu.pe/
+2026-07-11 01:55:36 | DEBUG    | crawler              | robots.txt unreadable for https://uniolimpiadas.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:55:36 | DEBUG    | crawler              |   HTML (15,512b) depth=0: https://uniolimpiadas.uni.edu.pe/
+2026-07-11 01:55:37 | DEBUG    | crawler              | robots.txt unreadable for https://www.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:55:37 | DEBUG    | crawler              |   HTML (83,191b) depth=0: https://www.uni.edu.pe/index.php/servicios/122-servicio-de-alimentacion-comedor-universitario
+2026-07-11 01:55:37 | DEBUG    | crawler              | robots.txt unreadable for https://ceps.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:55:37 | DEBUG    | crawler              |   HTML (168,476b) depth=0: https://ceps.uni.edu.pe/
+2026-07-11 01:55:37 | DEBUG    | extractor            | Block extraction: 16 from https://ceps.uni.edu.pe/
+2026-07-11 01:55:37 | INFO     | pipeline             |   9100 fragments | 123 candidate rows
+2026-07-11 01:55:38 | DEBUG    | crawler              | robots.txt unreadable for http://www.idiomas.uni.edu.pe: Remote end closed connection without response (allowing)
+2026-07-11 01:55:48 | INFO     | crawler              |   ConnectionError on http, retrying https: https://www.idiomas.uni.edu.pe/
+2026-07-11 01:55:48 | DEBUG    | crawler              |   HTML (110,184b) depth=0: http://www.idiomas.uni.edu.pe/
+2026-07-11 01:57:04 | DEBUG    | crawler              | robots.txt unreadable for http://www.imefen.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 01:57:37 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.imefen.uni.edu.pe/
+2026-07-11 01:58:10 | WARNING  | crawler              |   ConnectTimeout: https://www.imefen.uni.edu.pe/
+2026-07-11 01:58:10 | DEBUG    | crawler              | robots.txt unreadable for https://vri.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:58:10 | DEBUG    | crawler              |   HTML (43,159b) depth=1: https://vri.uni.edu.pe/catalog/servicio-electrician-electrical-services-template-kit
+2026-07-11 01:58:10 | DEBUG    | crawler              | robots.txt unreadable for https://faua.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:58:10 | DEBUG    | crawler              |   HTML (148,804b) depth=0: https://faua.uni.edu.pe/
+2026-07-11 01:58:10 | DEBUG    | crawler              | robots.txt unreadable for https://fieecs.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:58:10 | DEBUG    | crawler              |   HTML (330,732b) depth=0: https://fieecs.uni.edu.pe/
+2026-07-11 01:58:11 | DEBUG    | crawler              |   PDF: https://fieecs.uni.edu.pe/wp-content/uploads/2026/07/RR-0745-2026.pdf (found on: https://fieecs.uni.edu.pe/)
+2026-07-11 01:58:11 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://recaptcha.cloud/?template=cpg&server=198.251.84.200%3A443&ip=181.177.233.250&http=&host=fieecs.uni.edu.pe&real_ip=&proto=&url=%2Fwp-content%2Fuploads%2F2026%2F07%2FRR-0745-2026.pdf
+2026-07-11 01:58:11 | DEBUG    | crawler              |   PDF: https://fieecs.uni.edu.pe/wp-content/uploads/2026/07/RD-N°-101-FIEECS-2026RR.pdf (found on: https://fieecs.uni.edu.pe/)
+2026-07-11 01:58:11 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://recaptcha.cloud/?template=cpg&server=198.251.84.200%3A443&ip=181.177.233.250&http=&host=fieecs.uni.edu.pe&real_ip=&proto=&url=%2Fwp-content%2Fuploads%2F2026%2F07%2FRD-N%C2%B0-101-FIEECS-2026RR.pdf
+2026-07-11 01:58:11 | DEBUG    | crawler              |   PDF: https://fieecs.uni.edu.pe/wp-content/uploads/2026/06/RCU-650-2026-EXP.-0031859-2026-REGLAMENTO-GENERAL-DE-ELECCIONES-DE-AUTORIDADES-Y-REPRESENTANTES-ANTE-ORGANOS-DE-GOBIERNO-DE-LA-UNI-Y-ANEXO.1RRRRRR-1.pdf (found on: https://fieecs.uni.edu.pe/)
+2026-07-11 01:58:11 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://recaptcha.cloud/?template=cpg&server=198.251.84.200%3A443&ip=181.177.233.250&http=&host=fieecs.uni.edu.pe&real_ip=&proto=&url=%2Fwp-content%2Fuploads%2F2026%2F06%2FRCU-650-2026-EXP.-0031859-2026-REGLAMENTO-GENERAL-DE-ELECCIONES-DE-AUTORIDADES-Y-REPRESENTANTES-ANTE-ORGANOS-DE-GOBIERNO-DE-LA-UNI-Y-ANEXO.1RRRRRR-1.pdf
+2026-07-11 01:58:11 | DEBUG    | crawler              | robots.txt unreadable for https://fim.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:58:11 | DEBUG    | crawler              |   HTML (150,789b) depth=0: https://fim.uni.edu.pe/
+2026-07-11 01:58:11 | DEBUG    | crawler              | robots.txt unreadable for https://www.fiqt.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:58:11 | DEBUG    | crawler              |   HTML (246,439b) depth=0: https://www.fiqt.uni.edu.pe/
+2026-07-11 01:58:11 | DEBUG    | crawler              | robots.txt unreadable for https://uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:58:11 | DEBUG    | crawler              |   HTML (121,249b) depth=0: https://uni.edu.pe/
+2026-07-11 01:58:11 | DEBUG    | crawler              |   PDF: https://uni.edu.pe/images/noticias/201912/pdfs/RR-N1756_directiva--promocin-fortalecimiento-y-atencin-de-la-salud-mental.pdf (found on: https://uni.edu.pe/)
+2026-07-11 01:58:11 | WARNING  | extractor            | PDF has 0 chars over 10 page(s) (engine=pypdf) — flagging for manual review: https://portal.uni.edu.pe/images/noticias/201912/pdfs/RR-N1756_directiva--promocin-fortalecimiento-y-atencin-de-la-salud-mental.pdf
+2026-07-11 01:58:11 | DEBUG    | crawler              | robots.txt unreadable for http://sie.ocpla.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:58:11 | DEBUG    | crawler              |   HTML (6,678b) depth=0: http://sie.ocpla.uni.edu.pe/
+2026-07-11 01:58:11 | DEBUG    | crawler              | robots.txt unreadable for http://upgfia.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 01:58:11 | DEBUG    | crawler              |   HTML (12,288b) depth=0: http://upgfia.uni.edu.pe/
+2026-07-11 01:58:11 | DEBUG    | crawler              |   PDF: http://upgfia.uni.edu.pe/pdf/HORARIO/DOCTORADO HORARIOS  2026-1.pdf (found on: http://upgfia.uni.edu.pe/)
+2026-07-11 01:58:11 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://upgfia.uni.edu.pe/pdf/HORARIO/DOCTORADO%20HORARIOS%20%202026-1.pdf
+2026-07-11 01:58:11 | DEBUG    | crawler              |   PDF: http://upgfia.uni.edu.pe/pdf/HORARIO/HORARIO MAESTRÍA 2026-1.pdf (found on: http://upgfia.uni.edu.pe/)
+2026-07-11 01:58:11 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://upgfia.uni.edu.pe/pdf/HORARIO/HORARIO%20MAESTR%C3%8DA%202026-1.pdf
+2026-07-11 01:58:11 | DEBUG    | crawler              |   PDF: http://upgfia.uni.edu.pe/pdf/HORARIO/HORARIO DIPLOMADO 2025.pdf (found on: http://upgfia.uni.edu.pe/)
+2026-07-11 01:58:11 | WARNING  | extractor            | PDF has 60 chars over 2 page(s) (engine=pypdf) — flagging for manual review: https://upgfia.uni.edu.pe/pdf/HORARIO/HORARIO%20DIPLOMADO%202025.pdf
+2026-07-11 01:59:26 | DEBUG    | crawler              | robots.txt unreadable for http://www.acreditacionfic.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 02:00:00 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.acreditacionfic.uni.edu.pe/
+2026-07-11 02:00:33 | WARNING  | crawler              |   ConnectTimeout: https://www.acreditacionfic.uni.edu.pe/
+2026-07-11 02:01:48 | DEBUG    | crawler              | robots.txt unreadable for http://www.postgradofic.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 02:02:21 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.postgradofic.uni.edu.pe/
+2026-07-11 02:02:54 | WARNING  | crawler              |   ConnectTimeout: https://www.postgradofic.uni.edu.pe/
+2026-07-11 02:04:09 | DEBUG    | crawler              | robots.txt unreadable for http://www.labdcv.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 02:04:42 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.labdcv.uni.edu.pe/
+2026-07-11 02:05:15 | WARNING  | crawler              |   ConnectTimeout: https://www.labdcv.uni.edu.pe/
+2026-07-11 02:05:15 | DEBUG    | crawler              | robots.txt unreadable for http://www.lem.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:05:15 | DEBUG    | crawler              |   HTML (98,958b) depth=0: http://www.lem.uni.edu.pe/
+2026-07-11 02:05:15 | DEBUG    | extractor            | Table extraction: 5 rows from https://www.lem.uni.edu.pe/
+2026-07-11 02:05:15 | DEBUG    | crawler              |   PDF: http://www.lem.uni.edu.pe/archivoslem/CONDICIONES_GENERALES_DE_SERVICIO.pdf (found on: http://www.lem.uni.edu.pe/)
+2026-07-11 02:05:15 | DEBUG    | extractor            | PDF extracted: 6 page fragment(s) via pymupdf: https://www.lem.uni.edu.pe/archivoslem/CONDICIONES_GENERALES_DE_SERVICIO.pdf
+2026-07-11 02:05:15 | DEBUG    | crawler              |   PDF: http://www.lem.uni.edu.pe/archivoslem/ALCANCE_DEL_SISTEMA_DE_GESTION_DE_LA_CALIDAD.pdf (found on: http://www.lem.uni.edu.pe/)
+2026-07-11 02:05:15 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://www.lem.uni.edu.pe/archivoslem/ALCANCE_DEL_SISTEMA_DE_GESTION_DE_LA_CALIDAD.pdf
+2026-07-11 02:05:15 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1LGsU00jQWHPPnXWvxq9sAkID4mMadRlG (found on: http://www.lem.uni.edu.pe/)
+2026-07-11 02:05:15 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1LGsU00jQWHPPnXWvxq9sAkID4mMadRlG&export=download
+2026-07-11 02:06:30 | DEBUG    | crawler              | robots.txt unreadable for http://www.labquimica.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 02:07:03 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://www.labquimica.uni.edu.pe/
+2026-07-11 02:07:36 | WARNING  | crawler              |   ConnectTimeout: https://www.labquimica.uni.edu.pe/
+2026-07-11 02:07:36 | DEBUG    | crawler              |   HTML (60,188b) depth=1: http://www.fiis.uni.edu.pe/escuela-de-ingenieria-de-software/plan-de-estudios-de-ingenieria-software
+2026-07-11 02:07:36 | DEBUG    | crawler              |   PDF: http://www.fiis.uni.edu.pe/images/contenidos/escuela-software/PLAN_ESTUDIOS-_INGENIERIA-SOFTWARE_11-07-2021-CF-V1.pdf (found on: http://www.fiis.uni.edu.pe/escuela-de-ingenieria-de-software/plan-de-estudios-de-ingenieria-software)
+2026-07-11 02:07:36 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://www.fiis.uni.edu.pe/images/contenidos/escuela-software/PLAN_ESTUDIOS-_INGENIERIA-SOFTWARE_11-07-2021-CF-V1.pdf
+2026-07-11 02:07:36 | DEBUG    | crawler              |   HTML (82,694b) depth=1: http://www.fiis.uni.edu.pe/escuela-de-ingenieria-de-sistemas/plan-de-estudios
+2026-07-11 02:07:37 | DEBUG    | crawler              |   HTML (57,339b) depth=1: http://www.fiis.uni.edu.pe/escuela-de-ingenieria-de-software/maya-curricular
+2026-07-11 02:07:37 | DEBUG    | crawler              |   PDF: http://www.fiis.uni.edu.pe/images/contenidos/escuela-software/MALLA-INGENIERIA_DE_SOFTWARE-V10_31-01-2021-CF-WEB.pdf (found on: http://www.fiis.uni.edu.pe/escuela-de-ingenieria-de-software/maya-curricular)
+2026-07-11 02:07:37 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://www.fiis.uni.edu.pe/images/contenidos/escuela-software/MALLA-INGENIERIA_DE_SOFTWARE-V10_31-01-2021-CF-WEB.pdf
+2026-07-11 02:07:37 | DEBUG    | crawler              | robots.txt unreadable for https://posgradofim.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:07:37 | DEBUG    | crawler              |   HTML (1,212,417b) depth=0: https://posgradofim.uni.edu.pe/
+2026-07-11 02:07:37 | DEBUG    | crawler              |   PDF: https://posgradofim.uni.edu.pe/_files/ugd/4c7e57_40cf4998a3fe4730b4e114d7d605f8e4.pdf (found on: https://posgradofim.uni.edu.pe/)
+2026-07-11 02:07:37 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://posgradofim.uni.edu.pe/_files/ugd/4c7e57_40cf4998a3fe4730b4e114d7d605f8e4.pdf
+2026-07-11 02:07:37 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=12HiEItb0VIJoG6pI-ii2qH5SypyAf6Fo (found on: https://posgradofim.uni.edu.pe/)
+2026-07-11 02:07:37 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=12HiEItb0VIJoG6pI-ii2qH5SypyAf6Fo&export=download
+2026-07-11 02:07:37 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1SrE7uOmwby-ka0LMefErVXOOyV61fi0X (found on: https://posgradofim.uni.edu.pe/)
+2026-07-11 02:07:37 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1SrE7uOmwby-ka0LMefErVXOOyV61fi0X&export=download
+2026-07-11 02:07:37 | DEBUG    | crawler              | robots.txt unreadable for https://www.infouni.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:07:37 | DEBUG    | crawler              |   HTML (4,734b) depth=0: https://www.infouni.uni.edu.pe/
+2026-07-11 02:08:52 | DEBUG    | crawler              | robots.txt unreadable for https://www.motores.uni.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-11 02:09:25 | WARNING  | crawler              |   ConnectTimeout: https://www.motores.uni.edu.pe/
+2026-07-11 02:09:25 | DEBUG    | crawler              | robots.txt unreadable for http://idiin.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:09:35 | INFO     | crawler              |   SSLError on http, retrying https: https://idiin.uni.edu.pe/
+2026-07-11 02:09:44 | WARNING  | crawler              |   SSLError: https://idiin.uni.edu.pe/
+2026-07-11 02:09:44 | DEBUG    | crawler              | robots.txt unreadable for http://www.apps.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:09:44 | DEBUG    | crawler              |   HTML (13,248b) depth=0: http://www.apps.uni.edu.pe/
+2026-07-11 02:09:45 | DEBUG    | crawler              | robots.txt unreadable for http://www.revistas.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:09:45 | DEBUG    | crawler              |   HTML (14,893b) depth=0: http://www.revistas.uni.edu.pe/
+2026-07-11 02:09:45 | DEBUG    | crawler              |   HTML (78,791b) depth=0: https://portal.uni.edu.pe/index.php/posgrado-uni/doctorados
+2026-07-11 02:09:45 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado-faua.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:09:45 | DEBUG    | crawler              |   HTML (29,589b) depth=0: https://posgrado-faua.uni.edu.pe/cursos.html
+2026-07-11 02:09:45 | DEBUG    | extractor            | Block extraction: 1 from https://posgrado-faua.uni.edu.pe/cursos.html
+2026-07-11 02:09:45 | DEBUG    | crawler              |   HTML (82,452b) depth=0: https://portal.uni.edu.pe/index.php/posgrado-uni/maestrias
+2026-07-11 02:09:45 | DEBUG    | crawler              | robots.txt unreadable for http://www.posgrado-faua.uni.edu.pe: <urlopen error [Errno 8] nodename nor servname provided, or not known> (allowing)
+2026-07-11 02:09:54 | INFO     | crawler              |   ConnectionError on http, retrying https: https://www.posgrado-faua.uni.edu.pe/maestrias.html
+2026-07-11 02:10:03 | WARNING  | crawler              |   ConnectionError: https://www.posgrado-faua.uni.edu.pe/maestrias.html
+2026-07-11 02:10:04 | DEBUG    | crawler              | robots.txt unreadable for http://www.posgradofim.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:10:04 | DEBUG    | crawler              |   HTML (1,212,417b) depth=0: http://www.posgradofim.uni.edu.pe/
+2026-07-11 02:10:05 | DEBUG    | crawler              | robots.txt unreadable for http://bolsatrabajo.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:10:05 | DEBUG    | crawler              |   HTML (77,218b) depth=0: http://bolsatrabajo.uni.edu.pe/
+2026-07-11 02:10:05 | DEBUG    | crawler              | robots.txt unreadable for http://univirtual.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:10:05 | DEBUG    | crawler              |   HTML (33,151b) depth=0: http://univirtual.uni.edu.pe/
+2026-07-11 02:10:05 | DEBUG    | crawler              | robots.txt unreadable for https://fondoeduni.uni.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-11 02:10:05 | DEBUG    | crawler              |   HTML (55,112b) depth=0: https://fondoeduni.uni.edu.pe/
+2026-07-11 02:10:05 | DEBUG    | crawler              |   HTML (118,932b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ciencias/quimica
+2026-07-11 02:10:05 | DEBUG    | extractor            | Table extraction: 20 rows from https://portal.uni.edu.pe/index.php/facultades/ciencias/quimica
+2026-07-11 02:10:05 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=18ilg-bUSOlkEo6iihXuxUshVO7M4kxnH (found on: https://portal.uni.edu.pe/index.php/facultades/ciencias/quimica)
+2026-07-11 02:10:05 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=18ilg-bUSOlkEo6iihXuxUshVO7M4kxnH&export=download
+2026-07-11 02:10:05 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1YJrWnktXxbHc_mHZDBircPzs6UqdQ0BI (found on: https://portal.uni.edu.pe/index.php/facultades/ciencias/quimica)
+2026-07-11 02:10:06 | DEBUG    | extractor            | PDF extracted: 217 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1YJrWnktXxbHc_mHZDBircPzs6UqdQ0BI&export=download
+2026-07-11 02:10:06 | INFO     | pipeline             |   9200 fragments | 127 candidate rows
+2026-07-11 02:10:07 | INFO     | pipeline             |   9300 fragments | 134 candidate rows
+2026-07-11 02:10:07 | INFO     | pipeline             |   9400 fragments | 150 candidate rows
+2026-07-11 02:10:07 | DEBUG    | crawler              |   HTML (121,990b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ciencias/fisica
+2026-07-11 02:10:07 | DEBUG    | extractor            | Table extraction: 20 rows from https://portal.uni.edu.pe/index.php/facultades/ciencias/fisica
+2026-07-11 02:10:07 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1kz_ICwztPJJCZPLhlbHew3sfoQTlENKL (found on: https://portal.uni.edu.pe/index.php/facultades/ciencias/fisica)
+2026-07-11 02:10:08 | DEBUG    | extractor            | PDF extracted: 143 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1kz_ICwztPJJCZPLhlbHew3sfoQTlENKL&export=download
+2026-07-11 02:10:09 | INFO     | pipeline             |   9500 fragments | 224 candidate rows
+2026-07-11 02:10:09 | DEBUG    | crawler              |   HTML (116,054b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ciencias/matematica
+2026-07-11 02:10:09 | DEBUG    | extractor            | Table extraction: 20 rows from https://portal.uni.edu.pe/index.php/facultades/ciencias/matematica
+2026-07-11 02:10:09 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1IkBe1rXm6p6iXhbHFppBZiaSNV5KNOYj (found on: https://portal.uni.edu.pe/index.php/facultades/ciencias/matematica)
+2026-07-11 02:10:09 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1IkBe1rXm6p6iXhbHFppBZiaSNV5KNOYj&export=download
+2026-07-11 02:10:09 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=13zmr-Fgj1btPOjI9M5emKI3q1Tp4YLCd (found on: https://portal.uni.edu.pe/index.php/facultades/ciencias/matematica)
+2026-07-11 02:10:10 | DEBUG    | extractor            | PDF extracted: 137 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=13zmr-Fgj1btPOjI9M5emKI3q1Tp4YLCd&export=download
+2026-07-11 02:10:10 | INFO     | pipeline             |   9600 fragments | 255 candidate rows
+2026-07-11 02:10:10 | INFO     | pipeline             |   9700 fragments | 256 candidate rows
+2026-07-11 02:10:10 | DEBUG    | crawler              |   HTML (113,502b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ciencias/ciencia-de-la-computacion
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 20 rows from https://portal.uni.edu.pe/index.php/facultades/ciencias/ciencia-de-la-computacion
+2026-07-11 02:10:11 | DEBUG    | crawler              |   PDF: https://drive.google.com/uc?export=download&id=1ZWVw0Y9QI9xWCFLQ9eipscfG_ZD0HMv9 (found on: https://portal.uni.edu.pe/index.php/facultades/ciencias/ciencia-de-la-computacion)
+2026-07-11 02:10:11 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://drive.usercontent.google.com/download?id=1ZWVw0Y9QI9xWCFLQ9eipscfG_ZD0HMv9&export=download
+2026-07-11 02:10:11 | WARNING  | crawler              |   max_pdfs_per_domain (50) reached — further documents skipped
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (121,213b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-ambiental/ingenieria-sanitaria
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 10 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-ambiental/ingenieria-sanitaria
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (109,002b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-ambiental/ingenieria-de-higiene-y-seguridad-industrial
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-ambiental/ingenieria-de-higiene-y-seguridad-industrial
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (103,777b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-ambiental/ingenieria-ambiental
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-ambiental/ingenieria-ambiental
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (103,767b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-civil/ingenieria-civil
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-civil/ingenieria-civil
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (99,927b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-economica-estadistica-y-de-ciencias-sociales/ingenieria-economica
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-economica-estadistica-y-de-ciencias-sociales/ingenieria-economica
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (107,397b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-economica-estadistica-y-de-ciencias-sociales/ingenieria-estadistica
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-economica-estadistica-y-de-ciencias-sociales/ingenieria-estadistica
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (109,058b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-geologica-minera-y-metalurgica/ingenieria-de-minas
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-geologica-minera-y-metalurgica/ingenieria-de-minas
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (109,061b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-geologica-minera-y-metalurgica/ingenieria-geologica
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-geologica-minera-y-metalurgica/ingenieria-geologica
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (109,431b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-geologica-minera-y-metalurgica/ingenieria-metalurgica
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-geologica-minera-y-metalurgica/ingenieria-metalurgica
+2026-07-11 02:10:11 | INFO     | pipeline             |   9800 fragments | 257 candidate rows
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (111,966b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-industrial-y-de-sistemas/ingenieria-industrial
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 6 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-industrial-y-de-sistemas/ingenieria-industrial
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (113,101b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-industrial-y-de-sistemas/ingenieria-de-sistemas
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 6 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-industrial-y-de-sistemas/ingenieria-de-sistemas
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (79,970b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-industrial-y-de-sistemas/ingenieria-de-software
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (107,565b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-mecanica
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-mecanica
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (107,971b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-mecanica-electrica
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-mecanica-electrica
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (107,638b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-naval
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-naval
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (108,101b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-mecatronica
+2026-07-11 02:10:11 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-mecatronica
+2026-07-11 02:10:11 | DEBUG    | crawler              |   HTML (89,369b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-mecanica/ingenieria-aeroespacial
+2026-07-11 02:10:12 | DEBUG    | crawler              |   HTML (108,743b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-de-petroleo-y-petroquimica/ingenieria-de-petroleo
+2026-07-11 02:10:12 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-de-petroleo-y-petroquimica/ingenieria-de-petroleo
+2026-07-11 02:10:12 | DEBUG    | crawler              |   HTML (111,582b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-de-petroleo-y-petroquimica/ingenieria-petroquimica
+2026-07-11 02:10:12 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-de-petroleo-y-petroquimica/ingenieria-petroquimica
+2026-07-11 02:10:12 | DEBUG    | crawler              |   HTML (108,737b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-quimica-y-textil/ingenieria-quimica
+2026-07-11 02:10:12 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-quimica-y-textil/ingenieria-quimica
+2026-07-11 02:10:12 | DEBUG    | crawler              |   HTML (109,897b) depth=1: https://portal.uni.edu.pe/index.php/facultades/ingenieria-quimica-y-textil/ingenieria-textil
+2026-07-11 02:10:12 | DEBUG    | extractor            | Table extraction: 5 rows from https://portal.uni.edu.pe/index.php/facultades/ingenieria-quimica-y-textil/ingenieria-textil
+2026-07-11 02:10:12 | INFO     | crawler              |   Done: UNI | 150 pages fetched (99 HTML, 51 PDFs)
+2026-07-11 02:10:12 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-11 02:10:12 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-11 02:10:12 | INFO     | pipeline             | Phase 1/2 complete — 257 new candidate rows (257 total)
+2026-07-11 02:10:12 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-11 02:10:12 | INFO     | pipeline             | Wrote 257 rows → data/noseed_test.csv
+2026-07-11 02:10:12 | INFO     | pipeline             | ============================================================
+2026-07-11 02:10:12 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-11 02:10:12 | INFO     | pipeline             |   Seeds discovered    : 60
+2026-07-11 02:10:12 | INFO     | pipeline             |   Pages crawled       : 450
+2026-07-11 02:10:12 | INFO     | pipeline             |   PDFs detected       : 128
+2026-07-11 02:10:12 | INFO     | pipeline             |   PDFs extracted OK   : 114/125
+2026-07-11 02:10:12 | INFO     | pipeline             |   Fragments processed : 9854
+2026-07-11 02:10:12 | INFO     | pipeline             |   Candidate rows      : 257
+2026-07-11 02:10:12 | INFO     | pipeline             |   From PDFs           : 210
+2026-07-11 02:10:12 | INFO     | pipeline             |   Need manual review  : 11
+2026-07-11 02:10:12 | INFO     | pipeline             |   By seed origin      : {'auto_discovered': 257}
+2026-07-11 02:10:12 | INFO     | pipeline             |   Elapsed             : 3218.1s
+2026-07-11 02:10:12 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-11 02:10:12 | INFO     | pipeline             |   By classification:
+2026-07-11 02:10:12 | INFO     | pipeline             |     non_course_or_contextual          : 24
+2026-07-11 02:10:12 | INFO     | pipeline             |     qise_core                         : 3
+2026-07-11 02:10:12 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 150
+2026-07-11 02:10:12 | INFO     | pipeline             |     unclear                           : 80
+2026-07-11 02:10:12 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-11 02:10:12 | INFO     | pipeline             |   qise_core rows      : 3
+2026-07-11 02:10:12 | INFO     | pipeline             |   Institutions w/ core: 2
+2026-07-11 02:10:12 | INFO     | pipeline             |       • PUCP
+2026-07-11 02:10:12 | INFO     | pipeline             |       • UTEC
+2026-07-11 02:10:12 | INFO     | pipeline             | ============================================================

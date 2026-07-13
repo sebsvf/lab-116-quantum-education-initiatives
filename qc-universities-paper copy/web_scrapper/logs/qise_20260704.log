@@ -1,0 +1,343 @@
+2026-07-04 19:36:04 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 19:36:04 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-04 19:36:04 | INFO     | input_loader         | Loaded 3 universities from /Users/rafaelchamayo/qc-universities-paper/web_scrapper/tests/../data/universities_sample.csv
+2026-07-04 19:36:04 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-04 19:36:04 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-04 19:36:04 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-04 19:36:04 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-04 19:36:04 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-04 19:36:04 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-04 19:36:04 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-04 19:36:55 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 19:36:55 | WARNING  | extractor            | PDF has 0 chars over 24 page(s) (engine=pypdf) — flagging for manual review: file://10c36e7d35.pdf
+2026-07-04 19:36:56 | DEBUG    | extractor            | PDF extracted: 14 page fragment(s) via pymupdf: file://16b370e4f8.pdf
+2026-07-04 19:36:56 | WARNING  | extractor            | PDF has 0 chars over 21 page(s) (engine=pypdf) — flagging for manual review: file://17dc802f26.pdf
+2026-07-04 19:36:56 | WARNING  | extractor            | PDF has 0 chars over 17 page(s) (engine=pypdf) — flagging for manual review: file://34f94a0206.pdf
+2026-07-04 19:36:56 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: file://35bf4c1f8a.pdf
+2026-07-04 19:36:56 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: file://6714eaf24b.pdf
+2026-07-04 19:36:56 | WARNING  | extractor            | PDF has 0 chars over 2 page(s) (engine=pypdf) — flagging for manual review: file://a3e8b4a0da.pdf
+2026-07-04 19:36:56 | DEBUG    | extractor            | PDF extracted: 19 page fragment(s) via pymupdf: file://b4f23ed787.pdf
+2026-07-04 19:36:56 | DEBUG    | extractor            | PDF extracted: 24 page fragment(s) via pymupdf: file://dac9fe0a34.pdf
+2026-07-04 19:36:56 | DEBUG    | extractor            | PDF extracted: 25 page fragment(s) via pymupdf: file://891dc29b2e.pdf
+2026-07-04 19:36:57 | DEBUG    | extractor            | PDF extracted: 61 page fragment(s) via pymupdf: file://003b91be2e.pdf
+2026-07-04 19:36:58 | DEBUG    | extractor            | PDF extracted: 22 page fragment(s) via pymupdf: file://185e234bc5.pdf
+2026-07-04 19:36:58 | DEBUG    | extractor            | PDF extracted: 76 page fragment(s) via pymupdf: file://2bb53d3189.pdf
+2026-07-04 19:36:59 | DEBUG    | extractor            | PDF extracted: 22 page fragment(s) via pymupdf: file://4842dcda31.pdf
+2026-07-04 19:36:59 | DEBUG    | extractor            | PDF extracted: 16 page fragment(s) via pymupdf: file://7b73c10a39.pdf
+2026-07-04 19:36:59 | DEBUG    | extractor            | PDF extracted: 22 page fragment(s) via pymupdf: file://8d94746e71.pdf
+2026-07-04 19:36:59 | DEBUG    | extractor            | PDF extracted: 29 page fragment(s) via pymupdf: file://a5df7d8ef1.pdf
+2026-07-04 19:36:59 | DEBUG    | extractor            | PDF extracted: 8 page fragment(s) via pymupdf: file://f35de931cb.pdf
+2026-07-04 19:40:20 | WARNING  | extractor            | PDF has 0 chars over 24 page(s) (engine=pypdf) — flagging for manual review: f
+2026-07-04 19:40:20 | DEBUG    | extractor            | PDF extracted: 14 page fragment(s) via pymupdf: f
+2026-07-04 19:40:20 | WARNING  | extractor            | PDF has 0 chars over 21 page(s) (engine=pypdf) — flagging for manual review: f
+2026-07-04 19:40:20 | WARNING  | extractor            | PDF has 0 chars over 17 page(s) (engine=pypdf) — flagging for manual review: f
+2026-07-04 19:40:20 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: f
+2026-07-04 19:40:20 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: f
+2026-07-04 19:40:20 | WARNING  | extractor            | PDF has 0 chars over 2 page(s) (engine=pypdf) — flagging for manual review: f
+2026-07-04 19:40:20 | DEBUG    | extractor            | PDF extracted: 19 page fragment(s) via pymupdf: f
+2026-07-04 19:40:20 | DEBUG    | extractor            | PDF extracted: 24 page fragment(s) via pymupdf: f
+2026-07-04 19:40:20 | DEBUG    | extractor            | PDF extracted: 25 page fragment(s) via pymupdf: f
+2026-07-04 19:40:21 | DEBUG    | extractor            | PDF extracted: 61 page fragment(s) via pymupdf: f
+2026-07-04 19:40:21 | DEBUG    | extractor            | PDF extracted: 22 page fragment(s) via pymupdf: f
+2026-07-04 19:40:21 | DEBUG    | extractor            | PDF extracted: 76 page fragment(s) via pymupdf: f
+2026-07-04 19:40:21 | DEBUG    | extractor            | PDF extracted: 22 page fragment(s) via pymupdf: f
+2026-07-04 19:40:21 | DEBUG    | extractor            | PDF extracted: 16 page fragment(s) via pymupdf: f
+2026-07-04 19:40:21 | DEBUG    | extractor            | PDF extracted: 22 page fragment(s) via pymupdf: f
+2026-07-04 19:40:21 | DEBUG    | extractor            | PDF extracted: 29 page fragment(s) via pymupdf: f
+2026-07-04 19:40:21 | DEBUG    | extractor            | PDF extracted: 8 page fragment(s) via pymupdf: f
+2026-07-04 19:42:28 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-04 19:42:28 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/smoke.csv
+2026-07-04 19:42:28 | INFO     | main                 | Country : Argentina
+2026-07-04 19:42:28 | INFO     | main                 | Resume  : False | dry-run: False | limit: 40
+2026-07-04 19:42:28 | INFO     | pipeline             | ============================================================
+2026-07-04 19:42:28 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-04 19:42:28 | INFO     | pipeline             | ============================================================
+2026-07-04 19:42:28 | INFO     | input_loader         | Loaded 3 universities from data/universities_sample.csv
+2026-07-04 19:42:28 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 19:42:28 | INFO     | pipeline             | Universities to process: 1 (country=Argentina)
+2026-07-04 19:42:28 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-04 19:42:28 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-04 19:42:28 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-04 19:42:28 | INFO     | crawler              | Crawl: Instituto Balseiro | seeds=3 max_pages=8 max_depth=1 pdfs=on
+2026-07-04 19:42:28 | DEBUG    | crawler              | robots.txt unreadable for https://www.ib.edu.ar: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-04 19:42:29 | DEBUG    | crawler              |   HTML (290,411b) depth=0: https://www.ib.edu.ar/
+2026-07-04 19:42:30 | WARNING  | crawler              |   HTTP 404: https://www.ib.edu.ar/carreras/licenciatura-en-fisica
+2026-07-04 19:42:32 | WARNING  | crawler              |   HTTP 404: https://www.ib.edu.ar/carreras/maestria-en-fisica
+2026-07-04 19:42:34 | DEBUG    | crawler              |   HTML (196,633b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado
+2026-07-04 19:42:35 | DEBUG    | crawler              |   HTML (226,119b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-mecanica
+2026-07-04 19:42:37 | DEBUG    | crawler              |   HTML (225,540b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-nuclear
+2026-07-04 19:42:38 | DEBUG    | crawler              |   HTML (225,860b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-telecomunicaciones
+2026-07-04 19:42:41 | DEBUG    | crawler              |   HTML (225,842b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/carrera-de-grado_licfisica
+2026-07-04 19:42:42 | DEBUG    | crawler              |   HTML (193,366b) depth=1: https://www.ib.edu.ar/academicas/especializaciones-y-diplomaturas
+2026-07-04 19:42:44 | DEBUG    | crawler              |   HTML (250,541b) depth=1: https://www.ib.edu.ar/academicas/especializaciones-y-diplomaturas/especializacion-ceaten
+2026-07-04 19:42:44 | INFO     | crawler              |   Done: Instituto Balseiro | 8 pages fetched
+2026-07-04 19:42:44 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-04 19:42:44 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-04 19:42:44 | INFO     | pipeline             | Phase 1/2 complete — 0 new candidate rows (0 total)
+2026-07-04 19:42:44 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-04 19:42:44 | INFO     | pipeline             | Wrote 0 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/smoke.csv
+2026-07-04 19:42:44 | INFO     | pipeline             | ============================================================
+2026-07-04 19:42:44 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-04 19:42:44 | INFO     | pipeline             |   Fragments processed : 8
+2026-07-04 19:42:44 | INFO     | pipeline             |   Candidate rows      : 0
+2026-07-04 19:42:44 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-04 19:42:44 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-04 19:42:44 | INFO     | pipeline             |   Elapsed             : 16.2s
+2026-07-04 19:42:44 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 19:42:44 | INFO     | pipeline             |   By classification:
+2026-07-04 19:42:44 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 19:42:44 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-04 19:42:44 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-04 19:42:44 | INFO     | pipeline             | ============================================================
+2026-07-04 19:42:44 | WARNING  | main                 | No candidate evidence found. Check that seed URLs are reachable and that --max-depth/--max-pages allow crawling.
+2026-07-04 19:59:02 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 20:01:57 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/uba.csv
+2026-07-04 20:01:57 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/uba_out.csv
+2026-07-04 20:01:57 | INFO     | main                 | Country : all
+2026-07-04 20:01:57 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-04 20:01:57 | INFO     | pipeline             | ============================================================
+2026-07-04 20:01:57 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-04 20:01:57 | INFO     | pipeline             | ============================================================
+2026-07-04 20:01:57 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/uba.csv
+2026-07-04 20:01:57 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 20:01:57 | INFO     | pipeline             | Universities to process: 1
+2026-07-04 20:01:57 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-04 20:01:57 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-04 20:01:57 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-04 20:01:57 | INFO     | crawler              | Crawl: UBA Dept Fisica | seeds=2 max_pages=6 max_depth=1 pdfs=on
+2026-07-04 20:01:57 | DEBUG    | crawler              | robots.txt unreadable for https://df.uba.ar: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-04 20:01:58 | DEBUG    | crawler              |   HTML (56,229b) depth=0: https://df.uba.ar/
+2026-07-04 20:02:00 | DEBUG    | crawler              |   HTML (68,388b) depth=1: https://df.uba.ar/es/docentes/paginas-de-materias
+2026-07-04 20:02:01 | DEBUG    | crawler              |   HTML (86,156b) depth=1: https://df.uba.ar/es/docentes/concursos-docentes2
+2026-07-04 20:02:03 | DEBUG    | crawler              |   HTML (58,986b) depth=1: https://df.uba.ar/es/estudiantes/licenciatura
+2026-07-04 20:02:04 | DEBUG    | crawler              |   HTML (67,497b) depth=1: https://df.uba.ar/es/estudiantes/licenciatura/info-para-biologos-y-geologos
+2026-07-04 20:02:05 | DEBUG    | crawler              |   HTML (62,126b) depth=1: https://df.uba.ar/es/estudiantes/licenciatura/calendario-academico-estudiantes
+2026-07-04 20:02:06 | INFO     | crawler              |   Done: UBA Dept Fisica | 6 pages fetched
+2026-07-04 20:02:06 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-04 20:02:06 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-04 20:02:06 | INFO     | pipeline             | Phase 1/2 complete — 11 new candidate rows (11 total)
+2026-07-04 20:02:06 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-04 20:02:06 | INFO     | pipeline             | Wrote 11 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/uba_out.csv
+2026-07-04 20:02:06 | INFO     | pipeline             | ============================================================
+2026-07-04 20:02:06 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-04 20:02:06 | INFO     | pipeline             |   Fragments processed : 6
+2026-07-04 20:02:06 | INFO     | pipeline             |   Candidate rows      : 11
+2026-07-04 20:02:06 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-04 20:02:06 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-04 20:02:06 | INFO     | pipeline             |   Elapsed             : 8.2s
+2026-07-04 20:02:06 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 20:02:06 | INFO     | pipeline             |   By classification:
+2026-07-04 20:02:06 | INFO     | pipeline             |     non_course_or_contextual          : 9
+2026-07-04 20:02:06 | INFO     | pipeline             |     unclear                           : 2
+2026-07-04 20:02:06 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 20:02:06 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-04 20:02:06 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-04 20:02:06 | INFO     | pipeline             | ============================================================
+2026-07-04 20:07:04 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 20:07:04 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-04 20:07:04 | INFO     | input_loader         | Loaded 3 universities from /Users/rafaelchamayo/qc-universities-paper/web_scrapper/tests/../data/universities_sample.csv
+2026-07-04 20:07:04 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-04 20:07:04 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-04 20:07:04 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-04 20:07:04 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-04 20:07:04 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-04 20:07:04 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-04 20:07:04 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-04 20:08:32 | INFO     | input_loader         | Loaded 14 universities from sources.yaml
+2026-07-04 20:08:32 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/uba.csv
+2026-07-04 20:08:32 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/uba_out.csv
+2026-07-04 20:08:32 | INFO     | main                 | Country : all
+2026-07-04 20:08:32 | INFO     | main                 | Resume  : True | dry-run: False | limit: none
+2026-07-04 20:08:32 | INFO     | pipeline             | ============================================================
+2026-07-04 20:08:32 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-04 20:08:32 | INFO     | pipeline             | ============================================================
+2026-07-04 20:08:32 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/uba.csv
+2026-07-04 20:08:32 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 20:08:32 | INFO     | pipeline             | Universities to process: 1
+2026-07-04 20:08:32 | INFO     | pipeline             | Resume: 1 institutions already done, 0 remaining
+2026-07-04 20:08:32 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-04 20:08:32 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-04 20:08:32 | INFO     | dispatcher           | Dispatching 0 universities
+2026-07-04 20:08:32 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-04 20:08:32 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-04 20:08:32 | INFO     | pipeline             | Phase 1/2 complete — 0 new candidate rows (11 total)
+2026-07-04 20:08:32 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-04 20:08:32 | INFO     | pipeline             | Wrote 11 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/uba_out.csv
+2026-07-04 20:08:32 | INFO     | pipeline             | ============================================================
+2026-07-04 20:08:32 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-04 20:08:32 | INFO     | pipeline             |   Fragments processed : 0
+2026-07-04 20:08:32 | INFO     | pipeline             |   Candidate rows      : 11
+2026-07-04 20:08:32 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-04 20:08:32 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-04 20:08:32 | INFO     | pipeline             |   Elapsed             : 0.0s
+2026-07-04 20:08:32 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 20:08:32 | INFO     | pipeline             |   By classification:
+2026-07-04 20:08:32 | INFO     | pipeline             |     non_course_or_contextual          : 9
+2026-07-04 20:08:32 | INFO     | pipeline             |     unclear                           : 2
+2026-07-04 20:08:32 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 20:08:32 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-04 20:08:32 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-04 20:08:32 | INFO     | pipeline             | ============================================================
+2026-07-04 23:54:44 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-04 23:54:44 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-04 23:54:44 | INFO     | main                 | Country : all
+2026-07-04 23:54:44 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-04 23:54:44 | INFO     | pipeline             | ============================================================
+2026-07-04 23:54:44 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-04 23:54:44 | INFO     | pipeline             | ============================================================
+2026-07-04 23:54:44 | INFO     | input_loader         | Loaded 3 universities from data/universities_sample.csv
+2026-07-04 23:54:44 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 23:54:44 | INFO     | pipeline             | Universities to process: 3
+2026-07-04 23:54:44 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-04 23:54:44 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-04 23:54:44 | INFO     | dispatcher           | Dispatching 3 universities
+2026-07-04 23:54:44 | INFO     | crawler              | Crawl: Instituto Balseiro | seeds=3 max_pages=8 max_depth=1 pdfs=on
+2026-07-04 23:54:45 | DEBUG    | crawler              | robots.txt unreadable for https://www.ib.edu.ar: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-04 23:54:45 | DEBUG    | crawler              |   HTML (290,411b) depth=0: https://www.ib.edu.ar/
+2026-07-04 23:54:46 | WARNING  | crawler              |   HTTP 404: https://www.ib.edu.ar/carreras/licenciatura-en-fisica
+2026-07-04 23:54:48 | WARNING  | crawler              |   HTTP 404: https://www.ib.edu.ar/carreras/maestria-en-fisica
+2026-07-04 23:54:48 | DEBUG    | crawler              |   HTML (196,633b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado
+2026-07-04 23:54:48 | DEBUG    | crawler              |   HTML (226,119b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-mecanica
+2026-07-04 23:54:48 | DEBUG    | crawler              |   HTML (225,540b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-nuclear
+2026-07-04 23:54:48 | DEBUG    | crawler              |   HTML (225,860b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-telecomunicaciones
+2026-07-04 23:54:48 | DEBUG    | crawler              |   HTML (225,842b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/carrera-de-grado_licfisica
+2026-07-04 23:54:48 | DEBUG    | crawler              |   HTML (193,366b) depth=1: https://www.ib.edu.ar/academicas/especializaciones-y-diplomaturas
+2026-07-04 23:54:48 | DEBUG    | crawler              |   HTML (250,541b) depth=1: https://www.ib.edu.ar/academicas/especializaciones-y-diplomaturas/especializacion-ceaten
+2026-07-04 23:54:48 | INFO     | crawler              |   Done: Instituto Balseiro | 8 pages fetched
+2026-07-04 23:54:48 | INFO     | crawler              | Crawl: Universidade de São Paulo - Instituto de Física | seeds=3 max_pages=10 max_depth=1 pdfs=on
+2026-07-04 23:54:49 | DEBUG    | crawler              | robots.txt unreadable for https://www.if.usp.br: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-04 23:54:51 | DEBUG    | crawler              |   HTML (62,354b) depth=0: https://www.if.usp.br/
+2026-07-04 23:54:52 | DEBUG    | crawler              |   HTML (62,354b) depth=0: https://www.if.usp.br/graduacao
+2026-07-04 23:54:54 | DEBUG    | crawler              |   HTML (62,354b) depth=0: https://www.if.usp.br/posgraduacao
+2026-07-04 23:54:55 | DEBUG    | crawler              |   HTML (59,176b) depth=1: https://www.if.usp.br/graduacao?q=node%2F11497
+2026-07-04 23:54:57 | DEBUG    | crawler              |   HTML (59,689b) depth=1: https://www.if.usp.br/graduacao?q=node%2F11530
+2026-07-04 23:54:58 | DEBUG    | crawler              |   HTML (58,638b) depth=1: https://www.if.usp.br/graduacao?q=node%2F11531
+2026-07-04 23:55:00 | DEBUG    | crawler              |   HTML (56,179b) depth=1: https://www.if.usp.br/graduacao?q=node%2F11532
+2026-07-04 23:55:01 | DEBUG    | crawler              |   HTML (51,813b) depth=1: https://www.if.usp.br/graduacao?q=noticias%2Fdestaque%2Ftodas
+2026-07-04 23:55:03 | DEBUG    | crawler              |   HTML (59,176b) depth=1: https://www.if.usp.br/posgraduacao?q=node%2F11497
+2026-07-04 23:55:04 | DEBUG    | crawler              |   HTML (59,689b) depth=1: https://www.if.usp.br/posgraduacao?q=node%2F11530
+2026-07-04 23:55:04 | INFO     | crawler              |   Done: Universidade de São Paulo - Instituto de Física | 10 pages fetched
+2026-07-04 23:55:04 | INFO     | crawler              | Crawl: Universidad de los Andes - Física | seeds=3 max_pages=8 max_depth=1 pdfs=on
+2026-07-04 23:55:05 | DEBUG    | crawler              | robots.txt unreadable for https://fisica.uniandes.edu.co: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-04 23:55:05 | DEBUG    | crawler              |   HTML (146,254b) depth=0: https://fisica.uniandes.edu.co/
+2026-07-04 23:55:09 | DEBUG    | crawler              |   HTML (65,826b) depth=0: https://fisica.uniandes.edu.co/programas
+2026-07-04 23:55:12 | WARNING  | crawler              |   HTTP 404: https://fisica.uniandes.edu.co/cursos
+2026-07-04 23:55:18 | WARNING  | crawler              |   Truncated oversized download (> 40MB): https://fisica.uniandes.edu.co/sites/default/files/documents/Cursos-electivos/2026-2/Cursos-Electivos-2026.pdf
+2026-07-04 23:55:19 | DEBUG    | crawler              |   PDF: https://fisica.uniandes.edu.co/sites/default/files/documents/Cursos-electivos/2026-2/Cursos-Electivos-2026.pdf (found on: https://fisica.uniandes.edu.co/)
+2026-07-04 23:55:20 | DEBUG    | extractor            | pdfplumber failed: Unexpected EOF
+2026-07-04 23:55:21 | DEBUG    | extractor            | pdfminer failed: Unexpected EOF
+2026-07-04 23:55:24 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-04 23:55:24 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=low_text) — flagging for manual review: https://fisica.uniandes.edu.co/sites/default/files/documents/Cursos-electivos/2026-2/Cursos-Electivos-2026.pdf
+2026-07-04 23:55:29 | WARNING  | crawler              |   Truncated oversized download (> 40MB): https://fisica.uniandes.edu.co/sites/default/files/documents/Portafolio_empresarial_Departamento_de_Fisica-Universidad_de_los_Andes.pdf
+2026-07-04 23:55:29 | DEBUG    | crawler              |   PDF: https://fisica.uniandes.edu.co/sites/default/files/documents/Portafolio_empresarial_Departamento_de_Fisica-Universidad_de_los_Andes.pdf (found on: https://fisica.uniandes.edu.co/)
+2026-07-04 23:55:32 | DEBUG    | extractor            | pypdf failed: Invalid object in /Pages
+2026-07-04 23:55:32 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=low_text) — flagging for manual review: https://fisica.uniandes.edu.co/sites/default/files/documents/Portafolio_empresarial_Departamento_de_Fisica-Universidad_de_los_Andes.pdf
+2026-07-04 23:55:33 | DEBUG    | crawler              |   PDF: https://fisica.uniandes.edu.co/sites/default/files/documents/dpto-de-f-isica_53794899.pdf?_t=1620414337 (found on: https://fisica.uniandes.edu.co/)
+2026-07-04 23:55:33 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://fisica.uniandes.edu.co/sites/default/files/documents/dpto-de-f-isica_53794899.pdf?_t=1620414337
+2026-07-04 23:55:35 | DEBUG    | crawler              |   PDF: https://fisica.uniandes.edu.co/sites/default/files/documents/Calendario-academico-2026.pdf (found on: https://fisica.uniandes.edu.co/)
+2026-07-04 23:55:35 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://fisica.uniandes.edu.co/sites/default/files/documents/Calendario-academico-2026.pdf
+2026-07-04 23:55:36 | DEBUG    | crawler              |   HTML (63,156b) depth=1: https://fisica.uniandes.edu.co/es/soy-estudiante
+2026-07-04 23:55:37 | DEBUG    | crawler              |   HTML (62,835b) depth=1: https://fisica.uniandes.edu.co/es/soy-profesor
+2026-07-04 23:55:37 | INFO     | crawler              |   Done: Universidad de los Andes - Física | 8 pages fetched
+2026-07-04 23:55:37 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-04 23:55:37 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-04 23:55:37 | INFO     | pipeline             | Phase 1/2 complete — 2 new candidate rows (2 total)
+2026-07-04 23:55:37 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-04 23:55:37 | INFO     | pipeline             | Wrote 2 rows → data/qise_candidates.csv
+2026-07-04 23:55:37 | INFO     | pipeline             | ============================================================
+2026-07-04 23:55:37 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-04 23:55:37 | INFO     | pipeline             |   Fragments processed : 29
+2026-07-04 23:55:37 | INFO     | pipeline             |   Candidate rows      : 2
+2026-07-04 23:55:37 | INFO     | pipeline             |   From PDFs           : 2
+2026-07-04 23:55:37 | INFO     | pipeline             |   Need manual review  : 2
+2026-07-04 23:55:37 | INFO     | pipeline             |   Elapsed             : 52.9s
+2026-07-04 23:55:37 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 23:55:37 | INFO     | pipeline             |   By classification:
+2026-07-04 23:55:37 | INFO     | pipeline             |     unclear                           : 2
+2026-07-04 23:55:37 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 23:55:37 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-04 23:55:37 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-04 23:55:37 | INFO     | pipeline             | ============================================================
+2026-07-04 23:59:28 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-04 23:59:28 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-04 23:59:28 | INFO     | main                 | Country : all
+2026-07-04 23:59:28 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-04 23:59:28 | INFO     | pipeline             | ============================================================
+2026-07-04 23:59:28 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-04 23:59:28 | INFO     | pipeline             | ============================================================
+2026-07-04 23:59:28 | INFO     | input_loader         | Loaded 3 universities from data/universities_sample.csv
+2026-07-04 23:59:28 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-04 23:59:28 | INFO     | pipeline             | Universities to process: 3
+2026-07-04 23:59:28 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-04 23:59:28 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-04 23:59:28 | INFO     | dispatcher           | Dispatching 3 universities
+2026-07-04 23:59:28 | INFO     | crawler              | Crawl: Instituto Balseiro | seeds=3 max_pages=8 max_depth=1 pdfs=on
+2026-07-04 23:59:29 | DEBUG    | crawler              | robots.txt unreadable for https://www.ib.edu.ar: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-04 23:59:29 | DEBUG    | crawler              |   HTML (290,411b) depth=0: https://www.ib.edu.ar/
+2026-07-04 23:59:30 | WARNING  | crawler              |   HTTP 404: https://www.ib.edu.ar/carreras/licenciatura-en-fisica
+2026-07-04 23:59:31 | WARNING  | crawler              |   HTTP 404: https://www.ib.edu.ar/carreras/maestria-en-fisica
+2026-07-04 23:59:31 | DEBUG    | crawler              |   HTML (196,633b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado
+2026-07-04 23:59:31 | DEBUG    | crawler              |   HTML (226,119b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-mecanica
+2026-07-04 23:59:31 | DEBUG    | crawler              |   HTML (225,540b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-nuclear
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (225,860b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/ing-telecomunicaciones
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (225,842b) depth=1: https://www.ib.edu.ar/academicas/carreras-de-grado/carrera-de-grado_licfisica
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (193,366b) depth=1: https://www.ib.edu.ar/academicas/especializaciones-y-diplomaturas
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (250,541b) depth=1: https://www.ib.edu.ar/academicas/especializaciones-y-diplomaturas/especializacion-ceaten
+2026-07-04 23:59:32 | INFO     | crawler              |   Done: Instituto Balseiro | 8 pages fetched
+2026-07-04 23:59:32 | INFO     | crawler              | Crawl: Universidade de São Paulo - Instituto de Física | seeds=3 max_pages=10 max_depth=1 pdfs=on
+2026-07-04 23:59:32 | DEBUG    | crawler              | robots.txt unreadable for https://www.if.usp.br: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (62,354b) depth=0: https://www.if.usp.br/
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (62,354b) depth=0: https://www.if.usp.br/graduacao
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (62,354b) depth=0: https://www.if.usp.br/posgraduacao
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (59,176b) depth=1: https://www.if.usp.br/graduacao?q=node%2F11497
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (59,689b) depth=1: https://www.if.usp.br/graduacao?q=node%2F11530
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (58,638b) depth=1: https://www.if.usp.br/graduacao?q=node%2F11531
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (56,179b) depth=1: https://www.if.usp.br/graduacao?q=node%2F11532
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (51,813b) depth=1: https://www.if.usp.br/graduacao?q=noticias%2Fdestaque%2Ftodas
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (59,176b) depth=1: https://www.if.usp.br/posgraduacao?q=node%2F11497
+2026-07-04 23:59:32 | DEBUG    | crawler              |   HTML (59,689b) depth=1: https://www.if.usp.br/posgraduacao?q=node%2F11530
+2026-07-04 23:59:32 | INFO     | crawler              |   Done: Universidade de São Paulo - Instituto de Física | 10 pages fetched
+2026-07-04 23:59:32 | INFO     | crawler              | Crawl: Universidad de los Andes - Física | seeds=3 max_pages=8 max_depth=1 pdfs=on
+2026-07-04 23:59:33 | DEBUG    | crawler              | robots.txt unreadable for https://fisica.uniandes.edu.co: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-04 23:59:33 | DEBUG    | crawler              |   HTML (146,254b) depth=0: https://fisica.uniandes.edu.co/
+2026-07-04 23:59:33 | DEBUG    | crawler              |   HTML (65,826b) depth=0: https://fisica.uniandes.edu.co/programas
+2026-07-04 23:59:33 | WARNING  | crawler              |   HTTP 404: https://fisica.uniandes.edu.co/cursos
+2026-07-04 23:59:33 | DEBUG    | crawler              |   PDF: https://fisica.uniandes.edu.co/sites/default/files/documents/Cursos-electivos/2026-2/Cursos-Electivos-2026.pdf (found on: https://fisica.uniandes.edu.co/)
+2026-07-04 23:59:34 | DEBUG    | extractor            | pdfplumber failed: Unexpected EOF
+2026-07-04 23:59:35 | DEBUG    | extractor            | pdfminer failed: Unexpected EOF
+2026-07-04 23:59:37 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-04 23:59:37 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=low_text) — flagging for manual review: https://fisica.uniandes.edu.co/sites/default/files/documents/Cursos-electivos/2026-2/Cursos-Electivos-2026.pdf
+2026-07-04 23:59:37 | DEBUG    | crawler              |   PDF: https://fisica.uniandes.edu.co/sites/default/files/documents/Portafolio_empresarial_Departamento_de_Fisica-Universidad_de_los_Andes.pdf (found on: https://fisica.uniandes.edu.co/)
+2026-07-04 23:59:42 | DEBUG    | extractor            | pypdf failed: Invalid object in /Pages
+2026-07-04 23:59:42 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=low_text) — flagging for manual review: https://fisica.uniandes.edu.co/sites/default/files/documents/Portafolio_empresarial_Departamento_de_Fisica-Universidad_de_los_Andes.pdf
+2026-07-04 23:59:42 | DEBUG    | crawler              |   PDF: https://fisica.uniandes.edu.co/sites/default/files/documents/dpto-de-f-isica_53794899.pdf?_t=1620414337 (found on: https://fisica.uniandes.edu.co/)
+2026-07-04 23:59:42 | DEBUG    | extractor            | PDF extracted: 4 page fragment(s) via pymupdf: https://fisica.uniandes.edu.co/sites/default/files/documents/dpto-de-f-isica_53794899.pdf?_t=1620414337
+2026-07-04 23:59:42 | DEBUG    | crawler              |   PDF: https://fisica.uniandes.edu.co/sites/default/files/documents/Calendario-academico-2026.pdf (found on: https://fisica.uniandes.edu.co/)
+2026-07-04 23:59:42 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://fisica.uniandes.edu.co/sites/default/files/documents/Calendario-academico-2026.pdf
+2026-07-04 23:59:42 | DEBUG    | crawler              |   HTML (63,156b) depth=1: https://fisica.uniandes.edu.co/es/soy-estudiante
+2026-07-04 23:59:42 | DEBUG    | crawler              |   HTML (62,835b) depth=1: https://fisica.uniandes.edu.co/es/soy-profesor
+2026-07-04 23:59:42 | INFO     | crawler              |   Done: Universidad de los Andes - Física | 8 pages fetched
+2026-07-04 23:59:42 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-04 23:59:42 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-04 23:59:42 | INFO     | pipeline             | Phase 1/2 complete — 2 new candidate rows (2 total)
+2026-07-04 23:59:42 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-04 23:59:42 | INFO     | pipeline             | Wrote 2 rows → data/qise_candidates.csv
+2026-07-04 23:59:42 | INFO     | pipeline             | ============================================================
+2026-07-04 23:59:42 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-04 23:59:42 | INFO     | pipeline             |   Fragments processed : 29
+2026-07-04 23:59:42 | INFO     | pipeline             |   Candidate rows      : 2
+2026-07-04 23:59:42 | INFO     | pipeline             |   From PDFs           : 2
+2026-07-04 23:59:42 | INFO     | pipeline             |   Need manual review  : 2
+2026-07-04 23:59:42 | INFO     | pipeline             |   Elapsed             : 13.2s
+2026-07-04 23:59:42 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 23:59:42 | INFO     | pipeline             |   By classification:
+2026-07-04 23:59:42 | INFO     | pipeline             |     unclear                           : 2
+2026-07-04 23:59:42 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-04 23:59:42 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-04 23:59:42 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-04 23:59:42 | INFO     | pipeline             | ============================================================

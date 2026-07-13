@@ -1,0 +1,1413 @@
+2026-07-06 00:45:42 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-06 00:45:42 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 00:45:42 | INFO     | main                 | Country : all
+2026-07-06 00:45:42 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 00:45:42 | INFO     | pipeline             | ============================================================
+2026-07-06 00:45:42 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 00:45:42 | INFO     | pipeline             | ============================================================
+2026-07-06 00:45:42 | INFO     | input_loader         | Loaded 4 universities from data/universities_sample.csv
+2026-07-06 00:45:42 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 00:45:42 | INFO     | pipeline             | Universities to process: 4
+2026-07-06 00:45:42 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 00:45:42 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 00:45:42 | INFO     | dispatcher           | Dispatching 4 universities
+2026-07-06 00:45:42 | INFO     | crawler              | Crawl: UTEC | seeds=2 max_pages=10 max_depth=5
+2026-07-06 00:45:43 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-06 00:45:44 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-06 00:45:44 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-06 00:45:45 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-06 00:45:45 | DEBUG    | extractor            | Block extraction: 16 from https://utec.edu.pe/programas-de-bienestar
+2026-07-06 00:45:46 | INFO     | pipeline             |   100 fragments | 12 candidate rows
+2026-07-06 00:45:47 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-06 00:45:47 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-06 00:45:47 | INFO     | pipeline             |   200 fragments | 12 candidate rows
+2026-07-06 00:45:48 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-06 00:45:48 | DEBUG    | extractor            | Block extraction: 169 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-06 00:45:48 | INFO     | pipeline             |   300 fragments | 12 candidate rows
+2026-07-06 00:45:48 | INFO     | pipeline             |   400 fragments | 12 candidate rows
+2026-07-06 00:45:50 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-06 00:45:50 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-06 00:45:50 | INFO     | pipeline             |   500 fragments | 12 candidate rows
+2026-07-06 00:45:50 | INFO     | pipeline             |   600 fragments | 12 candidate rows
+2026-07-06 00:45:51 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-06 00:45:51 | DEBUG    | extractor            | Block extraction: 158 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-06 00:45:51 | INFO     | pipeline             |   700 fragments | 12 candidate rows
+2026-07-06 00:45:53 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-06 00:45:53 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/business-analytics
+2026-07-06 00:45:53 | INFO     | pipeline             |   800 fragments | 12 candidate rows
+2026-07-06 00:45:54 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-06 00:45:54 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-06 00:45:54 | INFO     | pipeline             |   900 fragments | 12 candidate rows
+2026-07-06 00:45:54 | INFO     | pipeline             |   1000 fragments | 12 candidate rows
+2026-07-06 00:45:56 | DEBUG    | crawler              |   HTML (394,428b) depth=1: https://utec.edu.pe/carreras/bioingenieria
+2026-07-06 00:45:56 | DEBUG    | extractor            | Block extraction: 185 from https://utec.edu.pe/carreras/bioingenieria
+2026-07-06 00:45:56 | INFO     | pipeline             |   1100 fragments | 12 candidate rows
+2026-07-06 00:45:56 | INFO     | pipeline             |   1200 fragments | 12 candidate rows
+2026-07-06 00:45:56 | INFO     | crawler              |   Done: UTEC | 10 páginas
+2026-07-06 00:45:56 | INFO     | crawler              | Crawl: Universidad de Ingeniería y Tecnología | seeds=2 max_pages=10 max_depth=5
+2026-07-06 00:45:57 | DEBUG    | crawler              |   HTML (176,656b) depth=0: https://utec.edu.pe/
+2026-07-06 00:45:59 | DEBUG    | crawler              |   HTML (254,580b) depth=0: https://utec.edu.pe/carreras/fisica
+2026-07-06 00:45:59 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-06 00:45:59 | INFO     | pipeline             |   1300 fragments | 13 candidate rows
+2026-07-06 00:46:00 | DEBUG    | crawler              |   HTML (1,073,855b) depth=1: https://utec.edu.pe/programas-de-bienestar
+2026-07-06 00:46:01 | DEBUG    | extractor            | Block extraction: 16 from https://utec.edu.pe/programas-de-bienestar
+2026-07-06 00:46:02 | DEBUG    | crawler              |   HTML (369,982b) depth=1: https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-06 00:46:02 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/sistemas-de-informacion
+2026-07-06 00:46:02 | INFO     | pipeline             |   1400 fragments | 13 candidate rows
+2026-07-06 00:46:02 | INFO     | pipeline             |   1500 fragments | 13 candidate rows
+2026-07-06 00:46:03 | DEBUG    | crawler              |   HTML (373,591b) depth=1: https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-06 00:46:03 | DEBUG    | extractor            | Block extraction: 169 from https://utec.edu.pe/carreras/ciencia-de-datos-e-inteligencia-artificial
+2026-07-06 00:46:03 | INFO     | pipeline             |   1600 fragments | 13 candidate rows
+2026-07-06 00:46:05 | DEBUG    | crawler              |   HTML (376,015b) depth=1: https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-06 00:46:05 | DEBUG    | extractor            | Block extraction: 168 from https://utec.edu.pe/carreras/ciencia-de-la-computacion
+2026-07-06 00:46:05 | INFO     | pipeline             |   1700 fragments | 13 candidate rows
+2026-07-06 00:46:05 | INFO     | pipeline             |   1800 fragments | 13 candidate rows
+2026-07-06 00:46:06 | DEBUG    | crawler              |   HTML (341,901b) depth=1: https://utec.edu.pe/carreras/ciberseguridad
+2026-07-06 00:46:06 | DEBUG    | extractor            | Block extraction: 158 from https://utec.edu.pe/carreras/ciberseguridad
+2026-07-06 00:46:06 | INFO     | pipeline             |   1900 fragments | 13 candidate rows
+2026-07-06 00:46:08 | DEBUG    | crawler              |   HTML (232,824b) depth=1: https://utec.edu.pe/carreras/business-analytics
+2026-07-06 00:46:08 | DEBUG    | extractor            | Block extraction: 91 from https://utec.edu.pe/carreras/business-analytics
+2026-07-06 00:46:08 | INFO     | pipeline             |   2000 fragments | 13 candidate rows
+2026-07-06 00:46:09 | DEBUG    | crawler              |   HTML (388,598b) depth=1: https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-06 00:46:09 | DEBUG    | extractor            | Block extraction: 181 from https://utec.edu.pe/carreras/ingenieria-industrial
+2026-07-06 00:46:09 | INFO     | pipeline             |   2100 fragments | 13 candidate rows
+2026-07-06 00:46:09 | INFO     | pipeline             |   2200 fragments | 13 candidate rows
+2026-07-06 00:46:11 | DEBUG    | crawler              |   HTML (394,428b) depth=1: https://utec.edu.pe/carreras/bioingenieria
+2026-07-06 00:46:11 | DEBUG    | extractor            | Block extraction: 185 from https://utec.edu.pe/carreras/bioingenieria
+2026-07-06 00:46:11 | INFO     | pipeline             |   2300 fragments | 13 candidate rows
+2026-07-06 00:46:11 | INFO     | pipeline             |   2400 fragments | 13 candidate rows
+2026-07-06 00:46:11 | INFO     | crawler              |   Done: Universidad de Ingeniería y Tecnología | 10 páginas
+2026-07-06 00:46:11 | INFO     | crawler              | Crawl: PUCP | seeds=3 max_pages=10 max_depth=5
+2026-07-06 00:46:12 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 00:46:14 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 00:46:17 | DEBUG    | crawler              |   HTML (87,481b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 00:46:17 | WARNING  | crawler              |   HTTP ?: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 00:46:18 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 00:46:20 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe/pregrado
+2026-07-06 00:46:21 | DEBUG    | crawler              |   HTML (129,316b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-lista
+2026-07-06 00:46:23 | DEBUG    | crawler              |   HTML (166,889b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-facultad
+2026-07-06 00:46:24 | DEBUG    | crawler              |   HTML (112,409b) depth=1: https://www.pucp.edu.pe/pregrado/becas
+2026-07-06 00:46:26 | DEBUG    | crawler              |   HTML (87,442b) depth=1: https://www.pucp.edu.pe/posgrado
+2026-07-06 00:46:28 | DEBUG    | crawler              |   HTML (93,870b) depth=1: https://www.pucp.edu.pe/en/carrera/fisica
+2026-07-06 00:46:28 | INFO     | crawler              |   Done: PUCP | 10 páginas
+2026-07-06 00:46:28 | INFO     | crawler              | Crawl: Ponticia Universidad Católica del Perú | seeds=3 max_pages=10 max_depth=5
+2026-07-06 00:46:29 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 00:46:31 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 00:46:33 | DEBUG    | crawler              |   HTML (87,481b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 00:46:34 | WARNING  | crawler              |   HTTP ?: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 00:46:35 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 00:46:37 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe/pregrado
+2026-07-06 00:46:38 | DEBUG    | crawler              |   HTML (129,316b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-lista
+2026-07-06 00:46:40 | DEBUG    | crawler              |   HTML (166,889b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-facultad
+2026-07-06 00:46:41 | DEBUG    | crawler              |   HTML (112,409b) depth=1: https://www.pucp.edu.pe/pregrado/becas
+2026-07-06 00:46:43 | DEBUG    | crawler              |   HTML (87,442b) depth=1: https://www.pucp.edu.pe/posgrado
+2026-07-06 00:46:44 | DEBUG    | crawler              |   HTML (93,870b) depth=1: https://www.pucp.edu.pe/en/carrera/fisica
+2026-07-06 00:46:44 | INFO     | crawler              |   Done: Ponticia Universidad Católica del Perú | 10 páginas
+2026-07-06 00:46:44 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 00:46:44 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 00:46:44 | INFO     | pipeline             | Phase 1/2 complete — 13 new candidate rows (13 total)
+2026-07-06 00:46:44 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 00:46:44 | INFO     | pipeline             | Wrote 13 rows → data/qise_candidates.csv
+2026-07-06 00:46:44 | INFO     | pipeline             | ============================================================
+2026-07-06 00:46:44 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 00:46:44 | INFO     | pipeline             |   Fragments processed : 2474
+2026-07-06 00:46:44 | INFO     | pipeline             |   Candidate rows      : 13
+2026-07-06 00:46:44 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-06 00:46:44 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 00:46:44 | INFO     | pipeline             |   Elapsed             : 62.4s
+2026-07-06 00:46:44 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 00:46:44 | INFO     | pipeline             |   By classification:
+2026-07-06 00:46:44 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 00:46:44 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 8
+2026-07-06 00:46:44 | INFO     | pipeline             |     unclear                           : 4
+2026-07-06 00:46:44 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 00:46:44 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 00:46:44 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 00:46:44 | INFO     | pipeline             |       • UTEC
+2026-07-06 00:46:44 | INFO     | pipeline             | ============================================================
+2026-07-06 00:47:27 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-06 00:47:27 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 00:47:27 | INFO     | main                 | Country : all
+2026-07-06 00:47:27 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 00:47:27 | INFO     | pipeline             | ============================================================
+2026-07-06 00:47:27 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 00:47:27 | INFO     | pipeline             | ============================================================
+2026-07-06 00:47:27 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-06 00:47:27 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 00:47:27 | INFO     | pipeline             | Universities to process: 2
+2026-07-06 00:47:27 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 00:47:27 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 00:47:27 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-06 00:47:27 | INFO     | crawler              | Crawl: PUCP | seeds=3 max_pages=10 max_depth=5
+2026-07-06 00:47:28 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 00:47:30 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 00:47:32 | DEBUG    | crawler              |   HTML (87,481b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 00:47:33 | WARNING  | crawler              |   HTTP ?: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 00:47:34 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 00:47:35 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe/pregrado
+2026-07-06 00:47:37 | DEBUG    | crawler              |   HTML (129,316b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-lista
+2026-07-06 00:47:38 | DEBUG    | crawler              |   HTML (166,889b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-facultad
+2026-07-06 00:47:40 | DEBUG    | crawler              |   HTML (112,409b) depth=1: https://www.pucp.edu.pe/pregrado/becas
+2026-07-06 00:47:41 | DEBUG    | crawler              |   HTML (87,442b) depth=1: https://www.pucp.edu.pe/posgrado
+2026-07-06 00:47:43 | DEBUG    | crawler              |   HTML (93,870b) depth=1: https://www.pucp.edu.pe/en/carrera/fisica
+2026-07-06 00:47:43 | INFO     | crawler              |   Done: PUCP | 10 páginas
+2026-07-06 00:47:43 | INFO     | crawler              | Crawl: Ponticia Universidad Católica del Perú | seeds=3 max_pages=10 max_depth=5
+2026-07-06 00:47:44 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 00:47:46 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 00:47:48 | DEBUG    | crawler              |   HTML (87,481b) depth=0: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 00:47:49 | WARNING  | crawler              |   HTTP ?: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 00:47:50 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 00:47:52 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe/pregrado
+2026-07-06 00:47:53 | DEBUG    | crawler              |   HTML (129,316b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-lista
+2026-07-06 00:47:55 | DEBUG    | crawler              |   HTML (166,889b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-facultad
+2026-07-06 00:47:57 | DEBUG    | crawler              |   HTML (112,409b) depth=1: https://www.pucp.edu.pe/pregrado/becas
+2026-07-06 00:47:58 | DEBUG    | crawler              |   HTML (87,442b) depth=1: https://www.pucp.edu.pe/posgrado
+2026-07-06 00:48:00 | DEBUG    | crawler              |   HTML (93,870b) depth=1: https://www.pucp.edu.pe/en/carrera/fisica
+2026-07-06 00:48:00 | INFO     | crawler              |   Done: Ponticia Universidad Católica del Perú | 10 páginas
+2026-07-06 00:48:00 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 00:48:00 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 00:48:00 | INFO     | pipeline             | Phase 1/2 complete — 0 new candidate rows (0 total)
+2026-07-06 00:48:00 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 00:48:00 | INFO     | pipeline             | Wrote 0 rows → data/qise_candidates.csv
+2026-07-06 00:48:00 | INFO     | pipeline             | ============================================================
+2026-07-06 00:48:00 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 00:48:00 | INFO     | pipeline             |   Fragments processed : 20
+2026-07-06 00:48:00 | INFO     | pipeline             |   Candidate rows      : 0
+2026-07-06 00:48:00 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-06 00:48:00 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 00:48:00 | INFO     | pipeline             |   Elapsed             : 32.5s
+2026-07-06 00:48:00 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 00:48:00 | INFO     | pipeline             |   By classification:
+2026-07-06 00:48:00 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 00:48:00 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-06 00:48:00 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-06 00:48:00 | INFO     | pipeline             | ============================================================
+2026-07-06 00:48:00 | WARNING  | main                 | No candidate evidence found. Check that seed URLs are reachable and that --max-depth/--max-pages allow crawling.
+2026-07-06 00:48:44 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-06 00:48:44 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 00:48:44 | INFO     | main                 | Country : all
+2026-07-06 00:48:44 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 00:48:44 | INFO     | pipeline             | ============================================================
+2026-07-06 00:48:44 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 00:48:44 | INFO     | pipeline             | ============================================================
+2026-07-06 00:48:44 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-06 00:48:44 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 00:48:44 | INFO     | pipeline             | Universities to process: 2
+2026-07-06 00:48:44 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 00:48:44 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 00:48:44 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-06 00:48:44 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=10 max_depth=5
+2026-07-06 00:48:45 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 00:48:46 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 00:48:48 | WARNING  | crawler              |   HTTP ?: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 00:48:49 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 00:48:51 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe/pregrado
+2026-07-06 00:48:52 | DEBUG    | crawler              |   HTML (129,316b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-lista
+2026-07-06 00:48:54 | DEBUG    | crawler              |   HTML (166,889b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-facultad
+2026-07-06 00:48:55 | DEBUG    | crawler              |   HTML (112,409b) depth=1: https://www.pucp.edu.pe/pregrado/becas
+2026-07-06 00:48:57 | DEBUG    | crawler              |   HTML (87,442b) depth=1: https://www.pucp.edu.pe/posgrado
+2026-07-06 00:48:58 | DEBUG    | crawler              |   HTML (93,870b) depth=1: https://www.pucp.edu.pe/en/carrera/fisica
+2026-07-06 00:49:00 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe//pregrado
+2026-07-06 00:49:00 | INFO     | crawler              |   Done: PUCP | 10 páginas
+2026-07-06 00:49:00 | INFO     | crawler              | Crawl: Ponticia Universidad Católica del Perú | seeds=2 max_pages=10 max_depth=5
+2026-07-06 00:49:01 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 00:49:03 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 00:49:04 | WARNING  | crawler              |   HTTP ?: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 00:49:06 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 00:49:07 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe/pregrado
+2026-07-06 00:49:09 | DEBUG    | crawler              |   HTML (129,316b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-lista
+2026-07-06 00:49:10 | DEBUG    | crawler              |   HTML (166,889b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-facultad
+2026-07-06 00:49:12 | DEBUG    | crawler              |   HTML (112,409b) depth=1: https://www.pucp.edu.pe/pregrado/becas
+2026-07-06 00:49:13 | DEBUG    | crawler              |   HTML (87,442b) depth=1: https://www.pucp.edu.pe/posgrado
+2026-07-06 00:49:15 | DEBUG    | crawler              |   HTML (93,870b) depth=1: https://www.pucp.edu.pe/en/carrera/fisica
+2026-07-06 00:49:16 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe//pregrado
+2026-07-06 00:49:16 | INFO     | crawler              |   Done: Ponticia Universidad Católica del Perú | 10 páginas
+2026-07-06 00:49:16 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 00:49:16 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 00:49:16 | INFO     | pipeline             | Phase 1/2 complete — 0 new candidate rows (0 total)
+2026-07-06 00:49:16 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 00:49:16 | INFO     | pipeline             | Wrote 0 rows → data/qise_candidates.csv
+2026-07-06 00:49:16 | INFO     | pipeline             | ============================================================
+2026-07-06 00:49:16 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 00:49:16 | INFO     | pipeline             |   Fragments processed : 20
+2026-07-06 00:49:16 | INFO     | pipeline             |   Candidate rows      : 0
+2026-07-06 00:49:16 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-06 00:49:16 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 00:49:16 | INFO     | pipeline             |   Elapsed             : 31.9s
+2026-07-06 00:49:16 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 00:49:16 | INFO     | pipeline             |   By classification:
+2026-07-06 00:49:16 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 00:49:16 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-06 00:49:16 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-06 00:49:16 | INFO     | pipeline             | ============================================================
+2026-07-06 00:49:16 | WARNING  | main                 | No candidate evidence found. Check that seed URLs are reachable and that --max-depth/--max-pages allow crawling.
+2026-07-06 00:54:01 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 00:54:01 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 00:54:01 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpni60hzbg.csv
+2026-07-06 00:54:02 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 00:54:02 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 00:54:02 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 00:54:02 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 00:54:02 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 00:54:02 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 00:54:02 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 00:55:17 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 00:55:17 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 00:55:17 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmp4n0t46zd.csv
+2026-07-06 00:55:17 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 00:55:17 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 00:55:17 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 00:55:17 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 00:55:17 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 00:55:17 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 00:55:17 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 00:56:45 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 00:56:45 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 00:56:45 | INFO     | main                 | Country : all
+2026-07-06 00:56:45 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 00:56:45 | INFO     | pipeline             | ============================================================
+2026-07-06 00:56:45 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 00:56:45 | INFO     | pipeline             | ============================================================
+2026-07-06 00:56:45 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 00:56:45 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 00:56:45 | INFO     | pipeline             | Universities to process: 1
+2026-07-06 00:56:45 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 00:56:45 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 00:56:45 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-06 00:56:45 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=12 max_depth=2 pdfs=on
+2026-07-06 00:56:45 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 00:56:45 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 00:56:47 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 00:56:49 | WARNING  | crawler              |   HTTP 404: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 00:56:49 | DEBUG    | crawler              | robots.txt unreadable for https://reglamentodisciplinario.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 00:56:51 | DEBUG    | crawler              |   HTML (21,835b) depth=1: https://reglamentodisciplinario.pucp.edu.pe/
+2026-07-06 00:56:51 | DEBUG    | crawler              | robots.txt unreadable for https://admision.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 00:56:51 | DEBUG    | crawler              |   HTML (55,133b) depth=1: https://admision.pucp.edu.pe/carreras
+2026-07-06 00:56:53 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 00:56:54 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 00:56:55 | DEBUG    | crawler              |   HTML (48,910b) depth=1: https://posgrado.pucp.edu.pe/admision
+2026-07-06 00:56:56 | DEBUG    | crawler              |   HTML (92,858b) depth=1: https://posgrado.pucp.edu.pe/maestrias?convocatoria=1
+2026-07-06 00:56:58 | DEBUG    | crawler              |   HTML (46,058b) depth=1: https://posgrado.pucp.edu.pe/doctorados?convocatoria=1
+2026-07-06 00:56:59 | DEBUG    | crawler              |   HTML (59,931b) depth=1: https://posgrado.pucp.edu.pe/admision/admision-para-alumnos-libres/guia-para-el-proceso-de-admision
+2026-07-06 00:57:00 | DEBUG    | crawler              |   HTML (87,186b) depth=1: https://www.pucp.edu.pe/pregrado
+2026-07-06 00:57:02 | DEBUG    | crawler              |   HTML (129,316b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-lista
+2026-07-06 00:57:03 | DEBUG    | crawler              |   HTML (166,889b) depth=1: https://www.pucp.edu.pe/pregrado/carreras/por-facultad
+2026-07-06 00:57:04 | INFO     | crawler              |   Done: PUCP | 12 pages fetched
+2026-07-06 00:57:04 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 00:57:04 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 00:57:04 | INFO     | pipeline             | Phase 1/2 complete — 0 new candidate rows (0 total)
+2026-07-06 00:57:04 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 00:57:04 | INFO     | pipeline             | Wrote 0 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 00:57:04 | INFO     | pipeline             | ============================================================
+2026-07-06 00:57:04 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 00:57:04 | INFO     | pipeline             |   Fragments processed : 12
+2026-07-06 00:57:04 | INFO     | pipeline             |   Candidate rows      : 0
+2026-07-06 00:57:04 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-06 00:57:04 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 00:57:04 | INFO     | pipeline             |   Elapsed             : 18.7s
+2026-07-06 00:57:04 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 00:57:04 | INFO     | pipeline             |   By classification:
+2026-07-06 00:57:04 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 00:57:04 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-06 00:57:04 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-06 00:57:04 | INFO     | pipeline             | ============================================================
+2026-07-06 00:57:04 | WARNING  | main                 | No candidate evidence found. Check that seed URLs are reachable and that --max-depth/--max-pages allow crawling.
+2026-07-06 00:59:43 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 00:59:43 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 00:59:43 | INFO     | main                 | Country : all
+2026-07-06 00:59:43 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 00:59:43 | INFO     | pipeline             | ============================================================
+2026-07-06 00:59:43 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 00:59:43 | INFO     | pipeline             | ============================================================
+2026-07-06 00:59:43 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 00:59:43 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 00:59:43 | INFO     | pipeline             | Universities to process: 1
+2026-07-06 00:59:43 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 00:59:43 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 00:59:43 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-06 00:59:43 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=12 max_depth=2 pdfs=on
+2026-07-06 00:59:43 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 00:59:44 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 00:59:45 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 00:59:45 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 00:59:51 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:01:06 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 01:02:55 | WARNING  | crawler              |   Connection error: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:02:59 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:03:03 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:03:03 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:03:07 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:03:07 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:03:08 | WARNING  | crawler              |   HTTP 404: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 01:03:08 | DEBUG    | crawler              | robots.txt unreadable for https://reglamentodisciplinario.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:03:09 | DEBUG    | crawler              |   HTML (21,835b) depth=1: https://reglamentodisciplinario.pucp.edu.pe/
+2026-07-06 01:03:09 | DEBUG    | crawler              | robots.txt unreadable for https://admision.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:03:10 | DEBUG    | crawler              |   HTML (55,133b) depth=1: https://admision.pucp.edu.pe/carreras
+2026-07-06 01:03:12 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 01:03:12 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:03:14 | DEBUG    | crawler              |   HTML (48,910b) depth=1: https://posgrado.pucp.edu.pe/admision
+2026-07-06 01:03:15 | DEBUG    | crawler              |   PDF: https://posgrado.pucp.edu.pe/wp-content/uploads/2026/05/PREGUNTAS-FRECUENTES-2026-2.pdf (found on: https://posgrado.pucp.edu.pe/admision)
+2026-07-06 01:03:15 | DEBUG    | extractor            | PDF extracted: 9 page fragment(s) via pymupdf: https://posgrado.pucp.edu.pe/wp-content/uploads/2026/05/PREGUNTAS-FRECUENTES-2026-2.pdf
+2026-07-06 01:03:17 | DEBUG    | crawler              |   HTML (92,858b) depth=1: https://posgrado.pucp.edu.pe/maestrias?convocatoria=1
+2026-07-06 01:03:17 | INFO     | crawler              |   Done: PUCP | 12 pages fetched
+2026-07-06 01:03:17 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 01:03:17 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 01:03:17 | INFO     | pipeline             | Phase 1/2 complete — 0 new candidate rows (0 total)
+2026-07-06 01:03:17 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 01:03:17 | INFO     | pipeline             | Wrote 0 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 01:03:17 | INFO     | pipeline             | ============================================================
+2026-07-06 01:03:17 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 01:03:17 | INFO     | pipeline             |   Fragments processed : 20
+2026-07-06 01:03:17 | INFO     | pipeline             |   Candidate rows      : 0
+2026-07-06 01:03:17 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-06 01:03:17 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 01:03:17 | INFO     | pipeline             |   Elapsed             : 213.5s
+2026-07-06 01:03:17 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:03:17 | INFO     | pipeline             |   By classification:
+2026-07-06 01:03:17 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:03:17 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-06 01:03:17 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-06 01:03:17 | INFO     | pipeline             | ============================================================
+2026-07-06 01:03:17 | WARNING  | main                 | No candidate evidence found. Check that seed URLs are reachable and that --max-depth/--max-pages allow crawling.
+2026-07-06 01:04:18 | INFO     | crawler              | Crawl: PUCP | seeds=1 max_pages=12 max_depth=2 pdfs=on
+2026-07-06 01:04:18 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:04:19 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 01:04:19 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 01:04:24 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:05:39 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 01:07:28 | WARNING  | crawler              |   Connection error: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:07:33 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:07:36 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:07:40 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:07:41 | WARNING  | crawler              |   HTTP 404: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 01:07:42 | DEBUG    | crawler              |   HTML (93,870b) depth=1: https://www.pucp.edu.pe/en/carrera/fisica
+2026-07-06 01:07:43 | DEBUG    | crawler              | robots.txt unreadable for https://reglamentodisciplinario.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:07:44 | DEBUG    | crawler              |   HTML (21,835b) depth=1: https://reglamentodisciplinario.pucp.edu.pe/
+2026-07-06 01:07:44 | DEBUG    | crawler              | robots.txt unreadable for https://admision.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:07:46 | DEBUG    | crawler              |   HTML (55,133b) depth=1: https://admision.pucp.edu.pe/carreras
+2026-07-06 01:07:46 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 01:07:47 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:07:48 | DEBUG    | crawler              |   HTML (48,910b) depth=1: https://posgrado.pucp.edu.pe/admision
+2026-07-06 01:07:50 | DEBUG    | crawler              |   PDF: https://posgrado.pucp.edu.pe/wp-content/uploads/2026/05/PREGUNTAS-FRECUENTES-2026-2.pdf (found on: https://posgrado.pucp.edu.pe/admision)
+2026-07-06 01:07:51 | DEBUG    | crawler              |   HTML (92,858b) depth=1: https://posgrado.pucp.edu.pe/maestrias?convocatoria=1
+2026-07-06 01:07:51 | INFO     | crawler              |   Done: PUCP | 12 pages fetched
+2026-07-06 01:08:33 | INFO     | crawler              | Crawl: PUCP | seeds=1 max_pages=12 max_depth=2 pdfs=on
+2026-07-06 01:08:34 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:08:34 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 01:08:34 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 01:08:39 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:09:54 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 01:11:43 | WARNING  | crawler              |   Connection error: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:11:48 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:11:51 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:11:55 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:11:56 | WARNING  | crawler              |   HTTP 404: https://www.pucp.edu.pe/admision/admision-pregrado/modalidades-de-admision
+2026-07-06 01:11:57 | DEBUG    | crawler              |   HTML (93,870b) depth=1: https://www.pucp.edu.pe/en/carrera/fisica
+2026-07-06 01:11:58 | DEBUG    | crawler              | robots.txt unreadable for https://reglamentodisciplinario.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:11:59 | DEBUG    | crawler              |   HTML (21,835b) depth=1: https://reglamentodisciplinario.pucp.edu.pe/
+2026-07-06 01:11:59 | DEBUG    | crawler              | robots.txt unreadable for https://admision.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:12:00 | DEBUG    | crawler              |   HTML (55,133b) depth=1: https://admision.pucp.edu.pe/carreras
+2026-07-06 01:12:01 | DEBUG    | crawler              |   HTML (79,722b) depth=1: https://www.pucp.edu.pe/admision/admision-pregrado/vacantes-y-plazas/informacion
+2026-07-06 01:12:02 | DEBUG    | crawler              | robots.txt unreadable for https://posgrado.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:12:03 | DEBUG    | crawler              |   HTML (48,910b) depth=1: https://posgrado.pucp.edu.pe/admision
+2026-07-06 01:12:05 | DEBUG    | crawler              |   PDF: https://posgrado.pucp.edu.pe/wp-content/uploads/2026/05/PREGUNTAS-FRECUENTES-2026-2.pdf (found on: https://posgrado.pucp.edu.pe/admision)
+2026-07-06 01:12:06 | DEBUG    | crawler              |   HTML (92,858b) depth=1: https://posgrado.pucp.edu.pe/maestrias?convocatoria=1
+2026-07-06 01:12:06 | INFO     | crawler              |   Done: PUCP | 12 pages fetched
+2026-07-06 01:13:38 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 01:13:38 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 01:13:38 | INFO     | main                 | Country : all
+2026-07-06 01:13:38 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 01:13:38 | INFO     | pipeline             | ============================================================
+2026-07-06 01:13:38 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 01:13:38 | INFO     | pipeline             | ============================================================
+2026-07-06 01:13:38 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 01:13:38 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 01:13:38 | INFO     | pipeline             | Universities to process: 1
+2026-07-06 01:13:38 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 01:13:38 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 01:13:38 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-06 01:13:38 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=12 max_depth=2 pdfs=on
+2026-07-06 01:13:39 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:13:39 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 01:13:40 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 01:13:41 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 01:13:46 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:15:01 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 01:16:50 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:16:52 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:16:53 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:16:53 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 01:16:53 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 01:16:59 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:17:03 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:17:03 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:17:07 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:17:07 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:17:09 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 01:17:10 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:17:11 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 01:17:11 | DEBUG    | crawler              | robots.txt unreadable for https://estudios-generales-ciencias.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:17:12 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 01:17:12 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf
+2026-07-06 01:17:13 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 01:17:13 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf
+2026-07-06 01:17:13 | INFO     | crawler              |   Done: PUCP | 12 pages fetched
+2026-07-06 01:17:13 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 01:17:13 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 01:17:13 | INFO     | pipeline             | Phase 1/2 complete — 8 new candidate rows (8 total)
+2026-07-06 01:17:13 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 01:17:13 | INFO     | pipeline             | Wrote 8 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 01:17:13 | INFO     | pipeline             | ============================================================
+2026-07-06 01:17:13 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 01:17:13 | INFO     | pipeline             |   Fragments processed : 16
+2026-07-06 01:17:13 | INFO     | pipeline             |   Candidate rows      : 8
+2026-07-06 01:17:13 | INFO     | pipeline             |   From PDFs           : 7
+2026-07-06 01:17:13 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 01:17:13 | INFO     | pipeline             |   Elapsed             : 215.0s
+2026-07-06 01:17:13 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:17:13 | INFO     | pipeline             |   By classification:
+2026-07-06 01:17:13 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 01:17:13 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 7
+2026-07-06 01:17:13 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:17:13 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 01:17:13 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 01:17:13 | INFO     | pipeline             |       • PUCP
+2026-07-06 01:17:13 | INFO     | pipeline             | ============================================================
+2026-07-06 01:17:57 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 01:17:57 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 01:17:57 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpxwfyckeo.csv
+2026-07-06 01:17:57 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 01:17:57 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 01:17:57 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 01:17:57 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 01:17:57 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 01:17:57 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 01:17:57 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 01:21:48 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-06 01:21:48 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 01:21:48 | INFO     | main                 | Country : all
+2026-07-06 01:21:48 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 01:21:48 | INFO     | pipeline             | ============================================================
+2026-07-06 01:21:48 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 01:21:48 | INFO     | pipeline             | ============================================================
+2026-07-06 01:21:48 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-06 01:21:48 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 01:21:48 | INFO     | pipeline             | Universities to process: 2
+2026-07-06 01:21:48 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 01:21:48 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 01:21:48 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-06 01:21:48 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-06 01:21:48 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:21:48 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 01:21:48 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 01:21:48 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 01:21:53 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:23:08 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 01:24:57 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:25:00 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:25:00 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:25:00 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 01:25:00 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 01:25:06 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:25:11 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:25:11 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:25:15 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:25:16 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:25:17 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 01:25:17 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:25:20 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 01:25:20 | INFO     | crawler              |   Done: PUCP | 10 pages fetched
+2026-07-06 01:25:20 | INFO     | crawler              | Crawl: Ponticia Universidad Católica del Perú | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-06 01:25:20 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 01:25:21 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 01:25:27 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:27:16 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:27:19 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:27:19 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 01:27:19 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 01:27:25 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:27:28 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:27:28 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:27:32 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:27:32 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:27:34 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 01:27:35 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 01:27:35 | INFO     | crawler              |   Done: Ponticia Universidad Católica del Perú | 10 pages fetched
+2026-07-06 01:27:35 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 01:27:35 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 01:27:35 | INFO     | pipeline             | Phase 1/2 complete — 8 new candidate rows (8 total)
+2026-07-06 01:27:35 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 01:27:35 | INFO     | pipeline             | Wrote 8 rows → data/qise_candidates.csv
+2026-07-06 01:27:35 | INFO     | pipeline             | ============================================================
+2026-07-06 01:27:35 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 01:27:35 | INFO     | pipeline             |   Fragments processed : 22
+2026-07-06 01:27:35 | INFO     | pipeline             |   Candidate rows      : 8
+2026-07-06 01:27:35 | INFO     | pipeline             |   From PDFs           : 7
+2026-07-06 01:27:35 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 01:27:35 | INFO     | pipeline             |   Elapsed             : 347.3s
+2026-07-06 01:27:35 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:27:35 | INFO     | pipeline             |   By classification:
+2026-07-06 01:27:35 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 01:27:35 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 7
+2026-07-06 01:27:35 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:27:35 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 01:27:35 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 01:27:35 | INFO     | pipeline             |       • PUCP
+2026-07-06 01:27:35 | INFO     | pipeline             | ============================================================
+2026-07-06 01:39:07 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 01:39:07 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 01:39:07 | INFO     | main                 | Country : all
+2026-07-06 01:39:07 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 01:39:07 | INFO     | pipeline             | ============================================================
+2026-07-06 01:39:07 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 01:39:07 | INFO     | pipeline             | ============================================================
+2026-07-06 01:39:07 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 01:39:07 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 01:39:07 | INFO     | pipeline             | Universities to process: 1
+2026-07-06 01:39:07 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 01:39:07 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 01:39:07 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-06 01:39:07 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=12 max_depth=2 pdfs=on
+2026-07-06 01:39:07 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:39:07 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 01:39:07 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 01:39:07 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 01:39:07 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:40:22 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 01:42:12 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:42:12 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:42:12 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:42:12 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 01:42:12 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 01:42:12 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:42:12 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:42:12 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:42:12 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:42:12 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:42:12 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 01:42:12 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:42:12 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 01:42:13 | DEBUG    | crawler              | robots.txt unreadable for https://estudios-generales-ciencias.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:42:15 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 01:42:15 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf
+2026-07-06 01:42:16 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 01:42:16 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf
+2026-07-06 01:42:16 | INFO     | crawler              |   Done: PUCP | 12 pages fetched
+2026-07-06 01:42:16 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 01:42:16 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 01:42:16 | INFO     | pipeline             | Phase 1/2 complete — 8 new candidate rows (8 total)
+2026-07-06 01:42:16 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 01:42:16 | INFO     | pipeline             | Wrote 8 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 01:42:16 | INFO     | pipeline             | ============================================================
+2026-07-06 01:42:16 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 01:42:16 | INFO     | pipeline             |   Fragments processed : 16
+2026-07-06 01:42:16 | INFO     | pipeline             |   Candidate rows      : 8
+2026-07-06 01:42:16 | INFO     | pipeline             |   From PDFs           : 7
+2026-07-06 01:42:16 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 01:42:16 | INFO     | pipeline             |   Elapsed             : 189.1s
+2026-07-06 01:42:16 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:42:16 | INFO     | pipeline             |   By classification:
+2026-07-06 01:42:16 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 01:42:16 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 7
+2026-07-06 01:42:16 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:42:16 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 01:42:16 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 01:42:16 | INFO     | pipeline             |       • PUCP
+2026-07-06 01:42:16 | INFO     | pipeline             | ============================================================
+2026-07-06 01:42:16 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 01:42:16 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 01:42:16 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmp_oei6bb8.csv
+2026-07-06 01:42:16 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 01:42:16 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 01:42:16 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 01:42:16 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 01:42:16 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 01:42:16 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 01:42:16 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 01:44:10 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-06 01:44:10 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 01:44:10 | INFO     | main                 | Country : all
+2026-07-06 01:44:10 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 01:44:10 | INFO     | pipeline             | ============================================================
+2026-07-06 01:44:10 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 01:44:10 | INFO     | pipeline             | ============================================================
+2026-07-06 01:44:10 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-06 01:44:10 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 01:44:10 | INFO     | pipeline             | Universities to process: 2
+2026-07-06 01:44:10 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 01:44:10 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 01:44:10 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-06 01:44:10 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-06 01:44:10 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:44:10 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 01:44:10 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 01:44:11 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 01:44:11 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:45:26 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 01:47:15 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:47:15 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:47:15 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:47:15 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 01:47:15 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 01:47:15 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:47:15 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:47:16 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:47:16 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:47:16 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:47:16 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 01:47:16 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 01:47:16 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 01:47:16 | INFO     | crawler              |   Done: PUCP | 10 pages fetched
+2026-07-06 01:47:16 | INFO     | crawler              | Crawl: Ponticia Universidad Católica del Perú | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-06 01:47:16 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 01:47:16 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 01:47:16 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 01:49:05 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:49:05 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 01:49:05 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 01:49:05 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 01:49:05 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 01:49:05 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:49:05 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 01:49:05 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:49:05 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 01:49:05 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 01:49:05 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 01:49:05 | INFO     | crawler              |   Done: Ponticia Universidad Católica del Perú | 10 pages fetched
+2026-07-06 01:49:05 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 01:49:05 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 01:49:05 | INFO     | pipeline             | Phase 1/2 complete — 8 new candidate rows (8 total)
+2026-07-06 01:49:05 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 01:49:05 | INFO     | pipeline             | Wrote 8 rows → data/qise_candidates.csv
+2026-07-06 01:49:05 | INFO     | pipeline             | ============================================================
+2026-07-06 01:49:05 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 01:49:05 | INFO     | pipeline             |   Fragments processed : 22
+2026-07-06 01:49:05 | INFO     | pipeline             |   Candidate rows      : 8
+2026-07-06 01:49:05 | INFO     | pipeline             |   From PDFs           : 7
+2026-07-06 01:49:05 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 01:49:05 | INFO     | pipeline             |   Elapsed             : 295.4s
+2026-07-06 01:49:05 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:49:05 | INFO     | pipeline             |   By classification:
+2026-07-06 01:49:05 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 01:49:05 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 7
+2026-07-06 01:49:05 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 01:49:05 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 01:49:05 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 01:49:05 | INFO     | pipeline             |       • PUCP
+2026-07-06 01:49:05 | INFO     | pipeline             | ============================================================
+2026-07-06 01:55:23 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 01:55:52 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:00:48 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 02:00:48 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 02:00:48 | INFO     | main                 | Country : all
+2026-07-06 02:00:48 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 02:00:48 | INFO     | pipeline             | ============================================================
+2026-07-06 02:00:48 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 02:00:48 | INFO     | pipeline             | ============================================================
+2026-07-06 02:00:48 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 02:00:48 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:00:48 | INFO     | pipeline             | Universities to process: 1
+2026-07-06 02:00:48 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 02:00:48 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 02:00:48 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-06 02:00:48 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=12 max_depth=2 pdfs=on
+2026-07-06 02:00:48 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:00:48 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 02:00:48 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 02:00:49 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 02:00:49 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 02:02:04 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 02:03:53 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 02:03:53 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 02:03:53 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:03:53 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 02:03:53 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 02:03:53 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 02:03:53 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 02:03:53 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 02:03:53 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 02:03:54 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 02:03:54 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 02:03:54 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:03:54 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 02:03:54 | DEBUG    | crawler              | robots.txt unreadable for https://estudios-generales-ciencias.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:03:54 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 02:03:54 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf
+2026-07-06 02:03:54 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 02:03:54 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf
+2026-07-06 02:03:54 | INFO     | crawler              |   Done: PUCP | 12 pages fetched
+2026-07-06 02:03:54 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 02:03:54 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 02:03:54 | INFO     | pipeline             | Phase 1/2 complete — 10 new candidate rows (10 total)
+2026-07-06 02:03:54 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 02:03:54 | INFO     | pipeline             | Wrote 10 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 02:03:54 | INFO     | pipeline             | ============================================================
+2026-07-06 02:03:54 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 02:03:54 | INFO     | pipeline             |   Fragments processed : 16
+2026-07-06 02:03:54 | INFO     | pipeline             |   Candidate rows      : 10
+2026-07-06 02:03:54 | INFO     | pipeline             |   From PDFs           : 9
+2026-07-06 02:03:54 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 02:03:54 | INFO     | pipeline             |   Elapsed             : 186.1s
+2026-07-06 02:03:54 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 02:03:54 | INFO     | pipeline             |   By classification:
+2026-07-06 02:03:54 | INFO     | pipeline             |     non_course_or_contextual          : 1
+2026-07-06 02:03:54 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 02:03:54 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 8
+2026-07-06 02:03:54 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 02:03:54 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 02:03:54 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 02:03:54 | INFO     | pipeline             |       • PUCP
+2026-07-06 02:03:54 | INFO     | pipeline             | ============================================================
+2026-07-06 02:04:09 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:04:09 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 02:04:09 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpeadtax3y.csv
+2026-07-06 02:04:09 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 02:04:09 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 02:04:09 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 02:04:09 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 02:04:09 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 02:04:09 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 02:04:09 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 02:05:00 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:05:00 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 02:05:00 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpbaseuxue.csv
+2026-07-06 02:05:00 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 02:05:00 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 02:05:00 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 02:05:00 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 02:05:00 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 02:05:00 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 02:05:00 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 02:05:51 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:05:51 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 02:05:51 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmp9yzm95eu.csv
+2026-07-06 02:05:52 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 02:05:52 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 02:05:52 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 02:05:52 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 02:05:52 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 02:05:52 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 02:05:52 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 02:06:47 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-06 02:06:47 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:17:10 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:17:10 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 02:17:10 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmp1_aq7k1l.csv
+2026-07-06 02:17:10 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 02:17:10 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 02:17:10 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 02:17:10 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 02:17:10 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 02:17:10 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 02:17:10 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 02:17:11 | DEBUG    | extractor            | Block extraction: 88 from https://utec.edu.pe/carreras/fisica
+2026-07-06 02:17:11 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:17:30 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 02:17:30 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 02:17:30 | INFO     | main                 | Country : all
+2026-07-06 02:17:30 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 02:17:30 | INFO     | pipeline             | ============================================================
+2026-07-06 02:17:30 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 02:17:30 | INFO     | pipeline             | ============================================================
+2026-07-06 02:17:30 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 02:17:30 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:17:30 | INFO     | pipeline             | Universities to process: 1
+2026-07-06 02:17:30 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 02:17:30 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 02:17:30 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-06 02:17:30 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=12 max_depth=2 pdfs=on
+2026-07-06 02:17:31 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:17:31 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 02:17:31 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 02:17:31 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 02:17:31 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 02:18:46 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 02:20:35 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 02:20:35 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 02:20:36 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:20:36 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 02:20:36 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 02:20:36 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 02:20:36 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 02:20:36 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 02:20:36 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 02:20:36 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 02:20:36 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 02:20:36 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:20:36 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 02:20:37 | DEBUG    | crawler              | robots.txt unreadable for https://estudios-generales-ciencias.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:20:37 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 02:20:37 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf
+2026-07-06 02:20:37 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 02:20:37 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf
+2026-07-06 02:20:37 | INFO     | crawler              |   Done: PUCP | 12 pages fetched
+2026-07-06 02:20:37 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 02:20:37 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 02:20:37 | INFO     | pipeline             | Phase 1/2 complete — 10 new candidate rows (10 total)
+2026-07-06 02:20:37 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 02:20:37 | INFO     | pipeline             | Wrote 10 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 02:20:37 | INFO     | pipeline             | ============================================================
+2026-07-06 02:20:37 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 02:20:37 | INFO     | pipeline             |   Fragments processed : 16
+2026-07-06 02:20:37 | INFO     | pipeline             |   Candidate rows      : 10
+2026-07-06 02:20:37 | INFO     | pipeline             |   From PDFs           : 9
+2026-07-06 02:20:37 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 02:20:37 | INFO     | pipeline             |   Elapsed             : 186.3s
+2026-07-06 02:20:37 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 02:20:37 | INFO     | pipeline             |   By classification:
+2026-07-06 02:20:37 | INFO     | pipeline             |     non_course_or_contextual          : 1
+2026-07-06 02:20:37 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 02:20:37 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 8
+2026-07-06 02:20:37 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 02:20:37 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 02:20:37 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 02:20:37 | INFO     | pipeline             |       • PUCP
+2026-07-06 02:20:37 | INFO     | pipeline             | ============================================================
+2026-07-06 02:21:57 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-06 02:21:57 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 02:21:57 | INFO     | main                 | Country : all
+2026-07-06 02:21:57 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 02:21:57 | INFO     | pipeline             | ============================================================
+2026-07-06 02:21:57 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 02:21:57 | INFO     | pipeline             | ============================================================
+2026-07-06 02:21:57 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-06 02:21:57 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 02:21:57 | INFO     | pipeline             | Universities to process: 2
+2026-07-06 02:21:57 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 02:21:57 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 02:21:57 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-06 02:21:57 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-06 02:21:57 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:21:57 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 02:21:57 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 02:21:58 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 02:21:58 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 02:23:13 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 02:25:02 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 02:25:02 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 02:25:02 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:25:02 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 02:25:02 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 02:25:02 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 02:25:03 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 02:25:03 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 02:25:03 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 02:25:03 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 02:25:03 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 02:25:03 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 02:25:03 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 02:25:03 | INFO     | crawler              |   Done: PUCP | 10 pages fetched
+2026-07-06 02:25:03 | INFO     | crawler              | Crawl: Ponticia Universidad Católica del Perú | seeds=2 max_pages=10 max_depth=5 pdfs=on
+2026-07-06 02:25:03 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 02:25:03 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 02:25:03 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 02:26:52 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 02:26:52 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 02:26:52 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 02:26:52 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 02:26:52 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 02:26:52 | DEBUG    | crawler              |   HTML (211,316b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 02:26:52 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel
+2026-07-06 02:26:52 | DEBUG    | crawler              |   HTML (211,062b) depth=2: https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 02:26:52 | DEBUG    | extractor            | Block extraction: 1 from https://educacioncontinua.pucp.edu.pe/cursos/sql-server-implementacion-base-datos-primer-nivel-3
+2026-07-06 02:26:52 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 02:26:52 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 02:26:52 | INFO     | crawler              |   Done: Ponticia Universidad Católica del Perú | 10 pages fetched
+2026-07-06 02:26:52 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 02:26:52 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 02:26:52 | INFO     | pipeline             | Phase 1/2 complete — 10 new candidate rows (10 total)
+2026-07-06 02:26:52 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 02:26:52 | INFO     | pipeline             | Wrote 10 rows → data/qise_candidates.csv
+2026-07-06 02:26:52 | INFO     | pipeline             | ============================================================
+2026-07-06 02:26:52 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 02:26:52 | INFO     | pipeline             |   Fragments processed : 22
+2026-07-06 02:26:52 | INFO     | pipeline             |   Candidate rows      : 10
+2026-07-06 02:26:52 | INFO     | pipeline             |   From PDFs           : 9
+2026-07-06 02:26:52 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 02:26:52 | INFO     | pipeline             |   Elapsed             : 295.5s
+2026-07-06 02:26:52 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 02:26:52 | INFO     | pipeline             |   By classification:
+2026-07-06 02:26:52 | INFO     | pipeline             |     non_course_or_contextual          : 1
+2026-07-06 02:26:52 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 02:26:52 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 8
+2026-07-06 02:26:52 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 02:26:52 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 02:26:52 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 02:26:52 | INFO     | pipeline             |       • PUCP
+2026-07-06 02:26:52 | INFO     | pipeline             | ============================================================
+2026-07-06 13:37:29 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 13:37:29 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 13:37:29 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmp72gawvg9.csv
+2026-07-06 13:37:29 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpr_s_ydha.csv
+2026-07-06 13:37:29 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 13:37:29 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 13:37:29 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 13:37:29 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 13:37:29 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 13:37:29 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 13:37:29 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 13:37:29 | DEBUG    | extractor            | Table extraction: 1 rows from https://uni.edu/plan
+2026-07-06 13:37:41 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpy524w4t8.csv
+2026-07-06 13:38:00 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 13:38:00 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 13:38:00 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpe29tez1q.csv
+2026-07-06 13:38:00 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpc9s41opz.csv
+2026-07-06 13:38:00 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 13:38:00 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 13:38:00 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 13:38:00 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 13:38:00 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 13:38:00 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 13:38:00 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 13:38:00 | DEBUG    | extractor            | Table extraction: 1 rows from https://uni.edu/plan
+2026-07-06 13:53:03 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 13:53:03 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 13:53:03 | INFO     | main                 | Country : all
+2026-07-06 13:53:03 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 13:53:03 | INFO     | pipeline             | ============================================================
+2026-07-06 13:53:03 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 13:53:03 | INFO     | pipeline             | ============================================================
+2026-07-06 13:53:03 | INFO     | input_loader         | Loaded 2 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 13:53:03 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 13:53:03 | DEBUG    | seed_discovery       | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 13:53:07 | INFO     | seed_discovery       | Seed discovery: UTEC | homepage_links=50 sitemap_urls=1961 candidates=1973 scored>=3: 122 → kept 20
+2026-07-06 13:53:07 | INFO     | seed_discovery       |     [ 13] https://utec.edu.pe/blog-de-carreras/utec/ingenieria-de-la-energia-en-utec-conoce-el-plan-de-estudios-de-esta-carrera  (url:carrera,plan de estudios + stem:ingenieria + curriculum-pattern + sitemap + low-priority:blog)
+2026-07-06 13:53:07 | INFO     | seed_discovery       |     [ 11] https://utec.edu.pe/noticias/escuela-de-posgrado-utec-lanza-la-maestria-profesional-en-ingenieria-de-minas  (url:escuela,maestria,posgrado + stem:ingenieria + sitemap + low-priority:noticias)
+2026-07-06 13:53:07 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-ciencias-basicas  (url:facultad + stem:ciencias + sitemap)
+2026-07-06 13:53:07 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-computacion  (url:facultad + stem:computacion + sitemap)
+2026-07-06 13:53:07 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-ingenieria  (url:facultad + stem:ingenieria + sitemap)
+2026-07-06 13:53:07 | DEBUG    | seed_discovery       | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 13:53:12 | INFO     | seed_discovery       | Seed discovery: PUCP | homepage_links=109 sitemap_urls=1000 candidates=569 scored>=3: 128 → kept 20
+2026-07-06 13:53:12 | INFO     | seed_discovery       |     [ 14] https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones  (url:departamento + stem:electronica,informatica,ingenieria + sitemap)
+2026-07-06 13:53:12 | INFO     | seed_discovery       |     [ 13] https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres  (url:cursos,oferta academica + anchor:cursos + curriculum-pattern)
+2026-07-06 13:53:12 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones  (url:carrera + stem:ingenieria,telecomunicaciones + sitemap)
+2026-07-06 13:53:12 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 13:53:12 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-informatica  (url:carrera + stem:informatica,ingenieria + sitemap)
+2026-07-06 13:53:12 | INFO     | pipeline             | Discovered seeds written → data/processed/discovered_seeds.csv (40 rows)
+2026-07-06 13:53:12 | INFO     | pipeline             | Seed discovery complete: 40 seeds across 2 institution(s)
+2026-07-06 13:58:20 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 13:58:20 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/auto_candidates.csv
+2026-07-06 13:58:20 | INFO     | main                 | Country : all
+2026-07-06 13:58:20 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 13:58:20 | INFO     | pipeline             | ============================================================
+2026-07-06 13:58:20 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 13:58:20 | INFO     | pipeline             | ============================================================
+2026-07-06 13:58:20 | INFO     | input_loader         | Loaded 2 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 13:58:20 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 13:58:20 | INFO     | pipeline             | Universities to process: 2
+2026-07-06 13:58:21 | DEBUG    | seed_discovery       | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 13:58:25 | INFO     | seed_discovery       | Seed discovery: UTEC | homepage_links=50 sitemap_urls=1961 candidates=1973 scored>=3: 122 → kept 20
+2026-07-06 13:58:25 | INFO     | seed_discovery       |     [ 13] https://utec.edu.pe/blog-de-carreras/utec/ingenieria-de-la-energia-en-utec-conoce-el-plan-de-estudios-de-esta-carrera  (url:carrera,plan de estudios + stem:ingenieria + curriculum-pattern + sitemap + low-priority:blog)
+2026-07-06 13:58:25 | INFO     | seed_discovery       |     [ 11] https://utec.edu.pe/noticias/escuela-de-posgrado-utec-lanza-la-maestria-profesional-en-ingenieria-de-minas  (url:escuela,maestria,posgrado + stem:ingenieria + sitemap + low-priority:noticias)
+2026-07-06 13:58:25 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-ciencias-basicas  (url:facultad + stem:ciencias + sitemap)
+2026-07-06 13:58:25 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-computacion  (url:facultad + stem:computacion + sitemap)
+2026-07-06 13:58:25 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-ingenieria  (url:facultad + stem:ingenieria + sitemap)
+2026-07-06 13:58:25 | DEBUG    | seed_discovery       | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 13:58:30 | INFO     | seed_discovery       | Seed discovery: PUCP | homepage_links=109 sitemap_urls=1000 candidates=569 scored>=3: 128 → kept 20
+2026-07-06 13:58:30 | INFO     | seed_discovery       |     [ 14] https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones  (url:departamento + stem:electronica,informatica,ingenieria + sitemap)
+2026-07-06 13:58:30 | INFO     | seed_discovery       |     [ 13] https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres  (url:cursos,oferta academica + anchor:cursos + curriculum-pattern)
+2026-07-06 13:58:30 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones  (url:carrera + stem:ingenieria,telecomunicaciones + sitemap)
+2026-07-06 13:58:30 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 13:58:30 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-informatica  (url:carrera + stem:informatica,ingenieria + sitemap)
+2026-07-06 13:58:30 | INFO     | pipeline             | Discovered seeds written → data/processed/discovered_seeds.csv (40 rows)
+2026-07-06 13:58:30 | INFO     | pipeline             | Seed resolution: {'auto_discovered': 2} | 40 seeds auto-discovered
+2026-07-06 13:58:30 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 13:58:30 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 13:58:30 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-06 13:58:30 | INFO     | crawler              | Crawl: UTEC | seeds=21 max_pages=None max_depth=None max_pdfs=50 pdfs=on seed_origin=auto_discovered
+2026-07-06 13:58:30 | ERROR    | main                 | Unexpected error: '<' not supported between instances of 'int' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/rafaelchamayo/qc-universities-paper/web_scrapper/main.py", line 112, in main
+    summary = pipeline.run(
+        output_path=args.output,
+    ...<6 lines>...
+        force_discover=args.force_discover,
+    )
+  File "/Users/rafaelchamayo/qc-universities-paper/web_scrapper/pipeline.py", line 164, in run
+    for fragment in dispatcher.stream_all_records():
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rafaelchamayo/qc-universities-paper/web_scrapper/dispatcher.py", line 56, in stream_all_records
+    yield from self._stream_universities()
+  File "/Users/rafaelchamayo/qc-universities-paper/web_scrapper/dispatcher.py", line 68, in _stream_universities
+    for raw in self.web_crawler.crawl_university(univ):
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/rafaelchamayo/qc-universities-paper/web_scrapper/crawler.py", line 198, in crawl_university
+    while queue and st["pages_crawled"] < max_pages:
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'NoneType'
+2026-07-06 14:05:23 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 14:05:23 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/auto_candidates.csv
+2026-07-06 14:05:23 | INFO     | main                 | Country : all
+2026-07-06 14:05:23 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 14:05:23 | INFO     | pipeline             | ============================================================
+2026-07-06 14:05:23 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 14:05:23 | INFO     | pipeline             | ============================================================
+2026-07-06 14:05:23 | INFO     | input_loader         | Loaded 2 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 14:05:23 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:05:23 | INFO     | pipeline             | Universities to process: 2
+2026-07-06 14:05:23 | DEBUG    | seed_discovery       | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:05:28 | INFO     | seed_discovery       | Seed discovery: UTEC | homepage_links=50 sitemap_urls=1961 candidates=1973 scored>=3: 122 → kept 20
+2026-07-06 14:05:28 | INFO     | seed_discovery       |     [ 13] https://utec.edu.pe/blog-de-carreras/utec/ingenieria-de-la-energia-en-utec-conoce-el-plan-de-estudios-de-esta-carrera  (url:carrera,plan de estudios + stem:ingenieria + curriculum-pattern + sitemap + low-priority:blog)
+2026-07-06 14:05:28 | INFO     | seed_discovery       |     [ 11] https://utec.edu.pe/noticias/escuela-de-posgrado-utec-lanza-la-maestria-profesional-en-ingenieria-de-minas  (url:escuela,maestria,posgrado + stem:ingenieria + sitemap + low-priority:noticias)
+2026-07-06 14:05:28 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-ciencias-basicas  (url:facultad + stem:ciencias + sitemap)
+2026-07-06 14:05:28 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-computacion  (url:facultad + stem:computacion + sitemap)
+2026-07-06 14:05:28 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/facultad/facultad-de-ingenieria  (url:facultad + stem:ingenieria + sitemap)
+2026-07-06 14:05:28 | DEBUG    | seed_discovery       | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:05:33 | INFO     | seed_discovery       | Seed discovery: PUCP | homepage_links=109 sitemap_urls=1000 candidates=569 scored>=3: 128 → kept 20
+2026-07-06 14:05:33 | INFO     | seed_discovery       |     [ 14] https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones  (url:departamento + stem:electronica,informatica,ingenieria + sitemap)
+2026-07-06 14:05:33 | INFO     | seed_discovery       |     [ 13] https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres  (url:cursos,oferta academica + anchor:cursos + curriculum-pattern)
+2026-07-06 14:05:33 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones  (url:carrera + stem:ingenieria,telecomunicaciones + sitemap)
+2026-07-06 14:05:33 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 14:05:33 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-informatica  (url:carrera + stem:informatica,ingenieria + sitemap)
+2026-07-06 14:05:33 | INFO     | pipeline             | Discovered seeds written → data/processed/discovered_seeds.csv (40 rows)
+2026-07-06 14:05:33 | INFO     | pipeline             | Seed resolution: {'auto_discovered': 2} | 40 seeds auto-discovered
+2026-07-06 14:05:33 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 14:05:33 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 14:05:33 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-06 14:05:33 | INFO     | crawler              | Crawl: UTEC | seeds=21 max_pages=12 max_depth=1 max_pdfs=50 pdfs=on seed_origin=auto_discovered
+2026-07-06 14:05:33 | DEBUG    | crawler              | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:05:34 | DEBUG    | crawler              |   HTML (89,755b) depth=0: https://utec.edu.pe/blog-de-carreras/utec/ingenieria-de-la-energia-en-utec-conoce-el-plan-de-estudios-de-esta-carrera
+2026-07-06 14:05:35 | DEBUG    | crawler              |   HTML (89,853b) depth=0: https://utec.edu.pe/noticias/escuela-de-posgrado-utec-lanza-la-maestria-profesional-en-ingenieria-de-minas
+2026-07-06 14:05:36 | DEBUG    | crawler              |   HTML (105,765b) depth=0: https://utec.edu.pe/facultad/facultad-de-ciencias-basicas
+2026-07-06 14:05:37 | DEBUG    | extractor            | Block extraction: 1 from https://utec.edu.pe/facultad/facultad-de-ciencias-basicas
+2026-07-06 14:05:38 | DEBUG    | crawler              |   HTML (113,713b) depth=0: https://utec.edu.pe/facultad/facultad-de-computacion
+2026-07-06 14:05:38 | DEBUG    | extractor            | Block extraction: 4 from https://utec.edu.pe/facultad/facultad-de-computacion
+2026-07-06 14:05:40 | DEBUG    | crawler              |   HTML (153,729b) depth=0: https://utec.edu.pe/facultad/facultad-de-ingenieria
+2026-07-06 14:05:40 | DEBUG    | extractor            | Block extraction: 10 from https://utec.edu.pe/facultad/facultad-de-ingenieria
+2026-07-06 14:05:41 | DEBUG    | crawler              |   HTML (88,742b) depth=0: https://utec.edu.pe/blog-de-carreras/ingenieria-industrial/egresada-de-ingenieria-industrial-de-utec-fue-becada-en-el-programa-doctoral-de-ingenieria-industrial-en-university-south-florida-usf
+2026-07-06 14:05:43 | DEBUG    | crawler              |   HTML (105,277b) depth=0: https://utec.edu.pe/blog-de-carreras/ingenieria-electronica/grad-school-lo-que-me-avisaron-y-no-hice-caso-experiencias-y-consejos-de-un-alumno-en-el-41
+2026-07-06 14:05:44 | DEBUG    | crawler              |   HTML (92,394b) depth=0: https://utec.edu.pe/blog-de-carreras/ingenieria-electronica/utec-alumno-de-ingenieria-electronica-participa-en-programa-nanorepu-2020
+2026-07-06 14:05:46 | DEBUG    | crawler              |   HTML (91,724b) depth=0: https://utec.edu.pe/blog-de-carreras/utec/ingenieria-electronica-5-razones-para-estudiar-esta-carrera
+2026-07-06 14:05:47 | DEBUG    | crawler              |   HTML (95,183b) depth=0: https://utec.edu.pe/blog-de-carreras/utec/ingenieria-electronica-cinco-razones-para-estudiar-esta-carrera
+2026-07-06 14:05:49 | DEBUG    | crawler              |   HTML (98,768b) depth=0: https://utec.edu.pe/blog/ciencias/por-que-estudiar-carrera-fisica
+2026-07-06 14:05:49 | DEBUG    | extractor            | Table extraction: 6 rows from https://utec.edu.pe/blog/ciencias/por-que-estudiar-carrera-fisica
+2026-07-06 14:05:50 | DEBUG    | crawler              |   HTML (88,088b) depth=0: https://utec.edu.pe/noticias/alumnos-de-la-carrera-de-ingenieria-electronica-obtuvieron-el-tercer-puesto-en-el-concurso-de-papers-del-intercon-2015
+2026-07-06 14:05:50 | INFO     | crawler              |   Done: UTEC | 12 pages fetched (12 HTML, 0 PDFs)
+2026-07-06 14:05:50 | INFO     | crawler              | Crawl: PUCP | seeds=21 max_pages=12 max_depth=1 max_pdfs=50 pdfs=on seed_origin=auto_discovered
+2026-07-06 14:05:50 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:05:52 | DEBUG    | crawler              |   HTML (96,785b) depth=0: https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones
+2026-07-06 14:05:52 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 14:05:52 | DEBUG    | crawler              |   HTML (224,857b) depth=0: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 14:05:53 | DEBUG    | crawler              |   HTML (111,145b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones
+2026-07-06 14:05:55 | DEBUG    | crawler              |   HTML (110,035b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-electronica
+2026-07-06 14:05:56 | DEBUG    | crawler              |   HTML (109,145b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-informatica
+2026-07-06 14:05:58 | DEBUG    | crawler              |   HTML (109,166b) depth=0: https://www.pucp.edu.pe/carrera/ciencias-de-la-informacion
+2026-07-06 14:05:58 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 14:05:59 | DEBUG    | crawler              |   HTML (111,146b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-ambiental-y-sostenible
+2026-07-06 14:06:01 | DEBUG    | crawler              |   HTML (110,055b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-biomedica
+2026-07-06 14:06:02 | DEBUG    | crawler              |   HTML (108,933b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-civil
+2026-07-06 14:06:04 | DEBUG    | crawler              |   HTML (109,273b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-de-minas
+2026-07-06 14:06:06 | DEBUG    | crawler              |   HTML (109,120b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-geologica
+2026-07-06 14:06:06 | INFO     | crawler              |   Done: PUCP | 12 pages fetched (12 HTML, 0 PDFs)
+2026-07-06 14:06:06 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 14:06:06 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 14:06:06 | INFO     | pipeline             | Phase 1/2 complete — 3 new candidate rows (3 total)
+2026-07-06 14:06:06 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 14:06:06 | INFO     | pipeline             | Wrote 3 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/auto_candidates.csv
+2026-07-06 14:06:06 | INFO     | pipeline             | ============================================================
+2026-07-06 14:06:06 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 14:06:06 | INFO     | pipeline             |   Seeds discovered    : 40
+2026-07-06 14:06:06 | INFO     | pipeline             |   Pages crawled       : 24
+2026-07-06 14:06:06 | INFO     | pipeline             |   PDFs detected       : 0
+2026-07-06 14:06:06 | INFO     | pipeline             |   PDFs extracted OK   : 0/0
+2026-07-06 14:06:06 | INFO     | pipeline             |   Fragments processed : 42
+2026-07-06 14:06:06 | INFO     | pipeline             |   Candidate rows      : 3
+2026-07-06 14:06:06 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-06 14:06:06 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 14:06:06 | INFO     | pipeline             |   By seed origin      : {'auto_discovered': 3}
+2026-07-06 14:06:06 | INFO     | pipeline             |   Elapsed             : 42.7s
+2026-07-06 14:06:06 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 14:06:06 | INFO     | pipeline             |   By classification:
+2026-07-06 14:06:06 | INFO     | pipeline             |     unclear                           : 3
+2026-07-06 14:06:06 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 14:06:06 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-06 14:06:06 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-06 14:06:06 | INFO     | pipeline             | ============================================================
+2026-07-06 14:24:45 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:24:45 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 14:24:45 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpi7g1fjj2.csv
+2026-07-06 14:24:45 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpqzksirgw.csv
+2026-07-06 14:24:46 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 14:24:46 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 14:24:46 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 14:24:46 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 14:24:46 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 14:24:46 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 14:24:46 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 14:24:46 | DEBUG    | extractor            | Table extraction: 1 rows from https://uni.edu/plan
+2026-07-06 14:24:46 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 14:24:46 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 14:24:46 | INFO     | main                 | Country : all
+2026-07-06 14:24:46 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 14:24:46 | INFO     | pipeline             | ============================================================
+2026-07-06 14:24:46 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 14:24:46 | INFO     | pipeline             | ============================================================
+2026-07-06 14:24:46 | INFO     | input_loader         | Loaded 2 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 14:24:46 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:24:46 | DEBUG    | seed_discovery       | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:24:50 | INFO     | seed_discovery       | Seed discovery: UTEC | homepage_links=50 sitemap_urls=1961 candidates=1973 scored>=3: 610 → kept 20
+2026-07-06 14:24:50 | INFO     | seed_discovery       |     [ 13] https://utec.edu.pe/blog-de-carreras/utec/ingenieria-de-la-energia-en-utec-conoce-el-plan-de-estudios-de-esta-carrera  (url:carrera,plan de estudios + stem:ingenieria + curriculum-pattern + sitemap + low-priority:blog)
+2026-07-06 14:24:50 | INFO     | seed_discovery       |     [ 12] https://utec.edu.pe/carreras/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 14:24:50 | INFO     | seed_discovery       |     [ 11] https://utec.edu.pe/blog-de-carreras/ingenieria-industrial/egresada-de-ingenieria-industrial-de-utec-fue-becada-en-el-programa-doctoral-de-ingenieria-industrial-en-university-south-florida-usf  (url:carrera,doctoral,programa + stem:ingenieria + sitemap + low-priority:blog)
+2026-07-06 14:24:50 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/blog-de-carreras/ciencia-de-la-computacion/los-desafios-de-implementar-el-voto-electronico-en-el-peru  (url:carrera + stem:computacion + curriculum-pattern + sitemap + low-priority:blog)
+2026-07-06 14:24:50 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/blog-de-carreras/ingenieria-civil/aniversario-de-lima-que-soluciones-tecnologicas-se-podrian-implementar-para-la-evolucion-de-la-ciudad  (url:carrera + stem:ingenieria + curriculum-pattern + sitemap + low-priority:blog)
+2026-07-06 14:24:50 | DEBUG    | seed_discovery       | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:24:55 | INFO     | seed_discovery       | Seed discovery: PUCP | homepage_links=109 sitemap_urls=1000 candidates=569 scored>=3: 166 → kept 20
+2026-07-06 14:24:55 | INFO     | seed_discovery       |     [ 14] https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones  (url:departamento + stem:electronica,informatica,ingenieria + sitemap)
+2026-07-06 14:24:55 | INFO     | seed_discovery       |     [ 13] https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres  (url:cursos,oferta academica + anchor:cursos + curriculum-pattern)
+2026-07-06 14:24:55 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones  (url:carrera + stem:ingenieria,telecomunicaciones + sitemap)
+2026-07-06 14:24:55 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 14:24:55 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-informatica  (url:carrera + stem:informatica,ingenieria + sitemap)
+2026-07-06 14:24:55 | INFO     | pipeline             | Discovered seeds written → data/processed/discovered_seeds.csv (40 rows)
+2026-07-06 14:24:55 | INFO     | pipeline             | Seed discovery complete: 40 seeds across 2 institution(s)
+2026-07-06 14:27:56 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:27:56 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 14:27:56 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpwencoghr.csv
+2026-07-06 14:27:56 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpvbakkenr.csv
+2026-07-06 14:27:56 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 14:27:56 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 14:27:56 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 14:27:56 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 14:27:56 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 14:27:56 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 14:27:56 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 14:27:56 | DEBUG    | extractor            | Table extraction: 1 rows from https://uni.edu/plan
+2026-07-06 14:27:57 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 14:27:57 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 14:27:57 | INFO     | main                 | Country : all
+2026-07-06 14:27:57 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 14:27:57 | INFO     | pipeline             | ============================================================
+2026-07-06 14:27:57 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 14:27:57 | INFO     | pipeline             | ============================================================
+2026-07-06 14:27:57 | INFO     | input_loader         | Loaded 2 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/domains_only.csv
+2026-07-06 14:27:57 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:27:57 | DEBUG    | seed_discovery       | robots.txt unreadable for https://utec.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:28:01 | INFO     | seed_discovery       | Seed discovery: UTEC | homepage_links=50 sitemap_urls=1961 candidates=1973 scored>=3: 609 → kept 20
+2026-07-06 14:28:01 | INFO     | seed_discovery       |     [ 13] https://utec.edu.pe/blog-de-carreras/utec/ingenieria-de-la-energia-en-utec-conoce-el-plan-de-estudios-de-esta-carrera  (url:carrera,plan de estudios + stem:ingenieria + curriculum-pattern + sitemap + low-priority:blog)
+2026-07-06 14:28:01 | INFO     | seed_discovery       |     [ 12] https://utec.edu.pe/carreras/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 14:28:01 | INFO     | seed_discovery       |     [ 11] https://utec.edu.pe/blog-de-carreras/ingenieria-industrial/egresada-de-ingenieria-industrial-de-utec-fue-becada-en-el-programa-doctoral-de-ingenieria-industrial-en-university-south-florida-usf  (url:carrera,doctoral,programa + stem:ingenieria + sitemap + low-priority:blog)
+2026-07-06 14:28:01 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/blog-de-carreras/ingenieria-electronica/grad-school-lo-que-me-avisaron-y-no-hice-caso-experiencias-y-consejos-de-un-alumno-en-el-41  (url:carrera,school + stem:electronica,ingenieria + sitemap + low-priority:blog)
+2026-07-06 14:28:01 | INFO     | seed_discovery       |     [ 10] https://utec.edu.pe/blog-de-carreras/ingenieria-electronica/utec-alumno-de-ingenieria-electronica-participa-en-programa-nanorepu-2020  (url:carrera,programa + stem:electronica,ingenieria + sitemap + low-priority:blog)
+2026-07-06 14:28:01 | DEBUG    | seed_discovery       | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:28:06 | INFO     | seed_discovery       | Seed discovery: PUCP | homepage_links=109 sitemap_urls=1000 candidates=569 scored>=3: 166 → kept 20
+2026-07-06 14:28:06 | INFO     | seed_discovery       |     [ 14] https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones  (url:departamento + stem:electronica,informatica,ingenieria + sitemap)
+2026-07-06 14:28:06 | INFO     | seed_discovery       |     [ 13] https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres  (url:cursos,oferta academica + anchor:cursos + curriculum-pattern)
+2026-07-06 14:28:06 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones  (url:carrera + stem:ingenieria,telecomunicaciones + sitemap)
+2026-07-06 14:28:06 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 14:28:06 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-informatica  (url:carrera + stem:informatica,ingenieria + sitemap)
+2026-07-06 14:28:06 | INFO     | pipeline             | Discovered seeds written → data/processed/discovered_seeds.csv (40 rows)
+2026-07-06 14:28:06 | INFO     | pipeline             | Seed discovery complete: 40 seeds across 2 institution(s)
+2026-07-06 14:29:26 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 14:29:26 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates2.csv
+2026-07-06 14:29:26 | INFO     | main                 | Country : all
+2026-07-06 14:29:26 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 14:29:26 | INFO     | pipeline             | ============================================================
+2026-07-06 14:29:26 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 14:29:26 | INFO     | pipeline             | ============================================================
+2026-07-06 14:29:26 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 14:29:26 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:29:26 | INFO     | pipeline             | Universities to process: 1
+2026-07-06 14:29:26 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 14:29:26 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 14:29:26 | INFO     | dispatcher           | Dispatching 1 universities
+2026-07-06 14:29:26 | INFO     | crawler              | Crawl: PUCP | seeds=2 max_pages=12 max_depth=2 max_pdfs=50 pdfs=on seed_origin=manual
+2026-07-06 14:29:26 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:29:26 | DEBUG    | crawler              |   HTML (106,568b) depth=0: https://www.pucp.edu.pe/
+2026-07-06 14:29:26 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 14:29:26 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 14:29:26 | DEBUG    | crawler              |   HTML (224,857b) depth=1: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 14:30:41 | DEBUG    | crawler              | robots.txt unreadable for http://facultad.pucp.edu.pe: <urlopen error [Errno 60] Operation timed out> (allowing)
+2026-07-06 14:32:31 | INFO     | crawler              |   ConnectTimeout on http, retrying https: https://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 14:32:31 | DEBUG    | crawler              |   HTML (87,481b) depth=1: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios
+2026-07-06 14:32:31 | DEBUG    | crawler              | robots.txt unreadable for https://facultad-ciencias-ingenieria.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:32:31 | DEBUG    | crawler              |   PDF: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf (found on: http://facultad.pucp.edu.pe/ingenieria/carreras/fisica/plan-de-estudios)
+2026-07-06 14:32:31 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://facultad-ciencias-ingenieria.pucp.edu.pe/wp-content/uploads/2026/03/ppee_FISICA-2026-1.pdf
+2026-07-06 14:32:31 | DEBUG    | crawler              |   HTML (224,755b) depth=2: https://educacioncontinua.pucp.edu.pe/oferta-academica
+2026-07-06 14:32:31 | DEBUG    | crawler              |   HTML (87,481b) depth=2: https://facultad-ciencias-ingenieria.pucp.edu.pe/carreras/fisica/plan-de-estudios
+2026-07-06 14:32:31 | DEBUG    | crawler              | robots.txt unreadable for https://facultad.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:32:31 | DEBUG    | crawler              |   HTML (88,239b) depth=2: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica
+2026-07-06 14:32:32 | DEBUG    | crawler              | robots.txt unreadable for https://estudios-generales-ciencias.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:32:32 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 14:32:32 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-fisica-version-pdf.pdf
+2026-07-06 14:32:32 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 14:32:32 | DEBUG    | extractor            | PDF extracted: 2 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/plan-ambiental-y-sostenible-2023-2-1.pdf
+2026-07-06 14:32:33 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2025/05/Plan-biomedica-PUCP-2025-2.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 14:32:33 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2025/05/Plan-biomedica-PUCP-2025-2.pdf
+2026-07-06 14:32:34 | DEBUG    | crawler              |   PDF: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-Civil-vigente-desde-2021-1.pdf (found on: https://facultad.pucp.edu.pe/generales-ciencias/informacion-para-el-estudiante/plan-de-estudios?especialidad=fisica)
+2026-07-06 14:32:34 | DEBUG    | extractor            | PDF extracted: 3 page fragment(s) via pymupdf: https://estudios-generales-ciencias.pucp.edu.pe/wp-content/uploads/2024/11/Plan-de-estudios-Ingenieria-Civil-vigente-desde-2021-1.pdf
+2026-07-06 14:32:34 | INFO     | crawler              |   Done: PUCP | 12 pages fetched (7 HTML, 5 PDFs)
+2026-07-06 14:32:34 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 14:32:34 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 14:32:34 | INFO     | pipeline             | Phase 1/2 complete — 10 new candidate rows (10 total)
+2026-07-06 14:32:34 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 14:32:34 | INFO     | pipeline             | Wrote 10 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates2.csv
+2026-07-06 14:32:34 | INFO     | pipeline             | ============================================================
+2026-07-06 14:32:34 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 14:32:34 | INFO     | pipeline             |   Seeds discovered    : 0
+2026-07-06 14:32:34 | INFO     | pipeline             |   Pages crawled       : 12
+2026-07-06 14:32:34 | INFO     | pipeline             |   PDFs detected       : 5
+2026-07-06 14:32:34 | INFO     | pipeline             |   PDFs extracted OK   : 5/5
+2026-07-06 14:32:34 | INFO     | pipeline             |   Fragments processed : 20
+2026-07-06 14:32:34 | INFO     | pipeline             |   Candidate rows      : 10
+2026-07-06 14:32:34 | INFO     | pipeline             |   From PDFs           : 9
+2026-07-06 14:32:34 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 14:32:34 | INFO     | pipeline             |   By seed origin      : {'manual': 10}
+2026-07-06 14:32:34 | INFO     | pipeline             |   Elapsed             : 188.6s
+2026-07-06 14:32:34 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 14:32:34 | INFO     | pipeline             |   By classification:
+2026-07-06 14:32:34 | INFO     | pipeline             |     non_course_or_contextual          : 1
+2026-07-06 14:32:34 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 14:32:34 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 8
+2026-07-06 14:32:34 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 14:32:34 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 14:32:34 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 14:32:34 | INFO     | pipeline             |       • PUCP
+2026-07-06 14:32:34 | INFO     | pipeline             | ============================================================
+2026-07-06 14:32:35 | INFO     | main                 | Input   : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 14:32:35 | INFO     | main                 | Output  : /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 14:32:35 | INFO     | main                 | Country : all
+2026-07-06 14:32:35 | INFO     | main                 | Resume  : True | dry-run: False | limit: none
+2026-07-06 14:32:35 | INFO     | pipeline             | ============================================================
+2026-07-06 14:32:35 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 14:32:35 | INFO     | pipeline             | ============================================================
+2026-07-06 14:32:35 | INFO     | input_loader         | Loaded 1 universities from /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_test.csv
+2026-07-06 14:32:35 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:32:35 | INFO     | pipeline             | Universities to process: 1
+2026-07-06 14:32:35 | INFO     | pipeline             | Resume: 1 institutions already done, 0 remaining
+2026-07-06 14:32:35 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 14:32:35 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 14:32:35 | INFO     | dispatcher           | Dispatching 0 universities
+2026-07-06 14:32:35 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 14:32:35 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 14:32:35 | INFO     | pipeline             | Phase 1/2 complete — 0 new candidate rows (10 total)
+2026-07-06 14:32:35 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 14:32:35 | INFO     | pipeline             | Wrote 10 rows → /private/tmp/claude-501/-Users-rafaelchamayo-qc-universities-paper/c8ece6fe-f5db-4b7a-84ca-cebd6517c601/scratchpad/pucp_candidates.csv
+2026-07-06 14:32:35 | INFO     | pipeline             | ============================================================
+2026-07-06 14:32:35 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 14:32:35 | INFO     | pipeline             |   Seeds discovered    : 0
+2026-07-06 14:32:35 | INFO     | pipeline             |   Pages crawled       : 0
+2026-07-06 14:32:35 | INFO     | pipeline             |   PDFs detected       : 0
+2026-07-06 14:32:35 | INFO     | pipeline             |   PDFs extracted OK   : 0/0
+2026-07-06 14:32:35 | INFO     | pipeline             |   Fragments processed : 0
+2026-07-06 14:32:35 | INFO     | pipeline             |   Candidate rows      : 10
+2026-07-06 14:32:35 | INFO     | pipeline             |   From PDFs           : 9
+2026-07-06 14:32:35 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 14:32:35 | INFO     | pipeline             |   By seed origin      : {'': 10}
+2026-07-06 14:32:35 | INFO     | pipeline             |   Elapsed             : 0.0s
+2026-07-06 14:32:35 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 14:32:35 | INFO     | pipeline             |   By classification:
+2026-07-06 14:32:35 | INFO     | pipeline             |     non_course_or_contextual          : 1
+2026-07-06 14:32:35 | INFO     | pipeline             |     qise_core                         : 1
+2026-07-06 14:32:35 | INFO     | pipeline             |     quantum_foundations_or_adjacent   : 8
+2026-07-06 14:32:35 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 14:32:35 | INFO     | pipeline             |   qise_core rows      : 1
+2026-07-06 14:32:35 | INFO     | pipeline             |   Institutions w/ core: 1
+2026-07-06 14:32:35 | INFO     | pipeline             |       • PUCP
+2026-07-06 14:32:35 | INFO     | pipeline             | ============================================================
+2026-07-06 14:34:44 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:34:44 | DEBUG    | extractor            | Table extraction: 2 rows from https://uni.edu/fisica/plan-de-estudios
+2026-07-06 14:34:44 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpem5hk4ds.csv
+2026-07-06 14:34:44 | INFO     | input_loader         | Loaded 2 universities from /var/folders/_l/mb5_68494fb1frcd_ktybw5r0000gn/T/tmpvnz3yx58.csv
+2026-07-06 14:34:44 | WARNING  | extractor            | PDF has 0 chars over 1 page(s) (engine=pypdf) — flagging for manual review: https://uni.edu/scan.pdf
+2026-07-06 14:34:44 | DEBUG    | extractor            | PyMuPDF failed: Failed to open stream
+2026-07-06 14:34:44 | DEBUG    | extractor            | pdfplumber failed: No /Root object! - Is this really a PDF?
+2026-07-06 14:34:44 | DEBUG    | extractor            | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-07-06 14:34:44 | DEBUG    | extractor            | pypdf failed: Stream has ended unexpectedly
+2026-07-06 14:34:44 | WARNING  | extractor            | PDF unreadable (all engines failed): https://uni.edu/broken.pdf
+2026-07-06 14:34:44 | DEBUG    | extractor            | PDF extracted: 1 page fragment(s) via pymupdf: https://uni.edu/serve?doc=7
+2026-07-06 14:34:44 | DEBUG    | extractor            | Table extraction: 1 rows from https://uni.edu/plan
+2026-07-06 14:40:09 | INFO     | main                 | Input   : data/universities_sample.csv
+2026-07-06 14:40:09 | INFO     | main                 | Output  : data/qise_candidates.csv
+2026-07-06 14:40:09 | INFO     | main                 | Country : all
+2026-07-06 14:40:09 | INFO     | main                 | Resume  : False | dry-run: False | limit: none
+2026-07-06 14:40:09 | INFO     | pipeline             | ============================================================
+2026-07-06 14:40:09 | INFO     | pipeline             | QISE-LatAm-Scraper pipeline starting
+2026-07-06 14:40:09 | INFO     | pipeline             | ============================================================
+2026-07-06 14:40:09 | INFO     | input_loader         | Loaded 2 universities from data/universities_sample.csv
+2026-07-06 14:40:09 | INFO     | classifier           | Classifier ready | categories=25 (core=12 adjacent=12)
+2026-07-06 14:40:09 | INFO     | pipeline             | Universities to process: 2
+2026-07-06 14:40:09 | DEBUG    | seed_discovery       | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:40:14 | INFO     | seed_discovery       | Seed discovery: PUCP | homepage_links=109 sitemap_urls=1000 candidates=569 scored>=3: 166 → kept 20
+2026-07-06 14:40:14 | INFO     | seed_discovery       |     [ 14] https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones  (url:departamento + stem:electronica,informatica,ingenieria + sitemap)
+2026-07-06 14:40:14 | INFO     | seed_discovery       |     [ 13] https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres  (url:cursos,oferta academica + anchor:cursos + curriculum-pattern)
+2026-07-06 14:40:14 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones  (url:carrera + stem:ingenieria,telecomunicaciones + sitemap)
+2026-07-06 14:40:14 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 14:40:14 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-informatica  (url:carrera + stem:informatica,ingenieria + sitemap)
+2026-07-06 14:40:20 | INFO     | seed_discovery       | Seed discovery: Ponticia Universidad Católica del Perú | homepage_links=109 sitemap_urls=1000 candidates=569 scored>=3: 166 → kept 20
+2026-07-06 14:40:20 | INFO     | seed_discovery       |     [ 14] https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones  (url:departamento + stem:electronica,informatica,ingenieria + sitemap)
+2026-07-06 14:40:20 | INFO     | seed_discovery       |     [ 13] https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres  (url:cursos,oferta academica + anchor:cursos + curriculum-pattern)
+2026-07-06 14:40:20 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones  (url:carrera + stem:ingenieria,telecomunicaciones + sitemap)
+2026-07-06 14:40:20 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-electronica  (url:carrera + stem:electronica,ingenieria + sitemap)
+2026-07-06 14:40:20 | INFO     | seed_discovery       |     [ 12] https://www.pucp.edu.pe/carrera/ingenieria-informatica  (url:carrera + stem:informatica,ingenieria + sitemap)
+2026-07-06 14:40:20 | INFO     | pipeline             | Discovered seeds written → data/processed/discovered_seeds.csv (40 rows)
+2026-07-06 14:40:20 | INFO     | pipeline             | Seed resolution: {'auto_discovered': 2} | 40 seeds auto-discovered
+2026-07-06 14:40:20 | WARNING  | dispatcher           | TWITTER_BEARER_TOKEN not set. Twitter source will be skipped.
+  → Set it with: export TWITTER_BEARER_TOKEN=your_token_here
+2026-07-06 14:40:20 | INFO     | pipeline             | Phase 1/2 — crawling, extracting, classifying...
+2026-07-06 14:40:20 | INFO     | dispatcher           | Dispatching 2 universities
+2026-07-06 14:40:20 | INFO     | crawler              | Crawl: PUCP | seeds=21 max_pages=10 max_depth=5 max_pdfs=50 pdfs=on seed_origin=auto_discovered
+2026-07-06 14:40:20 | DEBUG    | crawler              | robots.txt unreadable for https://www.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)> (allowing)
+2026-07-06 14:40:20 | DEBUG    | crawler              |   HTML (96,785b) depth=0: https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones
+2026-07-06 14:40:21 | DEBUG    | crawler              | robots.txt unreadable for https://educacioncontinua.pucp.edu.pe: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)> (allowing)
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (224,857b) depth=0: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (111,145b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (110,035b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-electronica
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (109,145b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-informatica
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (109,166b) depth=0: https://www.pucp.edu.pe/carrera/ciencias-de-la-informacion
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (111,146b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-ambiental-y-sostenible
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (110,055b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-biomedica
+2026-07-06 14:40:21 | DEBUG    | crawler              |   HTML (108,933b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-civil
+2026-07-06 14:40:21 | INFO     | crawler              |   Done: PUCP | 10 pages fetched (10 HTML, 0 PDFs)
+2026-07-06 14:40:21 | INFO     | crawler              | Crawl: Ponticia Universidad Católica del Perú | seeds=21 max_pages=10 max_depth=5 max_pdfs=50 pdfs=on seed_origin=auto_discovered
+2026-07-06 14:40:22 | DEBUG    | crawler              |   HTML (96,785b) depth=0: https://www.pucp.edu.pe/unidad/departamento-de-ingenieria-informatica-electronica-y-de-las-telecomunicaciones
+2026-07-06 14:40:22 | DEBUG    | crawler              |   HTML (224,857b) depth=0: https://educacioncontinua.pucp.edu.pe/oferta-academica?tipo%5B%5D=cursos-y-talleres&tipo%5B%5D=talleres
+2026-07-06 14:40:23 | DEBUG    | crawler              |   HTML (111,145b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-de-las-telecomunicaciones
+2026-07-06 14:40:25 | DEBUG    | crawler              |   HTML (110,035b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-electronica
+2026-07-06 14:40:26 | DEBUG    | crawler              |   HTML (109,145b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-informatica
+2026-07-06 14:40:28 | DEBUG    | crawler              |   HTML (109,166b) depth=0: https://www.pucp.edu.pe/carrera/ciencias-de-la-informacion
+2026-07-06 14:40:28 | DEBUG    | crawler              |   HTML (108,956b) depth=0: https://www.pucp.edu.pe/carrera/fisica
+2026-07-06 14:40:29 | DEBUG    | crawler              |   HTML (111,146b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-ambiental-y-sostenible
+2026-07-06 14:40:31 | DEBUG    | crawler              |   HTML (110,055b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-biomedica
+2026-07-06 14:40:32 | DEBUG    | crawler              |   HTML (108,933b) depth=0: https://www.pucp.edu.pe/carrera/ingenieria-civil
+2026-07-06 14:40:32 | INFO     | crawler              |   Done: Ponticia Universidad Católica del Perú | 10 pages fetched (10 HTML, 0 PDFs)
+2026-07-06 14:40:32 | INFO     | dispatcher           | Dispatching 0 news/RSS sources
+2026-07-06 14:40:32 | INFO     | dispatcher           | Dispatching 0 social sources
+2026-07-06 14:40:32 | INFO     | pipeline             | Phase 1/2 complete — 0 new candidate rows (0 total)
+2026-07-06 14:40:32 | INFO     | pipeline             | Phase 2/2 — writing output...
+2026-07-06 14:40:32 | INFO     | pipeline             | Wrote 0 rows → data/qise_candidates.csv
+2026-07-06 14:40:32 | INFO     | pipeline             | ============================================================
+2026-07-06 14:40:32 | INFO     | pipeline             | PIPELINE COMPLETE
+2026-07-06 14:40:32 | INFO     | pipeline             |   Seeds discovered    : 40
+2026-07-06 14:40:32 | INFO     | pipeline             |   Pages crawled       : 20
+2026-07-06 14:40:32 | INFO     | pipeline             |   PDFs detected       : 0
+2026-07-06 14:40:32 | INFO     | pipeline             |   PDFs extracted OK   : 0/0
+2026-07-06 14:40:32 | INFO     | pipeline             |   Fragments processed : 20
+2026-07-06 14:40:32 | INFO     | pipeline             |   Candidate rows      : 0
+2026-07-06 14:40:32 | INFO     | pipeline             |   From PDFs           : 0
+2026-07-06 14:40:32 | INFO     | pipeline             |   Need manual review  : 0
+2026-07-06 14:40:32 | INFO     | pipeline             |   By seed origin      : {}
+2026-07-06 14:40:32 | INFO     | pipeline             |   Elapsed             : 23.3s
+2026-07-06 14:40:32 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 14:40:32 | INFO     | pipeline             |   By classification:
+2026-07-06 14:40:32 | INFO     | pipeline             | ------------------------------------------------------------
+2026-07-06 14:40:32 | INFO     | pipeline             |   qise_core rows      : 0
+2026-07-06 14:40:32 | INFO     | pipeline             |   Institutions w/ core: 0
+2026-07-06 14:40:32 | INFO     | pipeline             | ============================================================
+2026-07-06 14:40:32 | WARNING  | main                 | No candidate evidence found. Check that seed URLs are reachable and that --max-depth/--max-pages allow crawling.
